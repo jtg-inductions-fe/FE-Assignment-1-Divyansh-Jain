@@ -1,5 +1,5 @@
-@use 'base/fonts';
-@use 'base/colors';
+@use 'base/fonts' as *;
+@use 'base/colors' as *;
 @use 'base/variables' as *;
 
 // Base Styling icomoon
@@ -28,81 +28,13 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram {
-    &:before {
-        content: $icon-instagram;
-        color: #fff;
-    }
-}
-.icon-twitter {
-    &:before {
-        content: $icon-twitter;
-        color: #f1f2f2;
-    }
-}
-.icon-arrow {
-    &:before {
-        content: $icon-arrow;
-        color: #fff;
-    }
-}
-.icon-arrow-head {
-    &:before {
-        content: $icon-arrow-head;
-        color: #ff5722;
-    }
-}
-.icon-calendar {
-    &:before {
-        content: $icon-calendar;
-        color: #fff;
-    }
-}
-.icon-coupon {
-    &:before {
-        content: $icon-coupon;
-        color: #fff;
-    }
-}
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
-        color: #5d50c6;
-    }
-}
-.icon-location-pointer {
-    &:before {
-        content: $icon-location-pointer;
-        color: #fff;
-    }
-}
-.icon-paper-plane {
-    &:before {
-        content: $icon-paper-plane;
-        color: #fff;
-    }
-}
-.icon-play {
-    &:before {
-        content: $icon-play;
-        color: #5d50c6;
-    }
-}
-.icon-rating {
-    &:before {
-        content: $icon-rating;
-        color: #facd49;
-    }
-}
-.icon-suitcase {
-    &:before {
-        content: $icon-suitcase;
-        color: #f85e9f;
-    }
-}
-.icon-user-add {
-    &:before {
-        content: $icon-user-add;
-        color: #fff;
+@each $key, $val in $icons {
+    @each $colorName, $colorVal in $color-pallete {
+        .#{$key}-#{$colorName} {
+            &:before {
+                content: $val;
+                color: $colorVal;
+            }
+        }
     }
 }

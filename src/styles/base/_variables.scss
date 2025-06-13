@@ -1,16 +1,20 @@
+@use 'sass:map';
 // icomoon icons variables
 $icomoon-font-family: 'icomoon' !default;
 $icomoon-font-path: '../assets/icons' !default;
-$icon-instagram: '\e90b';
-$icon-twitter: '\e90c';
-$icon-arrow: '\e900';
-$icon-arrow-head: '\e901';
-$icon-calendar: '\e902';
-$icon-coupon: '\e903';
-$icon-facebook: '\e904';
-$icon-location-pointer: '\e905';
-$icon-paper-plane: '\e906';
-$icon-play: '\e907';
-$icon-rating: '\e908';
-$icon-suitcase: '\e909';
-$icon-user-add: '\e90a';
+
+$icons: (
+    'icon-instagram': '\e90b',
+    'icon-twitter': '\e90c',
+    'icon-arrow': '\e900',
+    'icon-arrow-head': '\e901',
+    'icon-calendar': '\e902',
+    'icon-coupon': '\e903',
+    'icon-facebook': '\e904',
+    'icon-location-pointer': '\e905',
+    'icon-paper-plane': '\e906',
+    'icon-play': '\e907',
+    'icon-rating': '\e908',
+    'icon-suitcase': '\e909',
+    'icon-user-add': '\e90a',
+);
