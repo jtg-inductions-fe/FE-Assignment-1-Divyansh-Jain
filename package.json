@@ -32,8 +32,7 @@
         "sharp": "0.33.5",
         "vite": "5.4.1",
         "vite-plugin-html": "3.2.2",
-        "vite-plugin-image-optimizer": "1.1.8",
-        "yarn": "^1.22.22"
+        "vite-plugin-image-optimizer": "1.1.8"
     },
     "lint-staged": {
         "*.js": [

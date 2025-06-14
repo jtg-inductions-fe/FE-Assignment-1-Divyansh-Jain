@@ -1,0 +1,18 @@
+@use 'breakpoints';
+
+@mixin media-query($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        @media (min-width: map.get($breakpoints,$key)) {
+            @content;
+        }
+    }
+}
+
+@mixin font-face($name, $src, $wt) {
+    @font-face {
+        font-family: $name;
+        src: url($src) format('truetype');
+        font-weight: $wt;
+        display: swap;
+    }
+}

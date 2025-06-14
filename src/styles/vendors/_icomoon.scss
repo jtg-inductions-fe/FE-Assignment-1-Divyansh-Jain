@@ -1,0 +1,112 @@
+@use '../abstract/index' as *;
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0');
+    src:
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0#iefix')
+            format('embedded-opentype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?chion0')
+            format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?chion0')
+            format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?chion0##{$icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
+        color: #fff;
+    }
+}
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+        color: #f1f2f2;
+    }
+}
+.icon-arrow {
+    &:before {
+        content: $icon-arrow;
+        color: #fff;
+    }
+}
+.icon-arrow-head {
+    &:before {
+        content: $icon-arrow-head;
+        color: #ff5722;
+    }
+}
+.icon-calendar {
+    &:before {
+        content: $icon-calendar;
+        color: #fff;
+    }
+}
+.icon-coupon {
+    &:before {
+        content: $icon-coupon;
+        color: #fff;
+    }
+}
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+        color: #5d50c6;
+    }
+}
+.icon-location-pointer {
+    &:before {
+        content: $icon-location-pointer;
+        color: #fff;
+    }
+}
+.icon-paper-plane {
+    &:before {
+        content: $icon-paper-plane;
+        color: #fff;
+    }
+}
+.icon-play {
+    &:before {
+        content: $icon-play;
+        color: #5d50c6;
+    }
+}
+.icon-rating {
+    &:before {
+        content: $icon-rating;
+        color: #facd49;
+    }
+}
+.icon-suitcase {
+    &:before {
+        content: $icon-suitcase;
+        color: #f85e9f;
+    }
+}
+.icon-user-add {
+    &:before {
+        content: $icon-user-add;
+        color: #fff;
+    }
+}
