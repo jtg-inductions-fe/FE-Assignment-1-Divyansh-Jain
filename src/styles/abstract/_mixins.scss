@@ -1,4 +1,4 @@
-@use 'breakpoints';
+@use './breakpoint';
 
 @mixin media-query($screen) {
     @if map-has-key($map: $breakpoints, $key: $screen) {
