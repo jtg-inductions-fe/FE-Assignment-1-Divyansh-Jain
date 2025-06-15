@@ -10,37 +10,42 @@
 .navbar {
     a {
         text-decoration: none;
-        color: inherit;
+    }
+    li {
+        width: 90vw;
     }
     &_nav-links {
-        color: $black-50;
+        display: none;
+        a {
+            color: $black-50;
+        }
         a:hover {
             color: $black;
         }
         order: 3;
     }
     &_auth-links {
+        display: none;
         order: 4;
+    }
+    li {
+        list-style-type: none;
+        text-align: center;
+        margin-top: 1rem;
     }
     ul {
         margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-    li {
-        margin-top: 0.5rem;
-        text-align: center;
-        width: 100vw;
     }
     &_signup {
         font-size: 14px;
-        // font-family: 'roboto-medium';
-        padding: 0.8rem 1.6rem;
-        border-radius: 10rem;
+        padding: 16px 35px;
+        border-radius: 100px;
     }
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1192px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @include media-query('md') {
@@ -51,6 +56,7 @@
         order: 4;
     }
     .navbar_auth-links {
+        display: block;
         order: 3;
         li {
             display: inline;
@@ -60,13 +66,26 @@
 }
 
 @include media-query('lg') {
+    header {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    .navbar {
+        margin: auto;
+    }
     .navbar_logo {
         order: 1;
     }
     .navbar_nav-links {
+        padding-right: 30px;
+        display: flex;
         order: 2;
+        gap: 4rem;
     }
     .navbar_auth-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
         order: 3;
     }
     #hamburger-btn {
@@ -78,5 +97,6 @@
             display: inline;
             width: auto;
         }
+        gap: 1rem;
     }
 }
