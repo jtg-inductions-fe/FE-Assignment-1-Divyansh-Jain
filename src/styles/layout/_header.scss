@@ -1,1 +1,82 @@
 //TODO
+@use '../abstract/index.scss' as *;
+@use '../components/index' as *;
+@use '../components/button' as *;
+#hamburger-btn {
+    border: none;
+    background: none;
+}
+
+.navbar {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    &_nav-links {
+        color: $black-50;
+        a:hover {
+            color: $black;
+        }
+        order: 3;
+    }
+    &_auth-links {
+        order: 4;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li {
+        margin-top: 0.5rem;
+        text-align: center;
+        width: 100vw;
+    }
+    &_signup {
+        font-size: 14px;
+        // font-family: 'roboto-medium';
+        padding: 0.8rem 1.6rem;
+        border-radius: 10rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@include media-query('md') {
+    .navbar_logo {
+        order: 2;
+    }
+    .navbar_nav-links {
+        order: 4;
+    }
+    .navbar_auth-links {
+        order: 3;
+        li {
+            display: inline;
+            width: auto;
+        }
+    }
+}
+
+@include media-query('lg') {
+    .navbar_logo {
+        order: 1;
+    }
+    .navbar_nav-links {
+        order: 2;
+    }
+    .navbar_auth-links {
+        order: 3;
+    }
+    #hamburger-btn {
+        order: 4;
+        display: none;
+    }
+    .navbar {
+        li {
+            display: inline;
+            width: auto;
+        }
+    }
+}

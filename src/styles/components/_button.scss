@@ -1,1 +1,7 @@
 // TODO button component
+@use '../abstract/index' as *;
+
+.primary-btn {
+    background-color: $purple;
+    color: $light;
+}
