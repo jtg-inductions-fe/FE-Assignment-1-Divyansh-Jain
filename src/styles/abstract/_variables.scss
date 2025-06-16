@@ -1,3 +1,5 @@
+@use './colors' as *;
+
 // icomoon path and family name
 $icomoon-font-family: 'icomoon';
 $icomoon-font-path: '../assets/icomoon';
@@ -30,26 +32,121 @@ $breakpoints: (
 
 //fonts map
 $fonts-map: (
-        'name': 'inter-400',
+        'name': 'inter',
         'source': '../../assets/fonts/inter/400/Inter-Medium.ttf',
         'weight': 400,
         'style': 'normal',
+        'color': $midnight-express-50,
     ),
     (
-        'name': 'circular-std-400',
+        'name': 'inter',
+        'source': '../../assets/fonts/inter/400/Inter-Medium.ttf',
+        'weight': 400,
+        'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': 'circular-std',
         'source': '../../assets/fonts/circular-std/400/CircularStd-Medium.ttf',
         'weight': 400,
         'style': 'normal',
+        'color': $midnight-express-75,
     ),
     (
-        'name': 'circular-std-700',
+        'name': 'circular-std',
         'source': '../../assets/fonts/circular-std/400/CircularStd-Bold.ttf',
-        'weight': 400,
+        'weight': 700,
         'style': 'normal',
+        'color': $midnight-express-75,
     ),
     (
-        'name': 'circular-std-900',
+        'name': 'circular-std',
         'source': '../../assets/fonts/circular-std/400/CircularStd-Black.ttf',
         'weight': 900,
         'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Medium.ttf',
+        'weight': 400,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Bold.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Black.ttf',
+        'weight': 900,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Medium.ttf',
+        'weight': 400,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Bold.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Black.ttf',
+        'weight': 900,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Medium.ttf',
+        'weight': 400,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Bold.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Black.ttf',
+        'weight': 900,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Medium.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $black-pearl,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Bold.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $white-smoke,
+    ),
+    (
+        'name': 'circular-std',
+        'source': '../../assets/fonts/circular-std/400/CircularStd-Black.ttf',
+        'weight': 700,
+        'style': 'normal',
+        'color': $outrageous-orange,
     );

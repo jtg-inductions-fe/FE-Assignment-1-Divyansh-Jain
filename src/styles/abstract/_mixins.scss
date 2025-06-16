@@ -11,12 +11,13 @@
 }
 
 // font face mixin
-@mixin font-face($name, $source, $weight, $style: 'normal') {
+@mixin font-face($name, $source, $weight, $style: 'normal', $color: 'black') {
     @font-face {
         font-family: $name;
         src: url($source) format('truetype');
         font-weight: $weight;
         font-style: $style;
+        color: $color;
         display: swap;
     }
 }

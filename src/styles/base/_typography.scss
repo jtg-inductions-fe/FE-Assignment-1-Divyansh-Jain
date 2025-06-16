@@ -5,6 +5,8 @@
     @include font-face(
         map.get($font, 'name'),
         map.get($font, 'source'),
-        map.get($font, 'weight') map.get($font, 'style')
+        map.get($font, 'weight'),
+        map.get($font, 'style'),
+        map.get($font, 'color')
     );
 }
