@@ -16,12 +16,13 @@
         width: 90vw;
     }
     &_nav-links {
+        font-size: 16px;
         display: none;
         a {
-            color: $black-50;
+            color: $midnight-express-50;
         }
         a:hover {
-            color: $black;
+            color: $midnight-express;
         }
         order: 3;
     }

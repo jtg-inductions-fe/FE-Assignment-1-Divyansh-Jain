@@ -1,6 +1,8 @@
+@use './colors' as *;
+
 // icomoon path and family name
-$icomoon-font-family: 'icomoon' !default;
-$icomoon-font-path: '../assets/icomoon' !default;
+$icomoon-font-family: 'icomoon';
+$icomoon-font-path: '../assets/icomoon';
 
 // icomoon content variables
 $icon-instagram: '\e90b';
@@ -17,20 +19,140 @@ $icon-rating: '\e908';
 $icon-suitcase: '\e909';
 $icon-user-add: '\e90a';
 
-//box shadow for services section
-$services-card-shadow-blur: 89px;
-$services-card-shadow-y: 41px;
-$services-card-shadow-color: rgba(0, 0, 0, 0.1);
+// service card shadow (h v blure spread color)
+$service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
 
-//roboto font
+// breakpoints for different device sizes
 
-$fonts: (
-        'name': 'roboto-medium',
-        'src': '../../assets/fonts/roboto/Roboto-Regular.ttf',
-        'wt': 400,
+$breakpoints: (
+    'md': 768px,
+    'lg': 1208px,
+);
+
+$font-path: '../../assets/fonts';
+$inter: 'inter';
+$circular-std: 'circular-std';
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+//fonts map
+$fonts-map: (
+        'name': $inter,
+        'source': '#{$font-path}/inter/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $midnight-express-50,
     ),
     (
-        'name': 'roboto-bold',
-        'src': '../../assets/fonts/roboto/Roboto-Bold.ttf',
-        'wt': 700,
+        'name': $inter,
+        'source': '#{$font-path}/inter/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/900.ttf',
+        'weight': $font-weight-black,
+        'style': 'normal',
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/900.ttf',
+        'weight': $font-weight-black,
+        'style': 'normal',
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/900.ttf',
+        'weight': $font-weight-black,
+        'style': 'normal',
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/400.ttf',
+        'weight': $font-weight-normal,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/900.ttf',
+        'weight': $font-weight-black,
+        'style': 'normal',
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $black-pearl,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $white-smoke,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/circular-std/700.ttf',
+        'weight': $font-weight-bold,
+        'style': 'normal',
+        'color': $outrageous-orange,
     );

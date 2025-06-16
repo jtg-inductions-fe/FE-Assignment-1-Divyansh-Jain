@@ -1,5 +1,4 @@
 import '../styles/main.scss';
-console.log('console log ');
 
 const hamburgerBtn = document.getElementById('hamburger-btn');
 let isMenuOpen = false;

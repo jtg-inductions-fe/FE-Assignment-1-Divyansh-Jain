@@ -2,11 +2,11 @@
 @use '../abstract/index' as *;
 
 .primary-btn {
-    background-color: $purple;
-    color: $light;
+    background-color: $state-blue;
+    color: $white-smoke;
 }
 
 .ghost-btn {
     background-color: inherit;
-    color: $dark;
+    color: $black-pearl;
 }
