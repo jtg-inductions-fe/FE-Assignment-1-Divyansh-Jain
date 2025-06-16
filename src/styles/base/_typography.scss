@@ -1,5 +1,6 @@
 @use '../abstract/index' as *;
 
+// Creation of Font face for all the fonts present in fonts-map
 @each $font in $fonts {
     @include font-face(
         map.get($font, 'name'),

@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use 'sass:map';
 
+// mixin for media-query takes screen size as argument(e.g sm,md,lg)
 @mixin media-query($screen) {
     @if map-has-key($map: $breakpoints, $key: $screen) {
         @media (min-width: map.get($breakpoints,$screen)) {
@@ -9,6 +10,7 @@
     }
 }
 
+// font face mixin
 @mixin font-face($name, $source, $weight, $style: 'normal') {
     @font-face {
         font-family: $name;
