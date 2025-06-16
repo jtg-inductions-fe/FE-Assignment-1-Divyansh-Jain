@@ -25,7 +25,6 @@ $service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
 // breakpoints for different device sizes
 
 $breakpoints: (
-    'sm': 430px,
     'md': 768px,
     'lg': 1200px,
 );
@@ -33,7 +32,7 @@ $breakpoints: (
 $font-path: '../../assets/fonts';
 $inter: 'inter';
 $circular-std: 'circular-std';
-$font-weight-regular: 400;
+$font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
@@ -41,21 +40,21 @@ $font-weight-black: 900;
 $fonts-map: (
         'name': $inter,
         'source': '#{$font-path}/inter/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $midnight-express-50,
     ),
     (
         'name': $inter,
         'source': '#{$font-path}/inter/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $midnight-express-75,
     ),
     (
         'name': $circular-std,
         'source': '#{$font-path}/circular-std/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $midnight-express-75,
     ),
@@ -76,7 +75,7 @@ $fonts-map: (
     (
         'name': $circular-std,
         'source': '#{$font-path}/circular-std/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $midnight-express-50,
     ),
@@ -97,7 +96,7 @@ $fonts-map: (
     (
         'name': $circular-std,
         'source': '#{$font-path}/circular-std/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $midnight-express,
     ),
@@ -118,7 +117,7 @@ $fonts-map: (
     (
         'name': $circular-std,
         'source': '#{$font-path}/circular-std/400.ttf',
-        'weight': $font-weight-regular,
+        'weight': $font-weight-normal,
         'style': 'normal',
         'color': $french-rose,
     ),
