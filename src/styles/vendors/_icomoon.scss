@@ -1,0 +1,113 @@
+@use '../abstract/index' as *;
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0');
+    src:
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0#iefix')
+            format('embedded-opentype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?chion0')
+            format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?chion0')
+            format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?chion0##{$icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+// selects i tags with class icon-*
+i[class^='icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
+        color: $white;
+    }
+}
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+        color: $zircon;
+    }
+}
+.icon-arrow {
+    &:before {
+        content: $icon-arrow;
+        color: $white;
+    }
+}
+.icon-arrow-head {
+    &:before {
+        content: $icon-arrow-head;
+        color: $outrageous-orange;
+    }
+}
+.icon-calendar {
+    &:before {
+        content: $icon-calendar;
+        color: $white;
+    }
+}
+.icon-coupon {
+    &:before {
+        content: $icon-coupon;
+        color: $state-blue;
+    }
+}
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+        color: $state-blue;
+    }
+}
+.icon-location-pointer {
+    &:before {
+        content: $icon-location-pointer;
+        color: $white;
+    }
+}
+.icon-paper-plane {
+    &:before {
+        content: $icon-paper-plane;
+        color: $white;
+    }
+}
+.icon-play {
+    &:before {
+        content: $icon-play;
+        color: $state-blue;
+    }
+}
+.icon-rating {
+    &:before {
+        content: $icon-rating;
+        color: $kournikova;
+    }
+}
+.icon-suitcase {
+    &:before {
+        content: $icon-suitcase;
+        color: $french-rose;
+    }
+}
+.icon-user-add {
+    &:before {
+        content: $icon-user-add;
+        color: $white;
+    }
+}

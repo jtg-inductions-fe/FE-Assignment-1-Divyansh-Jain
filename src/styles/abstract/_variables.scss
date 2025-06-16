@@ -1,0 +1,141 @@
+@use './colors' as *;
+
+// icomoon path and family name
+$icomoon-font-family: 'icomoon';
+$icomoon-font-path: '../assets/icomoon';
+
+// icomoon content variables
+$icon-instagram: '\e90b';
+$icon-twitter: '\e90c';
+$icon-arrow: '\e900';
+$icon-arrow-head: '\e901';
+$icon-calendar: '\e902';
+$icon-coupon: '\e903';
+$icon-facebook: '\e904';
+$icon-location-pointer: '\e905';
+$icon-paper-plane: '\e906';
+$icon-play: '\e907';
+$icon-rating: '\e908';
+$icon-suitcase: '\e909';
+$icon-user-add: '\e90a';
+
+// service card shadow (h v blure spread color)
+$service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
+
+// breakpoints for different device sizes
+
+$breakpoints: (
+    'md': 768px,
+    'lg': 1208px,
+);
+
+$font-path: '../assets/fonts';
+$inter: 'inter';
+$circular-std: 'circular-std';
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+//fonts map
+$fonts-map: (
+        'name': $inter,
+        'source': '#{$font-path}/#{$inter}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $inter,
+        'source': '#{$font-path}/#{$inter}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
+        'weight': $font-weight-black,
+        'color': $midnight-express-75,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
+        'weight': $font-weight-black,
+        'color': $midnight-express-50,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
+        'weight': $font-weight-black,
+        'color': $midnight-express,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
+        'weight': $font-weight-normal,
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
+        'weight': $font-weight-black,
+        'color': $french-rose,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $black-pearl,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $white-smoke,
+    ),
+    (
+        'name': $circular-std,
+        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'weight': $font-weight-bold,
+        'color': $outrageous-orange,
+    );

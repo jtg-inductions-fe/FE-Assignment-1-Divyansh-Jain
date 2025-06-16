@@ -1,0 +1,11 @@
+@use '../abstract/index' as *;
+@use 'sass:map';
+// Creation of Font face for all the fonts present in fonts-map
+@each $font in $fonts-map {
+    @include font-face(
+        map.get($font, 'name'),
+        map.get($font, 'source'),
+        map.get($font, 'weight'),
+        map.get($font, 'color')
+    );
+}
