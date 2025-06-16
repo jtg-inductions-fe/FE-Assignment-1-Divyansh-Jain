@@ -2,6 +2,7 @@
 @use '../abstract/index.scss' as *;
 @use '../components/index' as *;
 @use '../components/button' as *;
+
 #hamburger-btn {
     border: none;
     background: none;
@@ -38,17 +39,20 @@
     }
     &_signup {
         font-size: 14px;
-        padding: 16px 35px;
+        padding: 18px 35px;
         border-radius: 100px;
     }
     display: flex;
     flex-wrap: wrap;
     max-width: 1192px;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 }
 
 @include media-query('md') {
+    header {
+        margin-top: 35px;
+    }
     .navbar_logo {
         order: 2;
     }
@@ -67,13 +71,14 @@
 
 @include media-query('lg') {
     header {
-        margin-top: 50px;
+        margin-top: 67px;
         margin-left: 50px;
     }
     .navbar {
         margin: auto;
     }
     .navbar_logo {
+        padding-top: 2px;
         order: 1;
     }
     .navbar_nav-links {
@@ -87,6 +92,9 @@
         align-items: center;
         gap: 32px;
         order: 3;
+        li {
+            margin: 0;
+        }
     }
     #hamburger-btn {
         order: 4;
