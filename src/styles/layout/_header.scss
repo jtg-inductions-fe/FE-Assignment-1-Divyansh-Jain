@@ -1,4 +1,4 @@
-@use '../base/globals' as *;
+@use '../base/global' as *;
 @use '../abstract/mixins' as *;
 header {
     button {
@@ -8,49 +8,122 @@ header {
 }
 
 .navbar {
-    @extend .flex-row;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    &_nav-links,
+    &_auth-btns {
+        display: none;
+    }
 
     &_nav-links,
     &_auth-btns {
-        @extend .hidden;
+        &--open {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+        }
+    }
+
+    &_nav-links--open {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        height: 60vh;
+    }
+    &_auth-btns--open {
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30vh;
     }
 
     &_auth-btns {
-        a {
-            padding: 16px 35px;
+        &_login,
+        &_signup {
+            padding: 1.8rem 3.1rem;
             border-radius: 100px;
         }
+    }
+
+    .navbar_hamburger-btn {
+        border-radius: 44px;
+        overflow: hidden;
     }
 }
 
 @include media-query('md') {
-    .navbar_nav-links {
-        order: 4;
-    }
-    .navbar_logo {
-        order: 2;
-    }
+    .navbar {
+        margin-top: 51px;
+        margin-left: -5px;
+        padding-inline: 64px;
+        &_nav-links {
+            display: none;
+        }
+        &_logo {
+            order: 2;
+            margin-top: -16px;
+            margin-left: 181px;
+        }
+        &_auth-btns--open,
+        &_auth-btns {
+            all: unset;
+            order: 3;
+            display: block;
+        }
 
-    .navbar_auth-btns {
-        order: 3;
-        display: block;
+        &_nav-links--open {
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &_hamburger-btn {
+            margin-top: -17px;
+            margin-left: 2px;
+        }
     }
 }
 
 @include media-query('lg') {
-    .navbar_logo {
-        order: 1;
-    }
-    .navbar_nav-links {
-        order: 2;
-        display: flex;
-        gap: 6.4rem;
-    }
-    .navbar_auth-btns {
-        order: 3;
-    }
-    .navbar_hamburger-btn {
-        display: none;
+    .navbar {
+        margin-top: 65px;
+        margin-left: 50px;
+        padding-inline: 98px;
+        align-items: center;
+        &_logo {
+            order: 1;
+            margin-top: 0;
+            margin-left: 0;
+        }
+        &_nav-links,
+        &_nav-links--open {
+            all: unset;
+            list-style-type: none;
+            order: 2;
+            display: flex;
+            //64px
+            gap: 6.4rem;
+        }
+
+        &_auth-btns,
+        &_auth-btns--open {
+            all: unset;
+            display: flex;
+            order: 3;
+        }
+        &_hamburger-btn {
+            display: none;
+            margin-top: 0;
+            margin-left: 0;
+        }
     }
 }
