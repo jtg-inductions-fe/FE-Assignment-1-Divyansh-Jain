@@ -1,111 +1,56 @@
-//TODO
-@use '../abstract/index.scss' as *;
-@use '../components/index' as *;
-@use '../components/button' as *;
-
-#hamburger-btn {
-    border: none;
-    background: none;
+@use '../base/globals' as *;
+@use '../abstract/mixins' as *;
+header {
+    button {
+        border: none;
+        background: none;
+    }
 }
 
 .navbar {
-    a {
-        text-decoration: none;
-    }
-    li {
-        width: 90vw;
-    }
-    &_nav-links {
-        font-size: 16px;
-        display: none;
-        a {
-            color: $midnight-express-50;
-        }
-        a:hover {
-            color: $midnight-express;
-        }
-        order: 3;
-    }
-    &_auth-links {
-        display: none;
-        order: 4;
-    }
-    li {
-        list-style-type: none;
-        text-align: center;
-        margin-top: 1rem;
-    }
-    ul {
-        margin: 0;
-    }
-    &_signup {
-        font-size: 14px;
-        padding: 18px 35px;
-        border-radius: 100px;
-    }
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1192px;
+    @extend .flex-row;
     justify-content: space-between;
-    // align-items: center;
+
+    &_nav-links,
+    &_auth-btns {
+        @extend .hidden;
+    }
+
+    &_auth-btns {
+        a {
+            padding: 16px 35px;
+            border-radius: 100px;
+        }
+    }
 }
 
 @include media-query('md') {
-    header {
-        margin-top: 35px;
+    .navbar_nav-links {
+        order: 4;
     }
     .navbar_logo {
         order: 2;
     }
-    .navbar_nav-links {
-        order: 4;
-    }
-    .navbar_auth-links {
-        display: block;
+
+    .navbar_auth-btns {
         order: 3;
-        li {
-            display: inline;
-            width: auto;
-        }
+        display: block;
     }
 }
 
 @include media-query('lg') {
-    header {
-        margin-top: 67px;
-        margin-left: 50px;
-    }
-    .navbar {
-        margin: auto;
-    }
     .navbar_logo {
-        padding-top: 2px;
         order: 1;
     }
     .navbar_nav-links {
-        padding-right: 30px;
-        display: flex;
         order: 2;
-        gap: 4rem;
-    }
-    .navbar_auth-links {
         display: flex;
-        align-items: center;
-        gap: 32px;
+        gap: 6.4rem;
+    }
+    .navbar_auth-btns {
         order: 3;
-        li {
-            margin: 0;
-        }
     }
-    #hamburger-btn {
-        order: 4;
+    .navbar_hamburger-btn {
         display: none;
-    }
-    .navbar {
-        li {
-            display: inline;
-            width: auto;
-        }
-        gap: 1rem;
     }
 }

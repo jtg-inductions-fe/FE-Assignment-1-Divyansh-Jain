@@ -1,5 +1,4 @@
-
-### Assignment 1 By Divyansh Jain 
+### Assignment 1 By Divyansh Jain
 
 ## Getting Started
 

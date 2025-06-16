@@ -12,34 +12,59 @@
     </head>
 
     <body>
-        <!-- <div>
-            <i class="icon-arrow-head"></i>
-            <span id="dummy-text">Arrow With Primary color</span>
-        </div> -->
-        <header>
-            <nav class="navbar">
-                <a href="" class="navbar_logo"
-                    ><img src="src/assets/images/logo.svg" alt=""
-                /></a>
-                <ul class="navbar_nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Special Deals</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-                <ul class="navbar_auth-links">
-                    <li>
-                        <a href="" class="ghost-btn navbar_login">Log In</a>
-                    </li>
-                    <li>
-                        <a href="" class="primary-btn navbar_signup">Sign Up</a>
-                    </li>
-                </ul>
-                <button id="hamburger-btn">
-                    <img src="src/assets/images/hamburger-btn.png" alt="" />
-                </button>
-            </nav>
-        </header>
+        <div class="container">
+            <header>
+                <nav class="navbar">
+                    <a href="" class="navbar_logo">
+                        <img src="src/assets/images/logo.svg" alt="" />
+                    </a>
+                    <ul class="navbar_nav-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li><a href="">Special Deals</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <div class="navbar_auth-btns">
+                        <a href="" class="navbar_auth-btns_login ghost-btn">
+                            Log In
+                        </a>
+                        <a href="" class="navbar_auth-btns_sign-up primary-btn">
+                            Sign Up
+                        </a>
+                    </div>
+                    <button class="navbar_hamburger-btn">
+                        <img
+                            src="src/assets/images/hamburger-btn.png"
+                            alt=""
+                            class="navbar_hamburger-btn--open"
+                        />
+                        <img
+                            src="src/assets/images/menu-close.png"
+                            alt=""
+                            class="navbar_hamburger-btn--close hidden"
+                        />
+                    </button>
+                </nav>
+            </header>
+            <section class="hero-section">
+                <div class="hero-section_text-content">
+                    <p class="hero-section_text-content_heading">
+                        Travel top destination of the world
+                    </p>
+                    <p>
+                        We always make our customer happy by providing as many
+                        choices as possible
+                    </p>
+                    <div class="hero-section_text-content_call-to-action">
+                        <button>Get Started</button>
+                        <button>Watch Demo</button>
+                    </div>
+                </div>
+                <div class="hero-section_hero-image hidden">
+                    <img src="src/assets/images/hero-image.png" alt="" />
+                </div>
+            </section>
+        </div>
 
         <script type="module" src="./src/script/index.js"></script>
     </body>
