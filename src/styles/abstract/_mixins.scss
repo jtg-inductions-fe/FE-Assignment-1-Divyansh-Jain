@@ -1,4 +1,4 @@
-@use './breakpoint' as *;
+@use './variables' as *;
 @use 'sass:map';
 
 @mixin media-query($screen) {
@@ -9,11 +9,12 @@
     }
 }
 
-@mixin font-face($name, $src, $wt) {
+@mixin font-face($name, $source, $weight, $style: 'normal') {
     @font-face {
         font-family: $name;
-        src: url($src) format('truetype');
-        font-weight: $wt;
+        src: url($source) format('truetype');
+        font-weight: $weight;
+        font-style: $style;
         display: swap;
     }
 }

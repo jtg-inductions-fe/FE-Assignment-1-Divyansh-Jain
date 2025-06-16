@@ -1,2 +1,2 @@
 import '../styles/main.scss';
-console.log('console log ');
+console.log('Assignment 1 Base Setup');

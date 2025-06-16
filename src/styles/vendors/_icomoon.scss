@@ -17,7 +17,7 @@
     font-display: block;
 }
 
-i {
+i[class^='icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: '#{$icomoon-font-family}' !important;
 
@@ -35,78 +35,78 @@ i {
 .icon-instagram {
     &:before {
         content: $icon-instagram;
-        color: #fff;
+        color: $white;
     }
 }
 .icon-twitter {
     &:before {
         content: $icon-twitter;
-        color: #f1f2f2;
+        color: $zircon;
     }
 }
 .icon-arrow {
     &:before {
         content: $icon-arrow;
-        color: #fff;
+        color: $white;
     }
 }
 .icon-arrow-head {
     &:before {
         content: $icon-arrow-head;
-        color: #ff5722;
+        color: $outrageous-orange;
     }
 }
 .icon-calendar {
     &:before {
         content: $icon-calendar;
-        color: #fff;
+        color: $white;
     }
 }
 .icon-coupon {
     &:before {
         content: $icon-coupon;
-        color: #fff;
+        color: $state-blue;
     }
 }
 .icon-facebook {
     &:before {
         content: $icon-facebook;
-        color: #5d50c6;
+        color: $state-blue;
     }
 }
 .icon-location-pointer {
     &:before {
         content: $icon-location-pointer;
-        color: #fff;
+        color: $white;
     }
 }
 .icon-paper-plane {
     &:before {
         content: $icon-paper-plane;
-        color: #fff;
+        color: $white;
     }
 }
 .icon-play {
     &:before {
         content: $icon-play;
-        color: #5d50c6;
+        color: $state-blue;
     }
 }
 .icon-rating {
     &:before {
         content: $icon-rating;
-        color: #facd49;
+        color: $Kournikova;
     }
 }
 .icon-suitcase {
     &:before {
         content: $icon-suitcase;
-        color: #f85e9f;
+        color: $french-rose;
     }
 }
 .icon-user-add {
     &:before {
         content: $icon-user-add;
-        color: #fff;
+        color: $white;
     }
 }
