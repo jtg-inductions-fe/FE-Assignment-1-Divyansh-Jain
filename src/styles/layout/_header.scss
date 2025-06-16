@@ -2,7 +2,9 @@
 
 // dummy styles
 
+@use '../abstract/index' as *;
 #dummy-text-rem {
+    font-family: inter, monospace;
     padding: 3rem;
     font-size: 3rem;
 }
@@ -10,4 +12,22 @@
 #dummy-text-px {
     font-size: 30px;
     padding: 30px;
+}
+
+@include media-query('md') {
+    #dummy-text-px {
+        color: $state-blue;
+    }
+    #dummy-text-rem {
+        color: $black-pearl;
+    }
+}
+
+@include media-query('lg') {
+    #dummy-text-rem {
+        color: $state-blue;
+    }
+    #dummy-text-px {
+        color: $black-pearl;
+    }
 }

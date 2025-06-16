@@ -16,7 +16,7 @@
         font-family: $name;
         src: url($source) format('truetype');
         font-weight: $weight;
-        font-style: $style;
+        // font-style: $style;
         color: $color;
     }
 }
