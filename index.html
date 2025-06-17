@@ -12,62 +12,52 @@
     </head>
 
     <body>
+        <!-- container is used to provide base margin  -->
         <div class="container">
             <header>
                 <nav class="navbar">
-                    <a href="" class="navbar_logo">
-                        <img src="src/assets/images/logo.svg" alt="" />
+                    <a href="/" class="navbar_logo">
+                        <img
+                            src="src/assets/images/logo.svg"
+                            alt="Travlog Website Logo purplish circle three white stripes on top"
+                        />
                     </a>
                     <ul class="navbar_nav-links">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Discover</a></li>
-                        <li><a href="">Special Deals</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#discover">Discover</a></li>
+                        <li><a href="#specials-deals">Special Deals</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <div class="navbar_auth-btns">
-                        <a href="" class="navbar_auth-btns_login ghost-btn">
+                        <!-- javascript:void(0) is used to disable action on link click -->
+                        <a
+                            href="javascript:void(0)"
+                            class="navbar_auth-btns_login ghost-btn"
+                        >
                             Log In
                         </a>
-                        <a href="" class="navbar_auth-btns_signup primary-btn">
+
+                        <a
+                            href="javascript:void(0)"
+                            class="navbar_auth-btns_signup primary-btn"
+                        >
                             Sign Up
                         </a>
                     </div>
                     <button class="navbar_hamburger-btn">
                         <img
                             src="src/assets/images/hamburger-btn.png"
-                            alt=""
+                            alt="icon with three white horizontal stripes used for opening of menu"
                             class="navbar_hamburger-btn--open"
-                            height="40px"
-                            width="40px"
                         />
                         <img
                             src="src/assets/images/menu-close.png"
-                            alt=""
+                            alt="a cross for closing the menu"
                             class="navbar_hamburger-btn--close hidden"
-                            height="40px"
-                            width="40px"
                         />
                     </button>
                 </nav>
             </header>
-            <!-- <section class="hero-section">
-                <div class="hero-section_text-content">
-                    <p class="hero-section_text-content_heading">
-                        Travel top destination of the world
-                    </p>
-                    <p>
-                        We always make our customer happy by providing as many
-                        choices as possible
-                    </p>
-                    <div class="hero-section_text-content_call-to-action">
-                        <button>Get Started</button>
-                        <button>Watch Demo</button>
-                    </div>
-                </div>
-                <div class="hero-section_hero-image ">
-                    <img src="src/assets/images/hero-image.png" alt="" />
-                </div>
-            </section> -->
         </div>
 
         <script type="module" src="./src/script/index.js"></script>

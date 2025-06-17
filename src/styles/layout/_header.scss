@@ -1,5 +1,8 @@
 @use '../base/global' as *;
 @use '../abstract/index' as *;
+
+// --open is in this file to represent the open state of menu
+
 header {
     button {
         border: none;
@@ -12,15 +15,28 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 38px;
+
     &_nav-links,
     &_auth-btns {
         display: none;
     }
 
     &_nav-links,
+    &_nav-links--open {
+        a:hover {
+            // adding hover effect on nav-links
+            color: $black-pearl;
+        }
+    }
+
+    li {
+        color: $midnight-express-50;
+    }
+    &_nav-links,
     &_auth-btns {
         font-size: 14px;
         &--open {
+            // common styles of nav-links and auth-btns for opened state of the menu
             font-size: 14px;
             display: flex;
             flex-direction: column;
@@ -28,12 +44,14 @@ header {
             position: absolute;
             align-items: center;
             width: 100vw;
+            // z-index is used to hide content behind the menu
             z-index: 2;
             background-color: white;
         }
     }
 
     &_nav-links--open {
+        // position in nav-links in navbar open state
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
@@ -41,6 +59,7 @@ header {
         height: 60vh;
     }
     &_auth-btns--open {
+        // positioning of auth-btns in navbar open state
         top: 70%;
         left: 50%;
         transform: translateX(-50%);
@@ -50,15 +69,11 @@ header {
     &_auth-btns {
         &_login,
         &_signup {
+            // giving padding to both signup and login btns
             font-size: 14px;
             padding: 1.7rem 3.2rem;
             border-radius: 100px;
         }
-    }
-
-    .navbar_hamburger-btn {
-        border-radius: 44px;
-        overflow: hidden;
     }
 }
 
@@ -77,8 +92,8 @@ header {
         }
         &_auth-btns--open,
         &_auth-btns {
+            // reseting changes made for mobile view only
             all: unset;
-            font-family: 'circular-std';
             margin-top: 3px;
             font-size: 14px;
             font-weight: 700;
@@ -89,6 +104,7 @@ header {
         }
 
         &_nav-links--open {
+            //nav-links styles for  open state of menu
             display: flex;
             flex-direction: column;
             height: 90vh;
@@ -118,30 +134,26 @@ header {
             margin-top: 0;
             margin-left: 0;
         }
+
         &_nav-links,
         &_nav-links--open {
+            // reseting changes made for mobile view and desktop view
             all: unset;
-            font-family: 'circular-std';
+
             margin-top: 3px;
             font-size: 14px;
             font-weight: 700;
-            a {
-                color: $midnight-express-50;
-            }
-            a:hover {
-                color: $black-pearl;
-            }
             list-style-type: none;
             order: 2;
             display: flex;
             //64px
             gap: 6.4rem;
         }
-
+        // styles for  both open state and non-open state is commmon  at some places to handle the edge case of user resizing in open/close state
         &_auth-btns,
         &_auth-btns--open {
+            // reseting changes made for mobile view and desktop view
             all: unset;
-            font-family: 'circular-std';
             font-weight: 700;
             color: $midnight-express-50;
             display: flex;
