@@ -16,13 +16,13 @@ header {
     flex-wrap: wrap;
     margin-top: 38px;
 
-    &_nav-links,
-    &_auth-btns {
+    &__nav-links,
+    &__auth-btns {
         display: none;
     }
 
-    &_nav-links,
-    &_nav-links--open {
+    &__nav-links,
+    &__nav-links--open {
         a:hover {
             // adding hover effect on nav-links
             color: $black-pearl;
@@ -32,8 +32,8 @@ header {
     li {
         color: $midnight-express-50;
     }
-    &_nav-links,
-    &_auth-btns {
+    &__nav-links,
+    &__auth-btns {
         font-size: 14px;
         &--open {
             // common styles of nav-links and auth-btns for opened state of the menu
@@ -50,7 +50,7 @@ header {
         }
     }
 
-    &_nav-links--open {
+    &__nav-links--open {
         // position in nav-links in navbar open state
         top: 10%;
         left: 50%;
@@ -58,7 +58,7 @@ header {
         text-align: center;
         height: 60vh;
     }
-    &_auth-btns--open {
+    &__auth-btns--open {
         // positioning of auth-btns in navbar open state
         top: 70%;
         left: 50%;
@@ -66,9 +66,9 @@ header {
         height: 30vh;
     }
 
-    &_auth-btns {
-        &_login,
-        &_signup {
+    &__auth-btns {
+        &__login,
+        &__signup {
             // giving padding to both signup and login btns
             font-size: 14px;
             padding: 1.7rem 3.2rem;
@@ -82,16 +82,16 @@ header {
         margin-top: 51px;
         margin-left: -5px;
 
-        &_nav-links {
+        &__nav-links {
             display: none;
         }
-        &_logo {
+        &__logo {
             order: 2;
             margin-top: -16px;
             margin-left: 181px;
         }
-        &_auth-btns--open,
-        &_auth-btns {
+        &__auth-btns--open,
+        &__auth-btns {
             // reseting changes made for mobile view only
             all: unset;
             margin-top: 3px;
@@ -103,7 +103,7 @@ header {
             display: block;
         }
 
-        &_nav-links--open {
+        &__nav-links--open {
             //nav-links styles for  open state of menu
             display: flex;
             flex-direction: column;
@@ -115,7 +115,7 @@ header {
             transform: translateX(-50%);
         }
 
-        &_hamburger-btn {
+        &__hamburger-btn {
             margin-top: -17px;
             margin-left: 2px;
         }
@@ -129,14 +129,14 @@ header {
         margin-top: 65px;
         margin-left: 26px;
         align-items: center;
-        &_logo {
+        &__logo {
             order: 1;
             margin-top: 0;
             margin-left: 0;
         }
 
-        &_nav-links,
-        &_nav-links--open {
+        &__nav-links,
+        &__nav-links--open {
             // reseting changes made for mobile view and desktop view
             all: unset;
 
@@ -150,8 +150,8 @@ header {
             gap: 6.4rem;
         }
         // styles for  both open state and non-open state is commmon  at some places to handle the edge case of user resizing in open/close state
-        &_auth-btns,
-        &_auth-btns--open {
+        &__auth-btns,
+        &__auth-btns--open {
             // reseting changes made for mobile view and desktop view
             all: unset;
             font-weight: 700;
@@ -159,7 +159,7 @@ header {
             display: flex;
             order: 3;
         }
-        &_hamburger-btn {
+        &__hamburger-btn {
             display: none;
             margin-top: 0;
             margin-left: 0;
