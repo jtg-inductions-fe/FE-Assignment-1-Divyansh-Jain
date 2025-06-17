@@ -1,1 +1,145 @@
 //TODO : Styles For Hero Section
+@use '../components/index' as *;
+@use '../abstract/index' as *;
+@use '../base/index' as *;
+
+.hero {
+    margin-top: 6rem;
+    @include flex-property($direction: column, $align-items: center);
+
+    &__image {
+        width: 404.29px;
+        height: 415px;
+    }
+    &__chip {
+        @extend .chip;
+        @include font-property($size: $text-sm);
+        padding: 1.6rem 3.2rem;
+        border-radius: 10rem;
+    }
+    &__buttons {
+        width: 100%;
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: 2.4rem
+        );
+        &__get-started {
+            @extend .primary-btn;
+            border: none;
+        }
+        &__watch-demo {
+            @extend .secondary-outline-btn;
+            @include flex-property(
+                $align-items: center,
+                $gap: 0.8rem,
+                $justify-content: center
+            );
+        }
+
+        button {
+            width: 100%;
+            padding: 2.4rem 3.2rem;
+            border-radius: 10rem;
+        }
+    }
+
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: 3.2rem
+        );
+        &__heading {
+            @include font-property(
+                $weight: 700,
+                $size: $hero-heading-sm,
+                $line-height: 1.2em
+            );
+            @include text-property($wrap: wrap, $align: center);
+        }
+
+        &__description {
+            @include font-property(
+                $family: 'inter',
+                $weight: 400,
+                $size: 16px,
+                $color: $midnight-express-50,
+                $line-height: 1.6em
+            );
+            @include text-property($wrap: wrap, $align: center);
+        }
+    }
+
+    @include media-query('md') {
+        &__image {
+            width: 799px;
+            height: 819px;
+        }
+        &__text-content {
+            @include flex-property(
+                $direction: column,
+                $align-items: center,
+                $gap: 4.3rem
+            );
+        }
+        &__text-content__heading {
+            @include font-property(
+                $weight: 700,
+                $size: $hero-heading-md,
+                $line-height: 1.2em
+            );
+            @include text-property($wrap: balance, $align: center);
+        }
+        &__text-content__description {
+            @include font-property(
+                $family: 'inter',
+                $weight: 400,
+                $size: $text-md,
+                $color: $midnight-express-50,
+                $line-height: 1.6em
+            );
+            @include text-property($wrap: wrap, $align: center);
+        }
+
+        &__buttons {
+            width: max-content;
+            @include flex-property($gap: 1.6rem);
+            button {
+                width: max-content;
+                padding: 1.6rem 3.2rem;
+                border-radius: 10rem;
+            }
+        }
+    }
+
+    @include media-query('lg') {
+        @include flex-property($direction: row-reverse);
+        &__text-content {
+            @include flex-property(
+                $direction: column,
+                $align-items: flex-start,
+                $gap: 4.3rem
+            );
+        }
+        &__text-content__heading {
+            @include font-property(
+                $weight: 700,
+                $size: $hero-heading-lg,
+                $line-height: 1.2em
+            );
+            @include text-property($wrap: balance, $align: left);
+        }
+
+        &__text-content__description {
+            @include font-property(
+                $family: 'inter',
+                $weight: 400,
+                $size: $text-md,
+                $color: $midnight-express-50,
+                $line-height: 1.6em
+            );
+            @include text-property($wrap: wrap, $align: left);
+        }
+    }
+}
