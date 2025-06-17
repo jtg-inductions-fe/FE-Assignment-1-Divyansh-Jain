@@ -1,5 +1,5 @@
 @use '../base/global' as *;
-@use '../abstract/mixins' as *;
+@use '../abstract/index' as *;
 header {
     button {
         border: none;
@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 35px;
+    margin-top: 38px;
     &_nav-links,
     &_auth-btns {
         display: none;
@@ -19,11 +19,17 @@ header {
 
     &_nav-links,
     &_auth-btns {
+        font-size: 14px;
         &--open {
+            font-size: 14px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             position: absolute;
+            align-items: center;
+            width: 100vw;
+            z-index: 2;
+            background-color: white;
         }
     }
 
@@ -44,7 +50,8 @@ header {
     &_auth-btns {
         &_login,
         &_signup {
-            padding: 1.8rem 3.1rem;
+            font-size: 14px;
+            padding: 1.7rem 3.2rem;
             border-radius: 100px;
         }
     }
@@ -59,7 +66,7 @@ header {
     .navbar {
         margin-top: 51px;
         margin-left: -5px;
-        padding-inline: 64px;
+
         &_nav-links {
             display: none;
         }
@@ -71,6 +78,12 @@ header {
         &_auth-btns--open,
         &_auth-btns {
             all: unset;
+            font-family: 'circular-std';
+            margin-top: 3px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: -1px;
+            margin-left: 6px;
             order: 3;
             display: block;
         }
@@ -95,9 +108,10 @@ header {
 
 @include media-query('lg') {
     .navbar {
+        padding-inline: 0;
+        margin-inline-end: -22px;
         margin-top: 65px;
-        margin-left: 50px;
-        padding-inline: 98px;
+        margin-left: 26px;
         align-items: center;
         &_logo {
             order: 1;
@@ -107,6 +121,16 @@ header {
         &_nav-links,
         &_nav-links--open {
             all: unset;
+            font-family: 'circular-std';
+            margin-top: 3px;
+            font-size: 14px;
+            font-weight: 700;
+            a {
+                color: $midnight-express-50;
+            }
+            a:hover {
+                color: $black-pearl;
+            }
             list-style-type: none;
             order: 2;
             display: flex;
@@ -117,6 +141,9 @@ header {
         &_auth-btns,
         &_auth-btns--open {
             all: unset;
+            font-family: 'circular-std';
+            font-weight: 700;
+            color: $midnight-express-50;
             display: flex;
             order: 3;
         }

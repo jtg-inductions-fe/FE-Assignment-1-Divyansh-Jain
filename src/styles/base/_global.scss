@@ -1,5 +1,21 @@
 //TODO : global classes are going to be defined here
+@use '../abstract/index' as *;
 .container {
+    margin-inline: 16px;
+    max-width: calc(100vw - 32px);
+}
+
+@include media-query('md') {
+    .container {
+        margin-inline: 64px;
+        max-width: calc(100vw - 128px);
+    }
+}
+@include media-query('lg') {
+    .container {
+        margin-inline: 124px;
+        max-width: calc(100vw - 248px);
+    }
 }
 
 .full-width {

@@ -13,11 +13,13 @@ menuBtn.addEventListener('click', () => {
         authBtns.className = 'navbar_auth-btns--open';
         menuCloseIcon.className = 'navbar-hamburger-btn--close';
         menuOpenIcon.className = 'navbar-hamburger-btn--open hidden';
+        document.body.style.overflow = 'hidden';
     } else {
         navLinks.className = 'navbar_nav-links';
         authBtns.className = 'navbar_auth-btns';
         menuCloseIcon.className = 'navbar-hamburger-btn--close hidden';
         menuOpenIcon.className = 'navbar-hamburger-btn--open';
+        document.body.style.overflow = 'auto';
     }
     isMenuOpen = !isMenuOpen;
 });
