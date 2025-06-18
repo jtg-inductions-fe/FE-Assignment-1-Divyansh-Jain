@@ -36,6 +36,15 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
+//
+$container-sm: 398;
+$container-md: 896;
+$container-lg: 1193;
+
+$btn-radius: 10rem;
+
+$menu-z-index: 2;
+
 //fonts map
 $fonts-map: (
         'name': $inter,

@@ -1,168 +1,106 @@
-@use '../base/global' as *;
+@use '../base/index' as *;
 @use '../abstract/index' as *;
 
-// --open is in this file to represent the open state of menu
-
-header {
-    button {
-        border: none;
-        background: none;
+a {
+    @include pseudo-interactive-states() {
+        color: $black-pearl;
     }
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 38px;
-
+    $nav: &;
+    margin: 38px 0;
+    @include flex-property(
+        $justify-content: space-between,
+        $align-items: center
+    );
+    //  commented because creating issue with height of container
+    // @include position-property($position : fixed);
+    width: 100%;
+    &__nav-links {
+        @include font-property($size: $text-sm);
+    }
     &__nav-links,
     &__auth-btns {
         display: none;
     }
+    &__auth-btn {
+        padding: px-to-rem(17) px-to-rem(32);
+    }
 
-    &__nav-links,
-    &__nav-links--open {
-        a:hover {
-            // adding hover effect on nav-links
-            color: $black-pearl;
+    &--active {
+        #{$nav}__nav-links,
+        #{$nav}__auth-btns {
+            @include flex-property($direction: column, $gap: px-to-rem(20));
+            background-color: $white;
+            z-index: $menu-z-index;
+        }
+
+        #{$nav}__nav-links {
+            @include position-property(
+                $position: absolute,
+                $top: 15%,
+                $left: 50%,
+                $x: -50%
+            );
+        }
+        #{$nav}__auth-btns {
+            @include position-property(
+                $position: absolute,
+                $top: 30%,
+                $left: 50%,
+                $x: -50%
+            );
         }
     }
-
-    li {
-        color: $midnight-express-50;
-    }
-    &__nav-links,
-    &__auth-btns {
-        font-size: 14px;
-        &--open {
-            // common styles of nav-links and auth-btns for opened state of the menu
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            position: absolute;
-            align-items: center;
-            width: 100vw;
-            // z-index is used to hide content behind the menu
-            z-index: 2;
-            background-color: white;
+    @include media-query('md') {
+        & {
+            margin: 33px 0; // to maintain pixel perfectnesss
         }
-    }
-
-    &__nav-links--open {
-        // position in nav-links in navbar open state
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        height: 60vh;
-    }
-    &__auth-btns--open {
-        // positioning of auth-btns in navbar open state
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 30vh;
-    }
-
-    &__auth-btns {
-        &__login,
-        &__signup {
-            // giving padding to both signup and login btns
-            font-size: 14px;
-            padding: 1.7rem 3.2rem;
-            border-radius: 100px;
-        }
-    }
-}
-
-@include media-query('md') {
-    .navbar {
-        margin-top: 51px;
-        margin-left: -5px;
-
-        &__nav-links {
-            display: none;
-        }
-        &__logo {
-            order: 2;
-            margin-top: -16px;
-            margin-left: 181px;
-        }
-        &__auth-btns--open,
-        &__auth-btns {
-            // reseting changes made for mobile view only
+        #{$nav}__auth-btns {
             all: unset;
-            margin-top: 3px;
-            font-size: 14px;
-            font-weight: 700;
-            margin-top: -1px;
-            margin-left: 6px;
+            @include flex-property();
+
             order: 3;
-            display: block;
         }
 
-        &__nav-links--open {
-            //nav-links styles for  open state of menu
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-            justify-content: space-evenly;
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
+        #{$nav}__logo-wrapper {
+            padding-left: 172px; // to maintain pixel perfectnesss
+            order: 2;
         }
-
-        &__hamburger-btn {
-            margin-top: -17px;
-            margin-left: 2px;
-        }
-    }
-}
-
-@include media-query('lg') {
-    .navbar {
-        padding-inline: 0;
-        margin-inline-end: -22px;
-        margin-top: 65px;
-        margin-left: 26px;
-        align-items: center;
-        &__logo {
+        #{$nav}__menu-btn {
             order: 1;
-            margin-top: 0;
-            margin-left: 0;
         }
+    }
 
-        &__nav-links,
-        &__nav-links--open {
-            // reseting changes made for mobile view and desktop view
-            all: unset;
-
-            margin-top: 3px;
-            font-size: 14px;
-            font-weight: 700;
-            list-style-type: none;
-            order: 2;
-            display: flex;
-            //64px
-            gap: 6.4rem;
+    @include media-query('lg') {
+        & {
+            margin: 67px 0; // to maintain pixel perfectnesss
+            margin-left: 26px; // to maintain pixel perfectnesss
         }
-        // styles for  both open state and non-open state is commmon  at some places to handle the edge case of user resizing in open/close state
-        &__auth-btns,
-        &__auth-btns--open {
-            // reseting changes made for mobile view and desktop view
+        #{$nav}__nav-links {
             all: unset;
-            font-weight: 700;
-            color: $midnight-express-50;
-            display: flex;
-            order: 3;
+            @include flex-property($gap: px-to-rem(64));
+            @include font-property($size: $text-sm);
         }
-        &__hamburger-btn {
+        #{$nav}__menu-btn {
             display: none;
-            margin-top: 0;
-            margin-left: 0;
         }
+
+        #{$nav}__logo-wrapper {
+            order: 1;
+            padding: 0;
+        }
+        #{$nav}__nav-links {
+            order: 2;
+        }
+    }
+
+    &__link {
+        color: $midnight-express-50;
+        min-width: max-content;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
     }
 }

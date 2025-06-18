@@ -2,15 +2,14 @@
 @use '../abstract/index' as *;
 
 .container {
-    margin-inline: 16px;
-    max-width: calc(100vw - 32px);
+    margin: 0 auto;
+    width: 100%;
+    max-width: px-to-rem($container-sm);
     @include media-query('md') {
-        margin-inline: 64px;
-        max-width: calc(100vw - 128px);
+        max-width: px-to-rem($container-md);
     }
     @include media-query('lg') {
-        margin-inline: 124px;
-        max-width: calc(100vw - 248px);
+        max-width: px-to-rem($container-lg);
     }
 }
 

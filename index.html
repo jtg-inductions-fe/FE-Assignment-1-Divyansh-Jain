@@ -12,48 +12,42 @@
     </head>
 
     <body>
-        <!-- container is used to provide base margin  -->
         <div class="container">
+            <!-- HEADER SECTION STARTS HERE  -->
             <header>
-                <nav class="navbar">
-                    <a href="/" class="navbar__logo">
+                <nav class="navbar" id="js-navbar">
+                    <a href="/" class="navbar__logo-wrapper">
                         <img
+                            class="logo-wrapper__image"
                             src="src/assets/images/logo.svg"
-                            alt="Travlog Website Logo purplish circle three white stripes on top"
+                            alt="Travlog logo"
                         />
                     </a>
                     <ul class="navbar__nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#discover">Discover</a></li>
-                        <li><a href="#specials-deals">Special Deals</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="navbar__link"><a href="#home">Home</a></li>
+                        <li class="navbar__link">
+                            <a href="#discover">Discover</a>
+                        </li>
+                        <li class="navbar__link">
+                            <a href="#specials-deals">Special Deals</a>
+                        </li>
+                        <li class="navbar__link">
+                            <a href="#contact">Contact</a>
+                        </li>
                     </ul>
                     <div class="navbar__auth-btns">
-                        <!-- javascript:void(0) is used to disable action on link click -->
-                        <a
-                            href="javascript:void(0)"
-                            class="navbar__auth-btns__login ghost-btn"
-                        >
+                        <button class="navbar__auth-btn btn--ghost">
                             Log In
-                        </a>
-
-                        <a
-                            href="javascript:void(0)"
-                            class="navbar__auth-btns__signup primary-btn"
-                        >
+                        </button>
+                        <button class="navbar__auth-btn btn--primary">
                             Sign Up
-                        </a>
+                        </button>
                     </div>
-                    <button class="navbar__hamburger-btn">
+                    <button class="navbar__menu-btn" id="js-menu-btn">
                         <img
                             src="src/assets/images/hamburger-btn.png"
                             alt="icon with three white horizontal stripes used for opening of menu"
-                            class="navbar__hamburger-btn--open"
-                        />
-                        <img
-                            src="src/assets/images/menu-close.png"
-                            alt="a cross for closing the menu"
-                            class="navbar__hamburger-btn--close hidden"
+                            id="js-menu-icon"
                         />
                     </button>
                 </nav>

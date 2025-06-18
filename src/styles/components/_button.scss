@@ -1,12 +1,40 @@
 // TODO button component
 @use '../abstract/index' as *;
+@use '../base/typography' as *;
+.btn {
+    &--primary {
+        background-color: $state-blue;
+        color: $white-smoke;
+        border: none;
+        border-radius: $btn-radius;
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem($text-sm)
+        );
+    }
 
-.primary-btn {
-    background-color: $state-blue;
-    color: $white-smoke;
-}
+    &--ghost {
+        background-color: inherit;
+        color: $black-pearl;
+        border: none;
+        border-radius: $btn-radius;
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem($text-sm)
+        );
+    }
 
-.ghost-btn {
-    background-color: inherit;
-    color: $black-pearl;
+    &--secondary-outline {
+        background-color: inherit;
+        color: $black-pearl;
+        border: 1px solid $white-smoke;
+        border-radius: $btn-radius;
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem($text-sm)
+        );
+    }
 }
