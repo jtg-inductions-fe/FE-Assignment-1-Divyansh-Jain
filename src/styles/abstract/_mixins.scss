@@ -60,6 +60,7 @@
     text-overflow: $overflow;
 }
 // mixin for positioning elements
+
 @mixin position-property(
     $position: static,
     $top: null,

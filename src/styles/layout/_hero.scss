@@ -76,6 +76,15 @@
             width: 799px;
             height: 819px;
         }
+        &__pattern {
+            width: 65px;
+            height: 169px;
+            @include position-property(
+                $position: absolute,
+                $left: 3%,
+                $bottom: 1%
+            );
+        }
         &__text-content {
             @include flex-property(
                 $direction: column,
