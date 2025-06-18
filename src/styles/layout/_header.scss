@@ -1,12 +1,6 @@
 @use '../base/index' as *;
 @use '../abstract/index' as *;
 
-a {
-    @include pseudo-interactive-states() {
-        color: $black-pearl;
-    }
-}
-
 .navbar {
     $nav: &;
     margin: 38px 0;
@@ -102,5 +96,8 @@ a {
         width: 100%;
         text-align: center;
         list-style-type: none;
+        @include pseudo-interactive-states() {
+            color: $black-pearl;
+        }
     }
 }

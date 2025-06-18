@@ -12,6 +12,10 @@
             $weight: $font-weight-bold,
             $size: px-to-rem($text-sm)
         );
+        @include pseudo-interactive-states() {
+            background-color: $black-pearl;
+            color: $white-smoke;
+        }
     }
 
     &--ghost {
@@ -24,6 +28,9 @@
             $weight: $font-weight-bold,
             $size: px-to-rem($text-sm)
         );
+        @include pseudo-interactive-states() {
+            color: $outrageous-orange;
+        }
     }
 
     &--secondary-outline {
