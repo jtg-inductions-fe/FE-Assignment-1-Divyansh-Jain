@@ -101,6 +101,15 @@
                 $top: 150%
             );
         }
+        &__pattern {
+            width: 65px;
+            height: 169px;
+            @include position-property(
+                $position: absolute,
+                $left: 3%,
+                $bottom: 1%
+            );
+        }
         &__text-content {
             padding: 0 10px;
             @include flex-property(
