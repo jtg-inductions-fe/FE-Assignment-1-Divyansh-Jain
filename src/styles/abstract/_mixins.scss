@@ -83,7 +83,7 @@
     @if $right {
         right: $right;
     }
-    transform: translate($x, $y);
+    transform:translate($x,$y);
 }
 
 // mixin used to add effects on interaction
