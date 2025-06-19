@@ -21,9 +21,14 @@
     }
 
     &__cards {
-        @include flex-property($direction: column);
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(16),
+            $align-items: center
+        );
     }
     @include media-query('md') {
+        gap: px-to-rem(64);
         &__cards {
             @include flex-property($gap: px-to-rem(16));
         }
@@ -31,20 +36,16 @@
 
     @include media-query('lg') {
         @include flex-property($direction: row, $align-items: center);
-        // test approach
-        // &-card {
-        //     display: none;
-        // }
-        // &-card:first-of-type{
-        //     display: flex;
-        // }
-
-        // &-card:first-of-type + &-card{
-        //     display: flex;
-        // }
-
+        &__cards {
+            @include flex-property($gap: px-to-rem(21));
+        }
         &-card:last-of-type {
             display: none;
+        }
+
+        &__text-content {
+            margin-top: 38px;
+            text-align: left;
         }
     }
 }
