@@ -38,7 +38,7 @@ $service-card-radius: 32px;
     line-height: 1.2;
 
     @include media-query('md') {
-        $font-size: 23px;
+        font-size: 23px;
     }
 }
 
@@ -51,10 +51,10 @@ $service-card-radius: 32px;
     line-height: 1.2;
 
     @include media-query('md') {
-        $font-size: 40px;
+        font-size: 40px;
     }
 
     @include media-query('lg') {
-        $font-size: 44px;
+        font-size: 44px;
     }
 }

@@ -1,41 +1,71 @@
 @use '../abstract/index' as *;
 @use '../base/index' as *;
 .services-card {
-    @include flex-property($direction: column, $align-items: center);
+    width: 100%;
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(32)
+    );
     border-radius: $service-card-radius;
     &__image-wrapper {
-        width: 50px;
+        width: 64px;
     }
+    padding: px-to-rem(32);
 
     &__title {
-        margin-top: px-to-rem(32);
         @include text-property($align: center, $wrap: wrap);
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
-            $size: $service-card-title
+            $size: $service-card-title,
+            // 24px;
+            $line-height: 1.2
         );
     }
 
     &__description {
-        margin-top: px-to-rem(32);
+        padding: 0 29px;
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
             $size: $service-card-description,
-            $color: $midnight-express-50
+            // 18px;
+            $color: $midnight-express-50,
+            $line-height: 1.6
         );
         @include text-property($align: center, $wrap: wrap);
     }
-
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: 32px
+        );
+    }
     @include pseudo-interactive-states() {
         box-shadow: $service-card-shadow;
     }
-    padding: px-to-rem(32);
     @include media-query('md') {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(64),
+            $align-items: center
+        );
         padding: px-to-rem(64);
+
         &__title {
-            margin-top: px-to-rem(64);
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: 28px,
+                // 28px;
+                $line-height: 1.2
+            );
+        }
+
+        &__description {
+            padding: 0;
         }
     }
 }
