@@ -9,9 +9,10 @@ const closeIcon = 'menu-close.png';
 menuBtn.addEventListener('click', () => {
     if (!navbar.classList.toggle('navbar--active')) {
         navbar.className = 'navbar';
-        menuIcon.src = `${imagePath}/${closeIcon}`;
-    } else {
         menuIcon.src = `${imagePath}/${openIcon}`;
+    } else {
+        menuIcon.src = `${imagePath}/${closeIcon}`;
+
         navbar.className = 'navbar navbar--active';
     }
 });

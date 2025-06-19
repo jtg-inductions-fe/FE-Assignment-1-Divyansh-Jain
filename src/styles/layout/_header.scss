@@ -1,16 +1,21 @@
 @use '../base/index' as *;
 @use '../abstract/index' as *;
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 .navbar {
+    background-color: white;
+    top: 0;
     $nav: &;
     margin: 38px 0;
     @include flex-property(
         $justify-content: space-between,
         $align-items: center
     );
-    //  commented because creating issue with height of container
-    // @include position-property($position : fixed);
-    width: 100%;
+
     &__nav-links {
         @include font-property($size: $text-sm);
     }
@@ -31,17 +36,21 @@
         }
 
         #{$nav}__nav-links {
+            width: 100vw;
             @include position-property(
                 $position: absolute,
-                $top: 15%,
+                $top: 150%,
                 $left: 50%,
                 $x: -50%
             );
         }
         #{$nav}__auth-btns {
+            width: 100vw;
+
+            @include flex-property($direction: column, $align-items: center);
             @include position-property(
                 $position: absolute,
-                $top: 30%,
+                $top: 405%,
                 $left: 50%,
                 $x: -50%
             );
