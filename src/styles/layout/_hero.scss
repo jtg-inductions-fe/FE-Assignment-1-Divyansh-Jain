@@ -8,14 +8,52 @@
     @include flex-property($direction: column, $align-items: center);
 
     &__image {
-        width: 404.29px;
-        height: 415px;
+        width: px-to-rem(404.29);
+        height: px-to-rem(415);
     }
     &__chip {
         @extend .chip;
         @include font-property($size: $text-sm);
         padding: 1.6rem 3.2rem;
         border-radius: 10rem;
+        .chip__text {
+            margin-top: 3px;
+            margin-left: -2px;
+        }
+        .icon-suitcase {
+            @include font-property($size: $base-icon-size);
+        }
+    }
+
+    &__text-content {
+        margin-top: -22px;
+        margin-left: -5px;
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: 3.2rem
+        );
+    }
+
+    &__heading {
+        @include font-property(
+            $weight: $font-weight-bold,
+            $size: $hero-heading-sm,
+            $line-height: 1.2
+        );
+        @include text-property($wrap: wrap, $align: center);
+        margin-top: -10px;
+    }
+    &__description {
+        margin-top: -11px;
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: 16px,
+            $color: $midnight-express-50,
+            $line-height: 1.6
+        );
+        @include text-property($wrap: wrap, $align: center);
     }
     &__buttons {
         width: 100%;
@@ -71,14 +109,22 @@
         }
     }
 
+    .icon-play {
+        font-size: $base-icon-size;
+    }
+
+    &__pattern {
+        display: none;
+    }
     @include media-query('md') {
         &__image {
-            width: 799px;
-            height: 819px;
+            width: px-to-rem(788);
+            height: px-to-rem(819);
         }
         &__pattern {
-            width: 65px;
-            height: 169px;
+            display: block;
+            width: px-to-rem(65);
+            height: px-to-rem(169);
             @include position-property(
                 $position: absolute,
                 $left: 3%,
@@ -94,19 +140,19 @@
         }
         &__text-content__heading {
             @include font-property(
-                $weight: 700,
+                $weight: $font-weight-bold,
                 $size: $hero-heading-md,
-                $line-height: 1.2em
+                $line-height: 1.2
             );
             @include text-property($wrap: balance, $align: center);
         }
         &__text-content__description {
             @include font-property(
-                $family: 'inter',
-                $weight: 400,
+                $family: $inter,
+                $weight: $font-weight-normal,
                 $size: $text-md,
                 $color: $midnight-express-50,
-                $line-height: 1.6em
+                $line-height: 1.6
             );
             @include text-property($wrap: wrap, $align: center);
         }
@@ -133,20 +179,20 @@
         }
         &__text-content__heading {
             @include font-property(
-                $weight: 700,
+                $weight: $font-weight-bold,
                 $size: $hero-heading-lg,
-                $line-height: 1.2em
+                $line-height: 1.2
             );
             @include text-property($wrap: balance, $align: left);
         }
 
         &__text-content__description {
             @include font-property(
-                $family: 'inter',
-                $weight: 400,
+                $family: $inter,
+                $weight: $font-weight-normal,
                 $size: $text-md,
                 $color: $midnight-express-50,
-                $line-height: 1.6em
+                $line-height: 1.6
             );
             @include text-property($wrap: wrap, $align: left);
         }
