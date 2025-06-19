@@ -10,9 +10,11 @@ menuBtn.addEventListener('click', () => {
     if (!navbar.classList.toggle('navbar--active')) {
         navbar.className = 'navbar';
         menuIcon.src = `${imagePath}/${openIcon}`;
+        document.body.style.overflow = 'scroll';
     } else {
         menuIcon.src = `${imagePath}/${closeIcon}`;
 
         navbar.className = 'navbar navbar--active';
+        document.body.style.overflow = 'hidden';
     }
 });

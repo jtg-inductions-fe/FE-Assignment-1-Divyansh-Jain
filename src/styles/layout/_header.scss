@@ -1,11 +1,6 @@
 @use '../base/index' as *;
 @use '../abstract/index' as *;
 
-header {
-    position: sticky;
-    top: 0;
-}
-
 .navbar {
     background-color: white;
     top: 0;
@@ -36,10 +31,12 @@ header {
         }
 
         #{$nav}__nav-links {
+            padding-top: px-to-rem(50);
+            height: 100vh;
             width: 100vw;
             @include position-property(
                 $position: absolute,
-                $top: 150%,
+                $top: 100%,
                 $left: 50%,
                 $x: -50%
             );
@@ -50,7 +47,7 @@ header {
             @include flex-property($direction: column, $align-items: center);
             @include position-property(
                 $position: absolute,
-                $top: 405%,
+                $top: 500%,
                 $left: 50%,
                 $x: -50%
             );
