@@ -19,8 +19,6 @@ const handleMenuClick = () => {
     } else {
         // menu is in closed state
         menuIcon.src = `${imagePath}/${closeIcon}`;
-        navbar.classList.add('navbar--active');
-
         // makes the other part of body not scrollable
         document.body.style.overflow = 'hidden';
         document.body.style.height = '100dvh';
