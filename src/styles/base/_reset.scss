@@ -26,16 +26,28 @@ footer,
 header,
 menu,
 nav,
-section {
+section,
+button {
+    &:focus {
+        outline: none;
+    }
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
+    max-width: inherit;
 }
 
 html {
     // 1rem  =10px
+
     font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 article,
@@ -50,7 +62,16 @@ section {
 body {
     line-height: 1;
 }
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 ol,
 ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }

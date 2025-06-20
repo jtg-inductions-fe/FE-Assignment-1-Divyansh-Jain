@@ -12,12 +12,58 @@
     </head>
 
     <body>
-        <header>
-            <div>
-                <i class="icon-arrow-head"></i>
-                <span id="dummy-text-rem">with 1rem font size</span>
-                <span id="dummy-text-px">with 1px font size</span>
-            </div>
+        <!-- HEADER SECTION STARTS HERE  -->
+        <header class="container sticky">
+            <nav class="navbar" id="js-navbar">
+                <a href="/" class="navbar__logo-wrapper">
+                    <img
+                        class="navbar__logo"
+                        src="src/assets/images/logo.svg"
+                        alt="Travlog logo"
+                    />
+                </a>
+                <ul class="navbar__list" id="js-menu-nav">
+                    <li class="navbar__item">
+                        <a class="inline-ellipsis navbar__link" href="#home"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a class="inline-ellipsis navbar__link" href="#discover"
+                            >Discover</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a
+                            class="inline-ellipsis navbar__link"
+                            href="#specials-deals"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a class="inline-ellipsis navbar__link" href="#contact"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+                <div class="navbar__auth-btns" id="js-menu-auth">
+                    <button class="navbar__auth-btn btn--ghost inline-ellipsis">
+                        Log In
+                    </button>
+                    <button
+                        class="navbar__auth-btn btn--primary inline-ellipsis"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+                <button class="navbar__menu-btn" id="js-menu-btn">
+                    <img
+                        src="src/assets/images/hamburger-btn.png"
+                        alt="icon with three white horizontal stripes used for opening of menu"
+                        id="js-menu-icon"
+                    />
+                </button>
+            </nav>
         </header>
 
         <script type="module" src="./src/script/index.js"></script>

@@ -21,7 +21,7 @@ export default [
             indent: ['error', 4],
             'no-unused-vars': 'warn',
             camelcase: ['warn'],
-            'no-console': ['off'],
+            'no-console': ['warn'],
         },
     },
 ];

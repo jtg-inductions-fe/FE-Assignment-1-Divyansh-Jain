@@ -1,33 +1,112 @@
-//TODO : Styles for Header Section
-
-// dummy styles
-
+@use '../base/index' as *;
 @use '../abstract/index' as *;
-#dummy-text-rem {
-    font-family: inter, monospace;
-    padding: 3rem;
-    font-size: 3rem;
-}
 
-#dummy-text-px {
-    font-size: 30px;
-    padding: 30px;
-}
+.navbar {
+    $nav: &;
+    margin: px-to-rem(38) 0;
+    @include flex-property(
+        $justify-content: space-between,
+        $align-items: center
+    );
 
-@include media-query('md') {
-    #dummy-text-px {
-        color: $state-blue;
+    &__list {
+        @include font-property($size: $text-sm);
     }
-    #dummy-text-rem {
-        color: $black-pearl;
+    &__list,
+    &__auth-btns {
+        display: none;
     }
-}
 
-@include media-query('lg') {
-    #dummy-text-rem {
-        color: $state-blue;
+    &__item {
+        color: $midnight-express-50;
+        min-width: max-content;
+        max-width: 440px;
+        z-index: $menu-z-index;
+        text-align: center;
+        list-style-type: none;
     }
-    #dummy-text-px {
-        color: $black-pearl;
+
+    &__link {
+        @include pseudo-interactive-states {
+            color: $black-pearl;
+        }
+    }
+    &--active {
+        #{$nav}__list {
+            @include flex-property(
+                $direction: column,
+                $gap: px-to-rem(20),
+                $align-items: center
+            );
+
+            padding-top: px-to-rem(50);
+            height: 100vh;
+            width: 100%;
+            background-color: $white;
+            min-width: 0;
+            @include position-property(
+                $position: absolute,
+                $top: 0,
+                $left: 50%,
+                $x: -50%,
+                $y: 60px
+            );
+        }
+        #{$nav}__auth-btns {
+            width: 100%;
+            @include flex-property($direction: column, $align-items: center);
+            @include position-property(
+                $position: absolute,
+                $top: 0,
+                $left: 50%,
+                $x: -50%,
+                $y: 240px
+            );
+        }
+    }
+    @include media-query('md') {
+        & {
+            margin: px-to-rem(33) 0;
+        }
+        #{$nav}__auth-btns {
+            all: unset;
+            @include flex-property();
+
+            order: 3;
+        }
+
+        #{$nav}__logo-wrapper {
+            padding-left: px-to-rem(172);
+            order: 2;
+        }
+        #{$nav}__menu-btn {
+            order: 1;
+        }
+    }
+
+    @include media-query('lg') {
+        & {
+            margin: px-to-rem(67) 0;
+            margin-left: px-to-rem(26);
+        }
+        #{$nav}__list {
+            all: unset;
+            @include flex-property($gap: px-to-rem(64));
+            @include font-property($size: $text-sm);
+        }
+        #{$nav}__menu-btn {
+            display: none;
+        }
+
+        #{$nav}__logo-wrapper {
+            order: 1;
+            padding: 0;
+        }
+        #{$nav}__list {
+            order: 2;
+        }
+        #{$nav}__item {
+            max-width: px-to-rem(100);
+        }
     }
 }
