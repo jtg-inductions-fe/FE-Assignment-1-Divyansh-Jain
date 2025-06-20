@@ -11,10 +11,6 @@
 }
 
 body {
-    font-family: 'circular-std';
-    font-size: 16px;
+    font-family: $circular-std;
+    font-size: $text-base;
 }
-
-$text-sm: 14px;
-$text-md: 18px;
-$text-lg: 23px;

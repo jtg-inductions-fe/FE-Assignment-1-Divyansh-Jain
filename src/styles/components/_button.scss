@@ -2,46 +2,30 @@
 @use '../abstract/index' as *;
 @use '../base/typography' as *;
 .btn {
+    border: none;
+    border-radius: $btn-radius;
+    cursor: pointer;
+    @include font-property(
+        $family: $circular-std,
+        $weight: $font-weight-bold,
+        $size: px-to-rem($text-sm)
+    );
     &--primary {
+        @extend .btn;
         background-color: $state-blue;
         color: $white-smoke;
-        border: none;
-        border-radius: $btn-radius;
-        @include font-property(
-            $family: $circular-std,
-            $weight: $font-weight-bold,
-            $size: px-to-rem($text-sm)
-        );
-        @include pseudo-interactive-states() {
+        @include pseudo-interactive-states {
             background-color: $black-pearl;
             color: $white-smoke;
         }
     }
 
     &--ghost {
+        @extend .btn;
         background-color: inherit;
         color: $black-pearl;
-        border: none;
-        border-radius: $btn-radius;
-        @include font-property(
-            $family: $circular-std,
-            $weight: $font-weight-bold,
-            $size: px-to-rem($text-sm)
-        );
-        @include pseudo-interactive-states() {
+        @include pseudo-interactive-states {
             color: $outrageous-orange;
         }
-    }
-
-    &--secondary-outline {
-        background-color: inherit;
-        color: $black-pearl;
-        border: 1px solid $white-smoke;
-        border-radius: $btn-radius;
-        @include font-property(
-            $family: $circular-std,
-            $weight: $font-weight-bold,
-            $size: px-to-rem($text-sm)
-        );
     }
 }

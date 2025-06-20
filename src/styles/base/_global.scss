@@ -3,14 +3,13 @@
 
 .container {
     margin: 0 px-to-rem(16);
-    width: 100%;
-    // max-width: px-to-rem($container-sm);
+    // max-width: px-to-rem(398);
     @include media-query('md') {
-        margin: 0 auto;
-        max-width: px-to-rem($container-md);
+        margin: 0 px-to-rem(64);
     }
     @include media-query('lg') {
-        max-width: px-to-rem($container-lg);
+        margin: 0 auto;
+        max-width: px-to-rem(1193);
     }
 }
 
@@ -21,4 +20,11 @@
 .sticky {
     position: sticky;
     top: 0;
+}
+
+.inline-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
 }

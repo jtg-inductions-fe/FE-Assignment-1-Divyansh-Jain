@@ -1,3 +1,4 @@
+@use './colors' as *;
 @use './variables' as *;
 @use 'sass:map';
 
@@ -11,7 +12,7 @@
 }
 
 // font face mixin
-@mixin font-face($name, $source, $weight, $style: 'normal', $color: 'black') {
+@mixin font-face($name, $source, $weight, $style: 'normal', $color: $black) {
     @font-face {
         font-family: $name;
         src: url($source) format('truetype');
@@ -23,11 +24,11 @@
 
 // mixin for applying font-property
 @mixin font-property(
-    $family: 'circular-std',
+    $family: $circular-std,
     $size: 18px,
-    $weight: 400,
-    $color: 'black',
-    $line-height: 1em
+    $weight: $font-weight-normal,
+    $color: $black,
+    $line-height: 1
 ) {
     font-family: $family;
     font-size: $size;
@@ -52,12 +53,13 @@
     flex-wrap: $wrap;
 }
 
+// mixin for applying text related properties
 @mixin text-property($align: left, $wrap: nowrap, $overflow: 'initial') {
     text-align: $align;
     text-wrap: $wrap;
     text-overflow: $overflow;
 }
-
+// mixin for positioning elements
 @mixin position-property(
     $position: static,
     $top: null,
@@ -83,7 +85,8 @@
     transform: translate($x, $y);
 }
 
-@mixin pseudo-interactive-states() {
+// mixin used to add effects on interaction
+@mixin pseudo-interactive-states {
     &:hover,
     &:focus,
     &:active,
