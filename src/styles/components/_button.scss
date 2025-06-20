@@ -6,10 +6,12 @@
     border-radius: $btn-radius;
     padding: px-to-rem(16) px-to-rem(32);
     max-width: 440px;
+    cursor: pointer;
     @include font-property(
         $family: $circular-std,
         $weight: $font-weight-bold,
-        $size: px-to-rem($text-sm)
+        $size: px-to-rem($text-sm),
+        $line-height: 1.2
     );
     &--primary {
         @extend .btn;
@@ -29,9 +31,21 @@
             color: $outrageous-orange;
         }
     }
-}
 
-.secondary-outline-btn {
-    background-color: inherit;
-    border: 1px solid $white-smoke;
+    &--secondary-outline {
+        background-color: inherit;
+        color: $black-pearl;
+        @extend .btn;
+        border: 1px solid $white-smoke;
+        @include flex-property(
+            $align-items: center,
+            $gap: px-to-rem(8),
+            $justify-content: center
+        );
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem($text-sm)
+        );
+    }
 }

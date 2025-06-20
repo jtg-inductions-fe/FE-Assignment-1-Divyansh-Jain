@@ -1,0 +1,35 @@
+@use '../abstract/index' as *;
+
+.partners {
+    margin-top: 80px;
+    &__partner {
+        max-width: 100%;
+        height: px-to-rem(20);
+        width: auto;
+    }
+
+    @include flex-property($wrap: wrap, $justify-content: center);
+    row-gap: px-to-rem(27);
+    column-gap: px-to-rem(32);
+
+    @include media-query('md') {
+        margin-top: px-to-rem(158);
+        padding: 0 px-to-rem(110);
+        &__partner {
+            max-width: 100%;
+
+            height: px-to-rem(32);
+            width: auto;
+        }
+
+        @include flex-property($wrap: wrap, $justify-content: center);
+        column-gap: px-to-rem(30);
+        row-gap: px-to-rem(31);
+    }
+    @include media-query('lg') {
+        padding: 0 0;
+        margin-top: px-to-rem(122);
+        margin-left: px-to-rem(133);
+        @include flex-property($gap: px-to-rem(104));
+    }
+}

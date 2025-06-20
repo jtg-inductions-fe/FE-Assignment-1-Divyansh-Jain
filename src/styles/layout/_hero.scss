@@ -4,21 +4,21 @@
 @use '../base/index' as *;
 
 .hero {
-    margin-top: 6rem;
-    @include flex-property($direction: column, $align-items: center);
+    margin-top: px-to-rem(65);
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: 35px
+    );
 
     &__image {
-        width: px-to-rem(404.29);
-        height: px-to-rem(415);
+        width: 100%;
     }
     &__chip {
         @extend .chip;
         @include font-property($size: $text-sm);
-        padding: 1.6rem 3.2rem;
-        border-radius: 10rem;
         .chip__text {
             margin-top: 3px;
-            margin-left: -2px;
         }
         .icon-suitcase {
             @include font-property($size: $base-icon-size);
@@ -26,26 +26,24 @@
     }
 
     &__text-content {
-        margin-top: -22px;
-        margin-left: -5px;
         @include flex-property(
             $direction: column,
             $align-items: center,
-            $gap: 3.2rem
+            $gap: 1.6rem
         );
     }
 
     &__heading {
+        margin-top: px-to-rem(5);
         @include font-property(
             $weight: $font-weight-bold,
             $size: $hero-heading-sm,
             $line-height: 1.2
         );
         @include text-property($wrap: wrap, $align: center);
-        margin-top: -10px;
     }
     &__description {
-        margin-top: -11px;
+        margin-top: px-to-rem(5);
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
@@ -56,57 +54,18 @@
         @include text-property($wrap: wrap, $align: center);
     }
     &__buttons {
+        margin-top: px-to-rem(18);
         width: 100%;
         @include flex-property(
             $direction: column,
             $align-items: center,
             $gap: 2.4rem
         );
-        &__get-started {
-            @extend .primary-btn;
-            border: none;
-        }
-        &__watch-demo {
-            @extend .secondary-outline-btn;
-            @include flex-property(
-                $align-items: center,
-                $gap: 0.8rem,
-                $justify-content: center
-            );
-        }
-
-        button {
-            width: 100%;
-            padding: 2.4rem 3.2rem;
-            border-radius: 10rem;
-        }
     }
 
-    &__text-content {
-        @include flex-property(
-            $direction: column,
-            $align-items: center,
-            $gap: 3.2rem
-        );
-        &__heading {
-            @include font-property(
-                $weight: 700,
-                $size: $hero-heading-sm,
-                $line-height: 1.2em
-            );
-            @include text-property($wrap: wrap, $align: center);
-        }
-
-        &__description {
-            @include font-property(
-                $family: 'inter',
-                $weight: 400,
-                $size: 16px,
-                $color: $midnight-express-50,
-                $line-height: 1.6em
-            );
-            @include text-property($wrap: wrap, $align: center);
-        }
+    &__btn {
+        aspect-ratio: 6.4;
+        width: 100%;
     }
 
     .icon-play {
@@ -116,10 +75,21 @@
     &__pattern {
         display: none;
     }
+
     @include media-query('md') {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(61)
+        );
+
+        margin-top: px-to-rem(97);
         &__image {
+            margin-left: px-to-rem(17);
             width: px-to-rem(788);
-            height: px-to-rem(819);
+        }
+        .chip__text {
+            margin-top: 3px;
         }
         &__pattern {
             display: block;
@@ -132,10 +102,11 @@
             );
         }
         &__text-content {
+            padding: 0 10px;
             @include flex-property(
                 $direction: column,
                 $align-items: center,
-                $gap: 4.3rem
+                $gap: 4.2rem
             );
         }
         &__text-content__heading {
@@ -144,9 +115,13 @@
                 $size: $hero-heading-md,
                 $line-height: 1.2
             );
+
             @include text-property($wrap: balance, $align: center);
         }
-        &__text-content__description {
+
+        &__description {
+            margin: 0;
+            padding: 0 215px;
             @include font-property(
                 $family: $inter,
                 $weight: $font-weight-normal,
@@ -158,7 +133,8 @@
         }
 
         &__buttons {
-            width: max-content;
+            width: auto;
+            margin: 0;
             @include flex-property($gap: 1.6rem);
             button {
                 width: max-content;
@@ -166,16 +142,35 @@
                 border-radius: 10rem;
             }
         }
+
+        &__btn {
+            width: auto;
+            aspect-ratio: auto;
+        }
     }
 
     @include media-query('lg') {
+        margin-top: px-to-rem(90);
+        max-width: 100%;
         @include flex-property($direction: row-reverse);
+
+        &__image {
+            margin-left: 0;
+            margin-right: px-to-rem(100);
+            width: px-to-rem(788);
+        }
+
         &__text-content {
             @include flex-property(
                 $direction: column,
                 $align-items: flex-start,
                 $gap: 4.3rem
             );
+            padding: 0;
+            padding-left: 130px;
+            margin-top: 68px;
+
+            @include flex-property($direction: column, $gap: 4.3rem);
         }
         &__text-content__heading {
             @include font-property(
@@ -186,7 +181,13 @@
             @include text-property($wrap: balance, $align: left);
         }
 
-        &__text-content__description {
+        &__chip {
+            margin-right: 64px;
+        }
+
+        &__description {
+            padding: 0 0;
+            @include line-clamp(3);
             @include font-property(
                 $family: $inter,
                 $weight: $font-weight-normal,
@@ -195,6 +196,20 @@
                 $line-height: 1.6
             );
             @include text-property($wrap: wrap, $align: left);
+        }
+
+        &__buttons {
+            margin-top: px-to-rem(29);
+        }
+
+        &__pattern {
+            @include position-property(
+                $position: absolute,
+                $top: 103%,
+                $left: 3%,
+                $x: -2px,
+                $y: -3px
+            );
         }
     }
 }
