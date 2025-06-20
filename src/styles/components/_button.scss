@@ -4,7 +4,8 @@
 .btn {
     border: none;
     border-radius: $btn-radius;
-    cursor: pointer;
+    padding: px-to-rem(16) px-to-rem(32);
+    max-width: 440px;
     @include font-property(
         $family: $circular-std,
         $weight: $font-weight-bold,

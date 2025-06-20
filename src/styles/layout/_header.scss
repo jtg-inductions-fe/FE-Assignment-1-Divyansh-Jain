@@ -2,7 +2,6 @@
 @use '../abstract/index' as *;
 
 .navbar {
-    // background-color: white;
     $nav: &;
     margin: px-to-rem(38) 0;
     @include flex-property(
@@ -17,36 +16,34 @@
     &__auth-btns {
         display: none;
     }
-    &__auth-btn {
-        cursor: pointer;
-        padding: px-to-rem(17) px-to-rem(32);
-    }
+
     &__item {
         color: $midnight-express-50;
         min-width: max-content;
-        width: 100%;
-        z-index: 3;
+        max-width: 440px;
+        z-index: $menu-z-index;
         text-align: center;
         list-style-type: none;
+    }
 
+    &__link {
         @include pseudo-interactive-states {
             color: $black-pearl;
         }
     }
     &--active {
-        #{$nav}__list,
-        #{$nav}__auth-btns {
-            @include flex-property($direction: column, $gap: px-to-rem(20));
-            // background-color: $white;
-            // z-index: $menu-z-index;
-        }
-
         #{$nav}__list {
+            @include flex-property(
+                $direction: column,
+                $gap: px-to-rem(20),
+                $align-items: center
+            );
+
             padding-top: px-to-rem(50);
             height: 100vh;
-
-            background-color: white;
-            width: 100vw;
+            width: 100%;
+            background-color: $white;
+            min-width: 0;
             @include position-property(
                 $position: absolute,
                 $top: 0,
@@ -56,8 +53,7 @@
             );
         }
         #{$nav}__auth-btns {
-            width: 100vw;
-
+            width: 100%;
             @include flex-property($direction: column, $align-items: center);
             @include position-property(
                 $position: absolute,
@@ -70,7 +66,7 @@
     }
     @include media-query('md') {
         & {
-            margin: px-to-rem(33) 0; // to maintain pixel perfectnesss
+            margin: px-to-rem(33) 0;
         }
         #{$nav}__auth-btns {
             all: unset;
@@ -80,7 +76,7 @@
         }
 
         #{$nav}__logo-wrapper {
-            padding-left: px-to-rem(172); // to maintain pixel perfectnesss
+            padding-left: px-to-rem(172);
             order: 2;
         }
         #{$nav}__menu-btn {
@@ -90,8 +86,8 @@
 
     @include media-query('lg') {
         & {
-            margin: px-to-rem(67) 0; // to maintain pixel perfectnesss
-            margin-left: px-to-rem(26); // to maintain pixel perfectnesss
+            margin: px-to-rem(67) 0;
+            margin-left: px-to-rem(26);
         }
         #{$nav}__list {
             all: unset;
