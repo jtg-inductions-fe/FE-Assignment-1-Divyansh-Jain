@@ -2,10 +2,11 @@
 @use '../abstract/index' as *;
 
 .container {
-    margin: 0 auto;
+    margin: 0 px-to-rem(16);
     width: 100%;
-    max-width: px-to-rem($container-sm);
+    // max-width: px-to-rem($container-sm);
     @include media-query('md') {
+        margin: 0 auto;
         max-width: px-to-rem($container-md);
     }
     @include media-query('lg') {

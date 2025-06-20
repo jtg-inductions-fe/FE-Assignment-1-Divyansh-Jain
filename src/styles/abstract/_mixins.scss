@@ -87,7 +87,8 @@
     &:hover,
     &:focus,
     &:active,
-    &:focus-visible {
+    &:focus-visible,
+    &:visited {
         @content;
     }
 }

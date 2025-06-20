@@ -11,26 +11,27 @@
         $align-items: center
     );
 
-    &__nav-links {
+    &__list {
         @include font-property($size: $text-sm);
     }
-    &__nav-links,
+    &__list,
     &__auth-btns {
         display: none;
     }
     &__auth-btn {
+        cursor: pointer;
         padding: px-to-rem(17) px-to-rem(32);
     }
 
     &--active {
-        #{$nav}__nav-links,
+        #{$nav}__list,
         #{$nav}__auth-btns {
             @include flex-property($direction: column, $gap: px-to-rem(20));
             background-color: $white;
             z-index: $menu-z-index;
         }
 
-        #{$nav}__nav-links {
+        #{$nav}__list {
             padding-top: px-to-rem(50);
             height: 100vh;
             width: 100vw;
@@ -78,7 +79,7 @@
             margin: 67px 0; // to maintain pixel perfectnesss
             margin-left: 26px; // to maintain pixel perfectnesss
         }
-        #{$nav}__nav-links {
+        #{$nav}__list {
             all: unset;
             @include flex-property($gap: px-to-rem(64));
             @include font-property($size: $text-sm);
@@ -91,14 +92,15 @@
             order: 1;
             padding: 0;
         }
-        #{$nav}__nav-links {
+        #{$nav}__list {
             order: 2;
         }
     }
 
-    &__link {
+    &__item {
         color: $midnight-express-50;
         min-width: max-content;
+        max-width: 100px;
         width: 100%;
         text-align: center;
         list-style-type: none;
