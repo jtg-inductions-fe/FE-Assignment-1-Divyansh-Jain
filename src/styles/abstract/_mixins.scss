@@ -60,6 +60,7 @@
     text-overflow: $overflow;
 }
 // mixin for positioning elements
+
 @mixin position-property(
     $position: static,
     $top: null,
@@ -94,4 +95,11 @@
     &:visited {
         @content;
     }
+}
+
+@mixin line-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
