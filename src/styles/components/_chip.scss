@@ -1,6 +1,6 @@
 @use '../abstract/index' as *;
 .chip {
-    @include flex-property($gap: 1.6rem);
+    @include flex-property($gap: 1.9rem, $align-items: center);
     box-shadow: 0 34px 75px 0 rgba(0, 0, 0, 0.4);
     padding: 1.6rem 3.2rem;
     border-radius: $btn-radius;

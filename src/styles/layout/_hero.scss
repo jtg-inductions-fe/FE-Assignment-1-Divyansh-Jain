@@ -97,8 +97,8 @@
             height: px-to-rem(169);
             @include position-property(
                 $position: absolute,
-                $left: 3%,
-                $bottom: 1%
+                $left: 4%,
+                $top: 150%
             );
         }
         &__text-content {
@@ -109,7 +109,7 @@
                 $gap: px-to-rem(42)
             );
         }
-        &__text-content__heading {
+        &__heading {
             @include font-property(
                 $weight: $font-weight-bold,
                 $size: $hero-heading-md,
@@ -136,11 +136,6 @@
             width: auto;
             margin: 0;
             @include flex-property($gap: 1.6rem);
-            button {
-                width: max-content;
-                padding: 1.6rem 3.2rem;
-                border-radius: 10rem;
-            }
         }
 
         &__btn {
@@ -161,23 +156,24 @@
         }
 
         &__text-content {
-            @include flex-property(
-                $direction: column,
-                $align-items: flex-start,
-                $gap: 4.3rem
-            );
+            // @include flex-property(
+            //     $direction: column,
+            //     $align-items: flex-start,
+            //     $gap: 4.3rem
+            // );
             padding: 0;
             margin-top: px-to-rem(68);
 
             @include flex-property($direction: column, $gap: 4.3rem);
         }
-        &__text-content__heading {
+        &__heading {
             @include font-property(
                 $weight: $font-weight-bold,
                 $size: $hero-heading-lg,
                 $line-height: 1.2
             );
             @include text-property($wrap: balance, $align: left);
+            text-indent: -1px;
         }
 
         &__chip {
