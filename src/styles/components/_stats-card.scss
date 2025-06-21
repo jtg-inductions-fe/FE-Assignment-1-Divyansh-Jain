@@ -1,0 +1,30 @@
+@use '../abstract/index' as *;
+.stats-card {
+    padding: px-to-rem(32);
+    border-radius: $card-radius;
+    border: 1px solid $midnight-express-10;
+    box-sizing: border-box;
+    height: px-to-rem(151);
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(16),
+        $align-items: center
+    );
+    &__stats {
+        @include font-property(
+            $size: 35px,
+            $color: $outrageous-orange,
+            $weight: $font-weight-bold,
+            $line-height: 1.2
+        );
+    }
+    &__title {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: 18px,
+            $color: $midnight-express,
+            $line-height: 1.6
+        );
+    }
+}

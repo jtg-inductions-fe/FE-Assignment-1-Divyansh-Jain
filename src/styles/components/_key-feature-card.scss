@@ -1,0 +1,45 @@
+@use '../abstract/index' as *;
+
+.key-feature-card {
+    @include flex-property($direction: column, $gap: px-to-rem(32));
+
+    padding: px-to-rem(32);
+    border-radius: $card-radius;
+
+    @include pseudo-interactive-states {
+        border: 1px solid $midnight-express-10;
+    }
+
+    &__icon-wrapper {
+        background-color: $kournikova;
+        width: max-content;
+        border-radius: 32px;
+        padding: 24px 28px;
+        background-color: $kournikova;
+        & i[class^='icon-'] {
+            font-size: 48px;
+        }
+    }
+
+    &__text-content {
+        @include flex-property($direction: column, $gap: px-to-rem(8));
+    }
+    &__title {
+        @include font-property(
+            $size: $text-lg,
+            $weight: $font-weight-bold,
+            $line-height: 1.2,
+            $color: $midnight-express
+        );
+    }
+
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: $text-md,
+            $weight: $font-weight-normal,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+    }
+}
