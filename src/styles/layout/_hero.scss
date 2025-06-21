@@ -11,7 +11,7 @@
         $gap: px-to-rem(35)
     );
 
-    &__image {
+    &__image-wrapper {
         width: 100%;
     }
     &__chip {
@@ -53,7 +53,7 @@
         );
         @include text-property($wrap: wrap, $align: center);
     }
-    &__buttons {
+    &__btns {
         margin-top: px-to-rem(18);
         width: 100%;
         @include flex-property(
@@ -84,7 +84,7 @@
         );
 
         margin-top: px-to-rem(97);
-        &__image {
+        &__image-wrapper {
             margin-left: px-to-rem(17);
             width: px-to-rem(788);
         }
@@ -132,7 +132,7 @@
             @include text-property($wrap: wrap, $align: center);
         }
 
-        &__buttons {
+        &__btns {
             width: auto;
             margin: 0;
             @include flex-property($gap: 1.6rem);
@@ -150,14 +150,14 @@
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(90);
-        max-width: 100%;
+        padding: 0 px-to-rem(10);
+        margin-top: px-to-rem(93);
+        width: 100%;
         @include flex-property($direction: row-reverse);
 
-        &__image {
+        &__image-wrapper {
             margin-left: 0;
-            margin-right: px-to-rem(100);
-            width: px-to-rem(788);
+            width: px-to-rem(772);
         }
 
         &__text-content {
@@ -167,7 +167,6 @@
                 $gap: 4.3rem
             );
             padding: 0;
-            padding-left: px-to-rem(130);
             margin-top: px-to-rem(68);
 
             @include flex-property($direction: column, $gap: 4.3rem);
@@ -198,7 +197,7 @@
             @include text-property($wrap: wrap, $align: left);
         }
 
-        &__buttons {
+        &__btns {
             margin-top: px-to-rem(29);
         }
 

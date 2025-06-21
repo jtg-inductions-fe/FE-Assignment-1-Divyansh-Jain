@@ -28,8 +28,8 @@
     }
     @include media-query('lg') {
         padding: 0 0;
-        margin-top: px-to-rem(122);
-        margin-left: px-to-rem(133);
+        margin-top: px-to-rem(130);
+        padding: 0 px-to-rem(10);
         @include flex-property($gap: px-to-rem(104));
     }
 }
