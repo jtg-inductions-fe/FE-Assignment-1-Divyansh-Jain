@@ -1,6 +1,6 @@
 @use '../abstract/index' as *;
 @use '../base/index' as *;
-.services-card {
+.service-card {
     width: 100%;
     @include flex-property(
         $direction: column,

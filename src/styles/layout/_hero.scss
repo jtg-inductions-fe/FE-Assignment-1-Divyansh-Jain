@@ -102,16 +102,16 @@
             );
         }
         &__pattern {
-            width: 65px;
-            height: 169px;
+            width: px-to-rem(65);
+            height: px-to-rem(169);
             @include position-property(
                 $position: absolute,
-                $left: 3%,
+                $left: 4%,
                 $bottom: 1%
             );
         }
         &__text-content {
-            padding: 0 10px;
+            padding: 0 px-to-rem(10);
             @include flex-property(
                 $direction: column,
                 $align-items: center,

@@ -1,10 +1,11 @@
 //TODO : Styles for services section
 @use '../abstract/index' as *;
 
-.services {
+.service {
+    margin-top: px-to-rem(66);
     @include flex-property(
         $direction: column,
-        $gap: px-to-rem(32),
+        $gap: px-to-rem(30),
         $align-items: center
     );
 
@@ -28,6 +29,7 @@
         );
     }
     @include media-query('md') {
+        margin-top: px-to-rem(130);
         gap: px-to-rem(64);
         &__cards {
             @include flex-property($gap: px-to-rem(16));
@@ -35,6 +37,8 @@
     }
 
     @include media-query('lg') {
+        margin-top: px-to-rem(123);
+        padding: 0 px-to-rem(3);
         @include flex-property($direction: row, $align-items: center);
         &__cards {
             @include flex-property($gap: px-to-rem(21));
