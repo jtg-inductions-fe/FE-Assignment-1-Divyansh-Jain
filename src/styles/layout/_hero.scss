@@ -8,7 +8,7 @@
     @include flex-property(
         $direction: column,
         $align-items: center,
-        $gap: 35px
+        $gap: px-to-rem(35)
     );
 
     &__image {
@@ -18,7 +18,7 @@
         @extend .chip;
         @include font-property($size: $text-sm);
         .chip__text {
-            margin-top: 3px;
+            margin-top: px-to-rem(3);
         }
         .icon-suitcase {
             @include font-property($size: $base-icon-size);
@@ -29,7 +29,7 @@
         @include flex-property(
             $direction: column,
             $align-items: center,
-            $gap: 1.6rem
+            $gap: px-to-rem(16)
         );
     }
 
@@ -47,7 +47,7 @@
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
-            $size: 16px,
+            $size: $text-base,
             $color: $midnight-express-50,
             $line-height: 1.6
         );
@@ -59,7 +59,7 @@
         @include flex-property(
             $direction: column,
             $align-items: center,
-            $gap: 2.4rem
+            $gap: px-to-rem(24)
         );
     }
 
@@ -89,7 +89,7 @@
             width: px-to-rem(788);
         }
         .chip__text {
-            margin-top: 3px;
+            margin-top: px-to-rem(3);
         }
         &__pattern {
             display: block;
@@ -106,7 +106,7 @@
             @include flex-property(
                 $direction: column,
                 $align-items: center,
-                $gap: 4.2rem
+                $gap: px-to-rem(42)
             );
         }
         &__text-content__heading {
@@ -121,7 +121,7 @@
 
         &__description {
             margin: 0;
-            padding: 0 215px;
+            padding: 0 px-to-rem(215);
             @include font-property(
                 $family: $inter,
                 $weight: $font-weight-normal,
@@ -167,8 +167,8 @@
                 $gap: 4.3rem
             );
             padding: 0;
-            padding-left: 130px;
-            margin-top: 68px;
+            padding-left: px-to-rem(130);
+            margin-top: px-to-rem(68);
 
             @include flex-property($direction: column, $gap: 4.3rem);
         }
@@ -182,7 +182,7 @@
         }
 
         &__chip {
-            margin-right: 64px;
+            margin-right: px-to-rem(64);
         }
 
         &__description {
