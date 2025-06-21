@@ -24,3 +24,37 @@ $text-md: 18px;
 $text-lg: 23px;
 
 $base-icon-size: 22px;
+
+$service-card-title: 24px;
+$service-card-description: 18px;
+$service-card-radius: 32px;
+
+.h-primary {
+    font-family: $circular-std;
+    color: $french-rose;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+
+    @include media-query('md') {
+        font-size: 23px;
+    }
+}
+
+.h-secondary {
+    font-family: $circular-std;
+    color: $black-pearl;
+    font-size: 32px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+    line-height: 1.2;
+
+    @include media-query('md') {
+        font-size: 40px;
+    }
+
+    @include media-query('lg') {
+        font-size: 44px;
+    }
+}
