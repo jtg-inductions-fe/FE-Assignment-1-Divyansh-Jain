@@ -48,7 +48,7 @@
         }
 
         &__text-content {
-            margin-top: 38px;
+            margin-top: px-to-rem(38);
             text-align: left;
         }
     }

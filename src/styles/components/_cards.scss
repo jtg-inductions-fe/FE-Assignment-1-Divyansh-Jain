@@ -7,7 +7,7 @@
         $align-items: center,
         $gap: px-to-rem(32)
     );
-    border-radius: $service-card-radius;
+    border-radius: $card-radius;
     &__image-wrapper {
         width: 64px;
     }
