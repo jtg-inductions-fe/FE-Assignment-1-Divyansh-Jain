@@ -36,6 +36,9 @@
         background-color: inherit;
         color: $black-pearl;
         @extend .btn;
+        i[class^='icon-'] {
+            font-size: $base-icon-size;
+        }
         border: 1px solid $white-smoke;
         @include flex-property(
             $align-items: center,
