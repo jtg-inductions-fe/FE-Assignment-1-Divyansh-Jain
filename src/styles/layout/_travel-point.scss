@@ -68,6 +68,10 @@
         }
     }
 
+    &__ticket {
+        display: none;
+    }
+
     &__description {
         @include line-clamp(3);
         margin-top: px-to-rem(16);
