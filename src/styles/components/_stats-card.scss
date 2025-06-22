@@ -1,4 +1,5 @@
 @use '../abstract/index' as *;
+@use '../base/index' as *;
 .stats-card {
     padding: px-to-rem(32);
     border-radius: $card-radius;
@@ -19,6 +20,9 @@
         );
     }
     &__title {
+        @extend .inline-ellipsis;
+        max-width: 300px;
+        text-wrap: nowrap;
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,

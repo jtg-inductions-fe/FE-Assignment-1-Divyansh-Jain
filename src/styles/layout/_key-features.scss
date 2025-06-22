@@ -1,9 +1,11 @@
 //TODO : Styles for key features section
 @use '../abstract/index' as *;
 .key-features {
-    padding: 0 px-to-rem(40);
+    width: 100%;
+    margin-top: px-to-rem(95);
     @include flex-property($direction: column, $align-items: center);
     &__text-content {
+        margin-top: px-to-rem(106);
         @include flex-property(
             $direction: column,
             $gap: px-to-rem(16),
@@ -13,14 +15,15 @@
         text-align: center;
     }
     &__image-wrapper {
-        width: 100%;
+        height: px-to-rem(439);
     }
 
     &__description {
         margin-top: px-to-rem(16);
+        padding: 0 px-to-rem(30);
         @include font-property(
             $family: $inter,
-            $size: $text-md,
+            $size: $text-base,
             $weight: $font-weight-normal,
             $line-height: 1.6,
             $color: $midnight-express-50
@@ -28,9 +31,64 @@
     }
 
     &__cards {
-        margin-top: px-to-rem(16);
+        width: 100%;
+        margin-top: px-to-rem(8);
+        margin-left: px-to-rem(50);
+    }
+
+    @include media-query('md') {
+        margin-top: px-to-rem(130);
+        &__image-wrapper {
+            height: auto;
+            max-width: px-to-rem(693);
+            max-height: px-to-rem(869);
+        }
+        &__text-content {
+            padding: 0;
+            margin-top: px-to-rem(68);
+        }
+        &__description {
+            @include font-property(
+                $family: $inter,
+                $size: $text-md,
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+        &__cards {
+            margin-left: 0;
+            padding: 0 px-to-rem(32);
+            box-sizing: border-box;
+            margin-top: 4.6rem;
+        }
     }
     @include media-query('lg') {
-        @include flex-property($direction: row-reverse);
+        margin-left: px-to-rem(117);
+        margin-top: px-to-rem(57);
+
+        @include flex-property($direction: row-reverse, $gap: px-to-rem(0));
+        &__text-content {
+            margin-top: px-to-rem(73);
+            margin-left: px-to-rem(24);
+            text-align: left;
+            @include flex-property(
+                $direction: column,
+                $align-items: flex-start,
+                $gap: px-to-rem(16)
+            );
+        }
+        &__description {
+            padding: 0;
+        }
+
+        &__image-wrapper {
+            margin-top: px-to-rem(68);
+        }
+
+        &__cards {
+            padding: 0;
+            margin-top: px-to-rem(75);
+        }
     }
 }
