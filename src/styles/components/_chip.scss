@@ -5,4 +5,8 @@
     padding: 1.6rem 3.2rem;
     border-radius: $btn-radius;
     width: max-content;
+
+    i[class^='icon-'] {
+        @include font-property($size: $base-icon-size);
+    }
 }

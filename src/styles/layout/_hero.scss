@@ -20,9 +20,6 @@
         .chip__text {
             margin-top: px-to-rem(3);
         }
-        .icon-suitcase {
-            @include font-property($size: $base-icon-size);
-        }
     }
 
     &__text-content {
@@ -98,7 +95,9 @@
             @include position-property(
                 $position: absolute,
                 $left: 4%,
-                $top: 150%
+                $top: 150%,
+                $x: -2px,
+                $y: 26px
             );
         }
         &__text-content {
@@ -156,11 +155,6 @@
         }
 
         &__text-content {
-            // @include flex-property(
-            //     $direction: column,
-            //     $align-items: flex-start,
-            //     $gap: 4.3rem
-            // );
             padding: 0;
             margin-top: px-to-rem(68);
 
@@ -200,7 +194,7 @@
         &__pattern {
             @include position-property(
                 $position: absolute,
-                $top: 103%,
+                $top: 105%,
                 $left: 3%,
                 $x: -2px,
                 $y: -3px
