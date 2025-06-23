@@ -23,6 +23,10 @@ $icon-user-add: '\e90a';
 $service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
 
 // breakpoints for different device sizes
+$text-base: 16px;
+$text-sm: 14px;
+$text-md: 18px;
+$text-lg: 23px;
 
 $breakpoints: (
     'md': 768px,
@@ -35,6 +39,9 @@ $circular-std: 'circular-std';
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
+$btn-radius: 10rem;
+
+$menu-z-index: 2;
 
 //fonts map
 $fonts-map: (
