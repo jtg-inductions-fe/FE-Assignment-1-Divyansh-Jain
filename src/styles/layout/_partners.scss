@@ -1,7 +1,7 @@
 @use '../abstract/index' as *;
 
 .partners {
-    margin-top: px-to-rem(80);
+    margin-top: px-to-rem(70);
 
     @include flex-property($wrap: wrap, $justify-content: center);
     row-gap: px-to-rem(27);
@@ -11,6 +11,12 @@
         max-width: 100%;
         height: px-to-rem(20);
         width: auto;
+
+        @include media-query('md') {
+            max-width: 100%;
+            height: px-to-rem(32);
+            width: auto;
+        }
     }
 
     @include media-query('md') {
@@ -20,12 +26,6 @@
         @include flex-property($wrap: wrap, $justify-content: center);
         column-gap: px-to-rem(30);
         row-gap: px-to-rem(31);
-
-        &__partner {
-            max-width: 100%;
-            height: px-to-rem(32);
-            width: auto;
-        }
     }
     @include media-query('lg') {
         margin-top: px-to-rem(130);

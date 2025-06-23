@@ -39,10 +39,5 @@
             $gap: px-to-rem(8),
             $justify-content: center
         );
-        @include font-property(
-            $family: $circular-std,
-            $weight: $font-weight-bold,
-            $size: px-to-rem($text-sm)
-        );
     }
 }
