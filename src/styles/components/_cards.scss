@@ -18,8 +18,7 @@
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
-            $size: $service-card-title,
-            // 24px;
+            $size: 24px,
             $line-height: 1.2
         );
     }
@@ -30,7 +29,6 @@
             $family: $inter,
             $weight: $font-weight-normal,
             $size: $service-card-description,
-            // 18px;
             $color: $midnight-express-50,
             $line-height: 1.6
         );
@@ -59,7 +57,6 @@
                 $family: $circular-std,
                 $weight: $font-weight-bold,
                 $size: 28px,
-                // 28px;
                 $line-height: 1.2
             );
         }
