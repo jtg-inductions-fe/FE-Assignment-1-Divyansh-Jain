@@ -1,7 +1,7 @@
 @use '../abstract/index' as *;
 
 .partners {
-    margin-top: 80px;
+    margin-top: px-to-rem(80);
 
     @include flex-property($wrap: wrap, $justify-content: center);
     row-gap: px-to-rem(27);

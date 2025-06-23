@@ -1,9 +1,7 @@
-//TODO : global classes are going to be defined here
 @use '../abstract/index' as *;
 
 .container {
     margin: 0 px-to-rem(16);
-    // max-width: px-to-rem(398);
     @include media-query('md') {
         margin: 0 px-to-rem(64);
     }
@@ -28,6 +26,6 @@
     white-space: nowrap;
     display: block;
 }
-.french-rose-text {
+.text-french-rose {
     color: $french-rose;
 }

@@ -15,8 +15,8 @@ body {
     font-size: $text-base;
 }
 
-.heading {
-    &--hero {
+.hero {
+    &__heading {
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
@@ -41,6 +41,32 @@ body {
         }
     }
 
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: $text-base,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $weight: $font-weight-normal,
+                $size: $text-md,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+
+    &__chip {
+        @include font-property($size: $text-sm);
+    }
+}
+
+.heading {
     &--primary {
         @include font-property(
             $family: $circular-std,
@@ -71,24 +97,13 @@ body {
         $line-height: 1.6,
         $color: $midnight-express-50
     );
+}
 
-    &--hero {
-        @include font-property(
-            $family: $inter,
-            $weight: $font-weight-normal,
-            $size: $text-base,
-            $line-height: 1.6,
-            $color: $midnight-express-50
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $family: $inter,
-                $weight: $font-weight-normal,
-                $size: $text-md,
-                $line-height: 1.6,
-                $color: $midnight-express-50
-            );
-        }
-    }
+.btn {
+    @include font-property(
+        $family: $circular-std,
+        $weight: $font-weight-bold,
+        $size: $text-sm,
+        $line-height: 1.2
+    );
 }
