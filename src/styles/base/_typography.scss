@@ -14,3 +14,81 @@ body {
     font-family: $circular-std;
     font-size: $text-base;
 }
+
+.heading {
+    &--hero {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(40),
+            $line-height: 1.2
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $weight: $font-weight-bold,
+                $size: px-to-rem(56),
+                $line-height: 1.2
+            );
+        }
+
+        @include media-query('lg') {
+            @include font-property(
+                $weight: $font-weight-bold,
+                $size: px-to-rem(69),
+                $line-height: 1.2
+            );
+        }
+    }
+
+    &--primary {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: $text-base,
+            $letter-spacing: 0.2em,
+            $color: $french-rose,
+            $line-height: 1.2
+        );
+    }
+
+    &--secondary {
+        @include font-property(
+            $family: $circular-std,
+            $color: $black-pearl,
+            $size: 32px,
+            $weight: $font-weight-bold,
+            $line-height: 1.2
+        );
+    }
+}
+
+.description {
+    @include font-property(
+        $family: $inter,
+        $weight: $font-weight-normal,
+        $size: $text-md,
+        $line-height: 1.6,
+        $color: $midnight-express-50
+    );
+
+    &--hero {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: $text-base,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $weight: $font-weight-normal,
+                $size: $text-md,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}

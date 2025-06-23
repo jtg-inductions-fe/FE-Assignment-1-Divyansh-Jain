@@ -28,7 +28,8 @@
     $size: 18px,
     $weight: $font-weight-normal,
     $color: $black,
-    $line-height: 1
+    $line-height: 1,
+    $letter-spacing: 0
 ) {
     font-family: $family;
     font-size: $size;

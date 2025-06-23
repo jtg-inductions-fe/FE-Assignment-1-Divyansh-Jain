@@ -1,4 +1,3 @@
-//TODO : Styles For Hero Section
 @use '../components/index' as *;
 @use '../abstract/index' as *;
 @use '../base/index' as *;
@@ -15,11 +14,7 @@
         width: 100%;
     }
     &__chip {
-        @extend .chip;
         @include font-property($size: $text-sm);
-        .chip__text {
-            margin-top: px-to-rem(3);
-        }
     }
 
     &__text-content {
@@ -32,24 +27,13 @@
 
     &__heading {
         margin-top: px-to-rem(5);
-        @include font-property(
-            $weight: $font-weight-bold,
-            $size: $hero-heading-sm,
-            $line-height: 1.2
-        );
         @include text-property($wrap: wrap, $align: center);
     }
     &__description {
         margin-top: px-to-rem(5);
-        @include font-property(
-            $family: $inter,
-            $weight: $font-weight-normal,
-            $size: $text-base,
-            $color: $midnight-express-50,
-            $line-height: 1.6
-        );
         @include text-property($wrap: wrap, $align: center);
     }
+
     &__btns {
         margin-top: px-to-rem(18);
         width: 100%;
@@ -70,24 +54,24 @@
     }
 
     @include media-query('md') {
+        margin-top: px-to-rem(97);
+
         @include flex-property(
             $direction: column,
             $align-items: center,
             $gap: px-to-rem(61)
         );
 
-        margin-top: px-to-rem(97);
         &__image-wrapper {
             margin-left: px-to-rem(17);
             width: px-to-rem(788);
         }
-        .chip__text {
-            margin-top: px-to-rem(3);
-        }
+
         &__pattern {
             display: block;
             width: px-to-rem(65);
             height: px-to-rem(169);
+
             @include position-property(
                 $position: absolute,
                 $left: 4%,
@@ -96,34 +80,25 @@
                 $y: 26px
             );
         }
+
         &__text-content {
             padding: 0 10px;
+
             @include flex-property(
                 $direction: column,
                 $align-items: center,
                 $gap: px-to-rem(42)
             );
         }
-        &__heading {
-            @include font-property(
-                $weight: $font-weight-bold,
-                $size: $hero-heading-md,
-                $line-height: 1.2
-            );
 
+        &__heading {
             @include text-property($wrap: balance, $align: center);
         }
 
         &__description {
             margin: 0;
             padding: 0 px-to-rem(215);
-            @include font-property(
-                $family: $inter,
-                $weight: $font-weight-normal,
-                $size: $text-md,
-                $color: $midnight-express-50,
-                $line-height: 1.6
-            );
+
             @include text-property($wrap: wrap, $align: center);
         }
 
@@ -143,6 +118,7 @@
         padding: 0 px-to-rem(10);
         margin-top: px-to-rem(93);
         width: 100%;
+
         @include flex-property($direction: row-reverse);
 
         &__image-wrapper {
@@ -153,17 +129,13 @@
         &__text-content {
             padding: 0;
             margin-top: px-to-rem(68);
-
+            max-width: px-to-rem(421);
             @include flex-property($direction: column, $gap: 4.3rem);
         }
         &__heading {
-            @include font-property(
-                $weight: $font-weight-bold,
-                $size: $hero-heading-lg,
-                $line-height: 1.2
-            );
-            @include text-property($wrap: balance, $align: left);
             text-indent: -1px;
+
+            @include text-property($wrap: balance, $align: left);
         }
 
         &__chip {
@@ -171,15 +143,8 @@
         }
 
         &__description {
-            padding: 0 0;
+            padding: 0;
             @include line-clamp(3);
-            @include font-property(
-                $family: $inter,
-                $weight: $font-weight-normal,
-                $size: $text-md,
-                $color: $midnight-express-50,
-                $line-height: 1.6
-            );
             @include text-property($wrap: wrap, $align: left);
         }
 
