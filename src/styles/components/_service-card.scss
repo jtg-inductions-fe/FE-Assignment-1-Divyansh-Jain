@@ -19,7 +19,6 @@
     &__image-wrapper {
         width: px-to-rem(64);
     }
-
     &__title {
         @include line-clamp(2);
         @include text-property($align: center, $wrap: wrap);
