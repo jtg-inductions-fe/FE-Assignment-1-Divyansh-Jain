@@ -37,7 +37,6 @@
             margin-left: px-to-rem(17);
             width: px-to-rem(788);
         }
-<<<<<<< HEAD
 
         @include media-query('lg') {
             margin-left: 0;
@@ -50,8 +49,6 @@
         @include media-query('lg') {
             margin-right: px-to-rem(64);
         }
-=======
->>>>>>> ad1e8a9 (updated the button.scss)
     }
 
     &__text-content {
@@ -61,84 +58,7 @@
             $gap: px-to-rem(16)
         );
 
-<<<<<<< HEAD
         @include media-query('md') {
-=======
-    &__heading {
-        margin-top: px-to-rem(5);
-        @include font-property(
-            $weight: $font-weight-bold,
-            $size: $hero-heading-sm,
-            $line-height: 1.2
-        );
-        @include text-property($wrap: wrap, $align: center);
-    }
-    &__description {
-        margin-top: px-to-rem(5);
-        @include font-property(
-            $family: $inter,
-            $weight: $font-weight-normal,
-            $size: $text-base,
-            $color: $midnight-express-50,
-            $line-height: 1.6
-        );
-        @include text-property($wrap: wrap, $align: center);
-    }
-    &__btns {
-        margin-top: px-to-rem(18);
-        width: 100%;
-        @include flex-property(
-            $direction: column,
-            $align-items: center,
-            $gap: px-to-rem(24)
-        );
-    }
-
-    &__btn {
-        aspect-ratio: 6.4;
-        width: 100%;
-    }
-
-    &__pattern {
-        display: none;
-    }
-
-    @include media-query('md') {
-        @include flex-property(
-            $direction: column,
-            $align-items: center,
-            $gap: px-to-rem(61)
-        );
-
-        margin-top: px-to-rem(97);
-        &__image-wrapper {
-            margin-left: px-to-rem(17);
-            width: px-to-rem(788);
-        }
-        .chip__text {
-            margin-top: px-to-rem(3);
-        }
-        &__pattern {
-            display: block;
-            width: px-to-rem(65);
-            height: px-to-rem(169);
-            @include position-property(
-                $position: absolute,
-                $left: 4%,
-                $top: 150%
-            );
-        }
-        &__pattern {
-            width: px-to-rem(65);
-            height: px-to-rem(169);
-            @include position-property(
-                $position: absolute,
-                $left: 4%,
-                $bottom: 1%
-            );
-        }
-        &__text-content {
->>>>>>> ad1e8a9 (updated the button.scss)
             padding: 0 px-to-rem(10);
 
             @include flex-property(

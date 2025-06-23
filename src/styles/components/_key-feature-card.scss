@@ -9,11 +9,9 @@
     @include pseudo-interactive-states {
         border: 1px solid $midnight-express-10;
     }
-
     &__icon-wrapper {
         width: max-content;
         border-radius: 32px;
-        // padding: ;
         position: relative;
         width: px-to-rem(100);
         height: px-to-rem(100);
@@ -46,30 +44,21 @@
     &__text-content {
         @include flex-property($direction: column, $gap: px-to-rem(8));
     }
-    &__title {
-        @include font-property(
-            $size: $text-lg,
-            $weight: $font-weight-bold,
-            $line-height: 1.2,
-            $color: $midnight-express
-        );
-    }
 
     &__description {
         text-align: left;
-        // text-wrap: pretty;
         padding-right: 50px;
-        @include font-property(
-            $family: $inter,
-            $size: $text-md,
-            $weight: $font-weight-normal,
-            $line-height: 1.6,
-            $color: $midnight-express-50
-        );
+
+        @include media-query('lg') {
+            padding: 0;
+        }
     }
 
     @include media-query('md') {
         margin-top: 0;
         @include flex-property($align-items: center, $gap: px-to-rem(33));
+    }
+
+    @include media-query('lg') {
     }
 }

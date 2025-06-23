@@ -166,3 +166,78 @@ body {
         }
     }
 }
+
+.stats-card {
+    &__stats {
+        @include font-property(
+            $size: 35px,
+            $color: $outrageous-orange,
+            $weight: $font-weight-bold,
+            $line-height: 1.2
+        );
+    }
+
+    &__title {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: 18px,
+            $color: $midnight-express,
+            $line-height: 1.6
+        );
+    }
+}
+
+.key-feature-card {
+    &__title {
+        @include font-property(
+            $size: $text-lg,
+            $weight: $font-weight-bold,
+            $line-height: 1.2,
+            $color: $midnight-express
+        );
+    }
+}
+
+.key-features {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: $text-base,
+            $weight: $font-weight-normal,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: $text-md,
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
+.travel-point {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: $text-base,
+            $weight: $font-weight-normal,
+            $line-height: 1.6
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: $text-md,
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
