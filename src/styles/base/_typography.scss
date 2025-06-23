@@ -81,6 +81,17 @@ body {
             $color: $french-rose,
             $line-height: 1.2
         );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: $text-lg,
+                $letter-spacing: 0.2em,
+                $color: $french-rose,
+                $line-height: 1.2
+            );
+        }
     }
 
     &--secondary {
@@ -91,6 +102,26 @@ body {
             $weight: $font-weight-bold,
             $line-height: 1.2
         );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $color: $black-pearl,
+                $size: 40px,
+                $weight: $font-weight-bold,
+                $line-height: 1.2
+            );
+        }
+
+        @include media-query('lg') {
+            @include font-property(
+                $family: $circular-std,
+                $color: $black-pearl,
+                $size: 44px,
+                $weight: $font-weight-bold,
+                $line-height: 1.2
+            );
+        }
     }
 }
 
@@ -104,6 +135,8 @@ body {
     );
 }
 
+// components typography
+
 .btn {
     @include font-property(
         $family: $circular-std,
@@ -111,4 +144,23 @@ body {
         $size: px-to-rem(14),
         $line-height: 1.2
     );
+}
+
+.service-card {
+    &__title {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: 24px,
+            $line-height: 1.2
+        );
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: 28px,
+                $line-height: 1.2
+            );
+        }
+    }
 }

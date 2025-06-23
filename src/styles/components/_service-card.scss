@@ -1,0 +1,49 @@
+@use '../abstract/index' as *;
+@use '../base/index' as *;
+.service-card {
+    box-sizing: border-box;
+    padding: px-to-rem(32);
+    width: 100%;
+    border: 1px solid $midnight-express-10;
+    border-radius: $card-radius;
+
+    // handles interaction like focus,hover
+    @include pseudo-interactive-states() {
+        box-shadow: $service-card-shadow;
+    }
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(32)
+    );
+    &__image-wrapper {
+        width: px-to-rem(64);
+    }
+    &__title {
+        @include text-property($align: center, $wrap: wrap);
+    }
+    &__description {
+        padding: 0 px-to-rem(9);
+        @include text-property($align: center, $wrap: wrap);
+        @include media-query('md') {
+            padding: 0;
+        }
+    }
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(32)
+        );
+    }
+
+    @include media-query('md') {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(64),
+            $align-items: center
+        );
+        padding: px-to-rem(64);
+        height: px-to-rem(443);
+    }
+}
