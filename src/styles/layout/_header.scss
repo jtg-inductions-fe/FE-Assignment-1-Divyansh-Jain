@@ -3,6 +3,7 @@
 
 .header {
     z-index: $header-z-index;
+    background-color: $white;
 }
 
 .navbar {
@@ -17,11 +18,24 @@
     );
 
     &__list {
+        display: none;
         @include font-property($size: $text-sm);
     }
-    &__list,
+
     &__auth-btns {
         display: none;
+    }
+
+    &__logo-wrapper {
+        &:focus {
+            outline: 2px solid $black;
+        }
+    }
+
+    &__menu-btn {
+        &:focus {
+            outline: 2px solid $black;
+        }
     }
 
     &__item {
@@ -41,11 +55,12 @@
         #{$nav}__list {
             @include flex-property(
                 $direction: column,
-                $gap: px-to-rem(20),
+                $gap: px-to-rem(40),
                 $align-items: center
             );
             z-index: $menu-z-index;
-            margin-top: px-to-rem(20);
+            margin-top: px-to-rem(60);
+
             height: 100vh;
             width: 100vw;
             background-color: $white;
@@ -59,36 +74,41 @@
             );
         }
         #{$nav}__auth-btns {
-            z-index: $menu-z-index;
+            border-top: 2px solid $white-smoke;
 
-            width: 100vw;
+            padding: px-to-rem(10);
+            z-index: $menu-z-index;
             @include flex-property($direction: column, $align-items: center);
             @include position-property(
                 $position: absolute,
                 $top: 0,
                 $left: 50%,
                 $x: -50%,
-                $y: px-to-rem(210)
+                $y: px-to-rem(330)
             );
+            width: 100%;
         }
     }
     @include media-query('md') {
         margin-top: px-to-rem(5);
         padding-left: px-to-rem(3);
-        padding-right: px-to-rem(1);
+
         #{$nav}__auth-btns {
             all: unset;
             @include flex-property();
-
             order: 3;
         }
 
         #{$nav}__logo-wrapper {
-            padding-left: px-to-rem(172);
+            margin-left: px-to-rem(172);
             order: 2;
         }
         #{$nav}__menu-btn {
             order: 1;
+
+            @include pseudo-interactive-states {
+                outline: 2px solid $black;
+            }
         }
     }
 
@@ -106,6 +126,7 @@
         }
 
         #{$nav}__logo-wrapper {
+            margin-left: 0;
             order: 1;
             padding: 0;
         }

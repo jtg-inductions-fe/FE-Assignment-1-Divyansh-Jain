@@ -3,8 +3,7 @@ import '../styles/main.scss';
 const menuBtn = document.getElementById('js-menu-btn');
 const navbar = document.getElementById('js-navbar');
 const menuIcon = document.getElementById('js-menu-icon');
-const menuNav = document.getElementById('js-menu-nav');
-const menuAuth = document.getElementById('js-menu-auth');
+const menuItems = document.getElementsByClassName('navbar__item');
 const imagePath = 'src/assets/images';
 const openIcon = 'hamburger-btn.png';
 const closeIcon = 'menu-close.png';
@@ -26,12 +25,11 @@ const handleMenuClick = () => {
 };
 
 menuBtn.addEventListener('click', handleMenuClick);
-
-const handleMenuItemClick = (e) => {
-    if (e.target.tagName == 'BUTTON' || e.target.tagName == 'A') {
-        handleMenuClick();
-    }
-};
-
-menuAuth.addEventListener('click', handleMenuItemClick);
-menuNav.addEventListener('click', handleMenuItemClick);
+// convert to menuItems to array
+const menuItemsList = Object.entries(menuItems).map((entry) => {
+    return entry[1];
+});
+// apply event listener on each menuItem
+menuItemsList.forEach((menuItem) => {
+    menuItem.addEventListener('click', handleMenuClick);
+});
