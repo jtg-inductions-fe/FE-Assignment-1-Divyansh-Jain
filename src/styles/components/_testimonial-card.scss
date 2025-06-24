@@ -1,0 +1,29 @@
+@use '../abstract/index' as *;
+
+.testimonial-card {
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(32)
+    );
+    width: 100%;
+    &__profile-wrapper {
+        width: px-to-rem(128);
+        height: px-to-rem(128);
+    }
+
+    &__user-info {
+        text-align: center;
+        margin-top: px-to-rem(32);
+        .user-info__name {
+            color: $outrageous-orange;
+        }
+    }
+
+    &__rating {
+    }
+    &__review {
+        text-align: center;
+        margin-top: px-to-rem(32);
+    }
+}

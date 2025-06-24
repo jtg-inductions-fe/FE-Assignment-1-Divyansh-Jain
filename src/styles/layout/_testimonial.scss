@@ -1,1 +1,16 @@
-//TODO : Styles for testimonial section
+@use '../abstract/index' as *;
+
+.testimonial {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(16),
+        $align-items: center
+    );
+
+    &__cards {
+        margin-top: px-to-rem(48);
+    }
+}

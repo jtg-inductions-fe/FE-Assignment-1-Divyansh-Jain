@@ -240,3 +240,23 @@ body {
         );
     }
 }
+
+.testimonial-card {
+    &__user-info {
+        @include font-property(
+            $family: $circular-std,
+            $size: px-to-rem(28),
+            $weight: $font-weight-bold,
+            $line-height: 1.2
+        );
+    }
+
+    &__review {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(18),
+            $weight: $font-weight-normal,
+            $color: $midnight-express-75
+        );
+    }
+}
