@@ -4,17 +4,16 @@
     border: none;
     border-radius: $btn-radius;
     padding: px-to-rem(16) px-to-rem(32);
-    max-width: 440px;
+    max-width: px-to-rem(440);
     cursor: pointer;
-
+    @include pseudo-interactive-states {
+        background-color: $black-pearl;
+        color: $white-smoke;
+    }
     &--primary {
         @extend .btn;
         background-color: $state-blue;
         color: $white-smoke;
-        @include pseudo-interactive-states {
-            background-color: $black-pearl;
-            color: $white-smoke;
-        }
     }
 
     &--ghost {
@@ -22,22 +21,24 @@
         background-color: inherit;
         color: $black-pearl;
         @include pseudo-interactive-states {
+            background-color: inherit;
             color: $outrageous-orange;
         }
     }
 
     &--secondary-outline {
+        @extend .btn;
+
         background-color: inherit;
         color: $black-pearl;
-        @extend .btn;
-        i[class^='icon-'] {
-            font-size: $base-icon-size;
-        }
         border: 1px solid $white-smoke;
         @include flex-property(
             $align-items: center,
             $gap: px-to-rem(8),
             $justify-content: center
         );
+        i[class^='icon-'] {
+            font-size: $base-icon-size;
+        }
     }
 }

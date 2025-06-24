@@ -3,8 +3,8 @@
 @use '../base/index' as *;
 
 .hero {
-    margin-top: px-to-rem(65);
-
+    margin-top: px-to-rem(55);
+    position: relative;
     @include flex-property(
         $direction: column,
         $align-items: center,
@@ -12,7 +12,7 @@
     );
 
     @include media-query('md') {
-        margin-top: px-to-rem(97);
+        margin-top: px-to-rem(87);
 
         @include flex-property(
             $direction: column,
@@ -23,7 +23,7 @@
 
     @include media-query('lg') {
         padding: 0 px-to-rem(10);
-        margin-top: px-to-rem(93);
+        margin-top: px-to-rem(83);
         width: 100%;
         @include flex-property($direction: row-reverse);
     }
@@ -125,7 +125,7 @@
         }
     }
 
-    .btn--primary {
+    &__get-started-btn {
         width: 100%;
         height: px-to-rem(65);
         @include media-query('md') {
@@ -134,7 +134,7 @@
         }
     }
 
-    .btn--secondary-outline {
+    &__watch-demo-btn {
         width: 100%;
         height: px-to-rem(72);
         @include media-query('md') {
@@ -153,20 +153,20 @@
 
             @include position-property(
                 $position: absolute,
-                $left: 4%,
-                $top: 150%,
-                $x: -2px,
-                $y: 0px
+                $left: px-to-rem(0),
+                $top: px-to-rem(1087),
+                $x: -25px,
+                $y: 3px
             );
         }
 
         @include media-query('lg') {
             @include position-property(
                 $position: absolute,
-                $top: 103%,
-                $left: 3%,
-                $x: -2px,
-                $y: -3px
+                $top: px-to-rem(659),
+                $left: px-to-rem(0),
+                $x: px-to-rem(-83),
+                $y: px-to-rem(2)
             );
         }
     }

@@ -29,12 +29,13 @@
     $weight: $font-weight-normal,
     $color: $black,
     $line-height: 1,
-    $letter-spacing: 0
+    $letter-spacing: normal
 ) {
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
     color: $color;
+    letter-spacing: $letter-spacing;
     line-height: $line-height;
 }
 
@@ -97,7 +98,7 @@
         @content;
     }
 }
-
+// mixin for restricting the text content under certain number of lines
 @mixin line-clamp($lines) {
     display: -webkit-box;
     -webkit-line-clamp: $lines;

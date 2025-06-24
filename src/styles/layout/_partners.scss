@@ -28,7 +28,7 @@
         row-gap: px-to-rem(31);
     }
     @include media-query('lg') {
-        margin-top: px-to-rem(130);
+        margin-top: px-to-rem(145);
         padding: 0 px-to-rem(10);
 
         @include flex-property($gap: px-to-rem(104));

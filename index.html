@@ -13,8 +13,8 @@
 
     <body>
         <!-- HEADER SECTION STARTS HERE  -->
-        <header class="container sticky">
-            <nav class="navbar" id="js-navbar">
+        <header class="header sticky">
+            <nav class="navbar container" id="js-navbar">
                 <a href="/" class="navbar__logo-wrapper">
                     <img
                         class="navbar__logo"
@@ -59,86 +59,80 @@
                 <button class="navbar__menu-btn" id="js-menu-btn">
                     <img
                         src="src/assets/images/hamburger-btn.png"
-                        alt="icon with three white horizontal stripes used for opening of menu"
+                        alt="menu icon"
                         id="js-menu-icon"
                     />
                 </button>
             </nav>
         </header>
         <!-- HERO SECTION STARTED -->
-        <div class="container">
-            <section class="hero">
-                <div class="hero__image-wrapper">
-                    <img
-                        src="src/assets/images/hero-image.png"
-                        alt="3 images of different tourist destinations with globe in background and plane flying "
-                    />
-                </div>
-                <div class="hero__text-content">
-                    <div class="hero__chip chip text-french-rose">
-                        <p class="chip__text text-french-rose">
-                            Explore the world!
-                        </p>
-                        <i class="icon-suitcase"></i>
-                    </div>
-                    <h1 class="hero__heading">
-                        Travel
-                        <span class="text-french-rose">top destination</span> of
-                        the world
-                    </h1>
-                    <p class="hero__description">
-                        We always make our customer happy by providing as many
-                        choices as possible
-                    </p>
-                    <div class="hero__btns">
-                        <button class="hero__btn btn--primary">
-                            Get Started
-                        </button>
-                        <button class="hero__btn btn--secondary-outline">
-                            <i class="icon-play"></i>
-                            Watch Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="hero__pattern">
-                    <img
-                        src="src/assets/images/arrow-head-pattern.png"
-                        alt="orange colored arrow heads "
-                    />
-                </div>
-            </section>
-            <!-- PARTNERS  SECTION STARTED -->
-            <section class="partners">
-                <div class="partners__partner">
-                    <img
-                        src="src/assets/images/tripadvisor.png"
-                        alt="Tripadvisor logo"
-                    />
-                </div>
 
-                <div class="partners__partner">
-                    <img
-                        src="src/assets/images/expedia.png"
-                        alt="Expedia logo "
-                    />
+        <section class="hero container">
+            <div class="hero__image-wrapper">
+                <img
+                    src="src/assets/images/hero-image.png"
+                    alt="3 images of tourist destinations  "
+                />
+            </div>
+            <div class="hero__text-content">
+                <div class="hero__chip chip">
+                    <p class="text-french-rose inline-ellipsis" tabindex="0">
+                        Explore the world!
+                    </p>
+                    <i class="icon-suitcase"></i>
                 </div>
-                <div class="partners__partner">
-                    <img
-                        src="src/assets/images/booking.png"
-                        alt=" Booking logo"
-                    />
+                <h1 class="hero__heading" tabindex="0">
+                    Travel
+                    <span class="text-french-rose">top destination</span> of the
+                    world
+                </h1>
+                <p class="hero__description" tabindex="0">
+                    We always make our customer happy by providing as many
+                    choices as possible
+                </p>
+                <div class="hero__btns">
+                    <button
+                        class="hero__btn hero__get-started-btn btn--primary inline-ellipsis"
+                    >
+                        Get Started
+                    </button>
+                    <button
+                        class="hero__btn hero__watch-demo-btn btn--secondary-outline"
+                    >
+                        <i class="icon-play"></i>
+                        <p class="inline-ellipsis">Watch Demo</p>
+                    </button>
                 </div>
-                <div class="partners__partner">
-                    <img
-                        src="src/assets/images/airbnb.png"
-                        alt="Airbnb logo "
-                    />
-                </div>
-                <div class="partners__partner">
-                    <img src="src/assets/images/orbitz.png" alt="Orbitz logo" />
-                </div>
-            </section>
-        </div>
+            </div>
+            <div class="hero__pattern">
+                <img
+                    src="src/assets/images/arrow-head-pattern.png"
+                    alt="orange colored arrow heads "
+                />
+            </div>
+        </section>
+        <!-- PARTNERS  SECTION STARTED -->
+        <section class="partners container">
+            <div class="partners__partner" tabindex="0">
+                <img
+                    src="src/assets/images/tripadvisor.png"
+                    alt="Tripadvisor logo"
+                />
+            </div>
+
+            <div class="partners__partner" tabindex="0">
+                <img src="src/assets/images/expedia.png" alt="Expedia logo " />
+            </div>
+            <div class="partners__partner" tabindex="0">
+                <img src="src/assets/images/booking.png" alt="Booking logo" />
+            </div>
+            <div class="partners__partner" tabindex="0">
+                <img src="src/assets/images/airbnb.png" alt="Airbnb logo " />
+            </div>
+            <div class="partners__partner" tabindex="0">
+                <img src="src/assets/images/orbitz.png" alt="Orbitz logo" />
+            </div>
+        </section>
 
         <script type="module" src="./src/script/index.js"></script>
     </body>
