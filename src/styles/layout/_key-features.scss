@@ -1,7 +1,7 @@
 @use '../abstract/index' as *;
 .key-features {
-    width: 100%;
-    margin-top: px-to-rem(95);
+    margin: px-to-rem(95) px-to-rem(48) 0;
+
     @include flex-property($direction: column, $align-items: center);
     &__text-content {
         margin-top: px-to-rem(106);
@@ -10,7 +10,6 @@
             $gap: px-to-rem(16),
             $align-items: center
         );
-        padding: 0 px-to-rem(8);
         text-align: center;
 
         @include media-query('md') {
@@ -41,13 +40,13 @@
         }
 
         @include media-query('lg') {
-            margin-top: px-to-rem(38);
+            margin-top: px-to-rem(45);
         }
     }
 
     &__description {
         margin-top: px-to-rem(16);
-        padding: 0 px-to-rem(30);
+        padding: 0;
 
         @include media-query('lg') {
             padding: 0;
@@ -55,14 +54,12 @@
     }
 
     &__cards {
-        padding: 0 px-to-rem(21);
         margin-top: px-to-rem(8);
 
         @include media-query('md') {
             width: 100%;
             padding: 0;
             margin-left: 0;
-            padding: 0 px-to-rem(32);
             box-sizing: border-box;
             margin-top: px-to-rem(50);
         }
@@ -74,11 +71,12 @@
     }
 
     @include media-query('md') {
-        margin-top: px-to-rem(130);
+        margin: px-to-rem(130) px-to-rem(96) 0;
     }
 
     @include media-query('lg') {
         margin-top: px-to-rem(82);
+        margin-left: px-to-rem(60);
         transform: translateX(58px);
         @include flex-property($direction: row-reverse, $gap: px-to-rem(70));
     }

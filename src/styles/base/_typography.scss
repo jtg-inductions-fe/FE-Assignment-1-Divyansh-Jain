@@ -181,7 +181,7 @@ body {
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
-            $size: $text-md,
+            $size: px-to-rem(18),
             $color: $midnight-express,
             $line-height: 1.6
         );
@@ -191,7 +191,7 @@ body {
 .key-feature-card {
     &__title {
         @include font-property(
-            $size: $text-lg,
+            $size: px-to-rem(23),
             $weight: $font-weight-bold,
             $line-height: 1.2,
             $color: $midnight-express
@@ -203,7 +203,7 @@ body {
     &__description {
         @include font-property(
             $family: $inter,
-            $size: $text-base,
+            $size: px-to-rem(16),
             $weight: $font-weight-normal,
             $line-height: 1.6,
             $color: $midnight-express-50
@@ -212,7 +212,7 @@ body {
         @include media-query('md') {
             @include font-property(
                 $family: $inter,
-                $size: $text-md,
+                $size: px-to-rem(18),
                 $weight: $font-weight-normal,
                 $line-height: 1.6,
                 $color: $midnight-express-50
@@ -225,7 +225,7 @@ body {
     &__description {
         @include font-property(
             $family: $inter,
-            $size: $text-base,
+            $size: px-to-rem(16),
             $weight: $font-weight-normal,
             $line-height: 1.6
         );
@@ -233,7 +233,7 @@ body {
         @include media-query('md') {
             @include font-property(
                 $family: $inter,
-                $size: $text-md,
+                $size: px-to-rem(18),
                 $weight: $font-weight-normal,
                 $line-height: 1.6,
                 $color: $midnight-express-50

@@ -29,7 +29,7 @@
         text-align: center;
 
         @include media-query('md') {
-            margin-top: px-to-rem(27);
+            margin-top: px-to-rem(20);
             padding: 0 px-to-rem(32);
         }
 
@@ -50,7 +50,7 @@
             display: block;
             @include position-property(
                 $position: absolute,
-                $right: 0%,
+                $right: 8%,
                 $top: 39%,
                 $x: px-to-rem(65)
             );
@@ -85,8 +85,7 @@
     }
 
     @include media-query('lg') {
-        // transform: translateX(px-to-rem(-55));
-        margin-top: px-to-rem(116);
+        margin-top: px-to-rem(100);
         @include flex-property($direction: row, $align-items: center);
     }
 }

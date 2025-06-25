@@ -18,4 +18,8 @@
         max-width: px-to-rem(300);
         text-wrap: nowrap;
     }
+
+    @include pseudo-interactive-states {
+        box-shadow: $stats-card-shadow;
+    }
 }
