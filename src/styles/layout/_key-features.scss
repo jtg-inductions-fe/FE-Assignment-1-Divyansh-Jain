@@ -78,7 +78,6 @@
     }
 
     @include media-query('lg') {
-        margin-left: 11.7rem;
         margin-top: 8.7rem;
 
         @include flex-property($direction: row-reverse, $gap: px-to-rem(70));

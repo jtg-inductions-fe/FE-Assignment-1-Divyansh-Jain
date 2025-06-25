@@ -81,12 +81,12 @@
     }
 
     @include media-query('md') {
-        margin-top: px-to-rem(95);
+        margin-top: px-to-rem(125);
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(150);
-        margin-left: 1px;
+        transform: translateX(-55px);
+        margin-top: 116px;
         @include flex-property($direction: row, $align-items: center);
     }
 }
