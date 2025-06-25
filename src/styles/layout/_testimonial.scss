@@ -96,4 +96,22 @@
         margin-top: px-to-rem(117);
         margin-left: px-to-rem(130);
     }
+
+    &__btn {
+        height: 64px;
+        width: 64px;
+
+        @include media-query('md') {
+            height: 100px;
+            width: 100px;
+        }
+
+        &--next {
+            background-color: $state-blue;
+        }
+
+        &--prev {
+            background-color: $white;
+        }
+    }
 }
