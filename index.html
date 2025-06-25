@@ -15,7 +15,7 @@
         <!-- HEADER SECTION STARTS HERE  -->
         <header class="header sticky">
             <nav class="navbar container" id="js-navbar">
-                <a href="/" class="navbar__logo-wrapper">
+                <a href="/" class="navbar__logo-wrapper" tabindex="1">
                     <img
                         class="navbar__logo"
                         src="src/assets/images/logo.svg"
@@ -24,39 +24,53 @@
                 </a>
                 <ul class="navbar__list" id="js-menu-nav">
                     <li class="navbar__item">
-                        <a class="inline-ellipsis navbar__link" href="#home"
+                        <a
+                            class="inline-ellipsis navbar__link"
+                            href="#home"
+                            tabindex="2"
                             >Home</a
                         >
                     </li>
                     <li class="navbar__item">
-                        <a class="inline-ellipsis navbar__link" href="#discover"
+                        <a
+                            class="inline-ellipsis navbar__link"
+                            href="#discover"
+                            tabindex="3"
                             >Discover</a
                         >
                     </li>
                     <li class="navbar__item">
                         <a
                             class="inline-ellipsis navbar__link"
+                            tabindex="4"
                             href="#specials-deals"
                             >Special Deals</a
                         >
                     </li>
                     <li class="navbar__item">
-                        <a class="inline-ellipsis navbar__link" href="#contact"
+                        <a
+                            class="inline-ellipsis navbar__link"
+                            href="#contact"
+                            tabindex="5"
                             >Contact</a
                         >
                     </li>
                 </ul>
                 <div class="navbar__auth-btns" id="js-menu-auth">
-                    <button class="navbar__auth-btn btn--ghost inline-ellipsis">
+                    <button
+                        class="navbar__auth-btn navbar__item btn--ghost inline-ellipsis"
+                        tabindex="6"
+                    >
                         Log In
                     </button>
                     <button
-                        class="navbar__auth-btn btn--primary inline-ellipsis"
+                        class="navbar__auth-btn navbar__item btn--primary inline-ellipsis"
+                        tabindex="1"
                     >
                         Sign Up
                     </button>
                 </div>
-                <button class="navbar__menu-btn" id="js-menu-btn">
+                <button class="navbar__menu-btn" id="js-menu-btn" tabindex="7">
                     <img
                         src="src/assets/images/hamburger-btn.png"
                         alt="menu icon"

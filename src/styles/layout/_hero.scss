@@ -153,7 +153,7 @@
 
             @include position-property(
                 $position: absolute,
-                $left: px-to-rem(0),
+                $left: 0,
                 $top: px-to-rem(1087),
                 $x: -25px,
                 $y: 3px
@@ -164,7 +164,7 @@
             @include position-property(
                 $position: absolute,
                 $top: px-to-rem(659),
-                $left: px-to-rem(0),
+                $left: 0,
                 $x: px-to-rem(-83),
                 $y: px-to-rem(2)
             );

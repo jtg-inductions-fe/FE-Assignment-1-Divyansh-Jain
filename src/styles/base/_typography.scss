@@ -60,10 +60,10 @@ body {
             );
         }
     }
+}
 
-    &__chip {
-        @include font-property($size: $text-sm);
-    }
+.chip {
+    @include font-property($size: $text-sm);
 }
 
 .heading {
