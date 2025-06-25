@@ -15,7 +15,7 @@
         <!-- HEADER SECTION STARTS HERE  -->
         <header class="header sticky">
             <nav class="navbar container" id="js-navbar">
-                <a href="/" class="navbar__logo-wrapper" tabindex="1">
+                <a href="/" class="navbar__logo-wrapper" tabindex="0">
                     <img
                         class="navbar__logo"
                         src="src/assets/images/logo.svg"
@@ -27,7 +27,7 @@
                         <a
                             class="inline-ellipsis navbar__link"
                             href="#home"
-                            tabindex="2"
+                            tabindex="0"
                             >Home</a
                         >
                     </li>
@@ -35,14 +35,14 @@
                         <a
                             class="inline-ellipsis navbar__link"
                             href="#discover"
-                            tabindex="3"
+                            tabindex="0"
                             >Discover</a
                         >
                     </li>
                     <li class="navbar__item">
                         <a
                             class="inline-ellipsis navbar__link"
-                            tabindex="4"
+                            tabindex="0"
                             href="#specials-deals"
                             >Special Deals</a
                         >
@@ -51,7 +51,7 @@
                         <a
                             class="inline-ellipsis navbar__link"
                             href="#contact"
-                            tabindex="5"
+                            tabindex="0"
                             >Contact</a
                         >
                     </li>
@@ -59,13 +59,13 @@
                 <div class="navbar__auth-btns" id="js-menu-auth">
                     <button
                         class="navbar__auth-btn navbar__item btn--ghost inline-ellipsis"
-                        tabindex="6"
+                        tabindex="0"
                     >
                         Log In
                     </button>
                     <button
                         class="navbar__auth-btn navbar__item btn--primary inline-ellipsis"
-                        tabindex="1"
+                        tabindex="0"
                     >
                         Sign Up
                     </button>
@@ -73,7 +73,7 @@
                 <button class="navbar__menu-btn" id="js-menu-btn" tabindex="7">
                     <img
                         src="src/assets/images/hamburger-btn.png"
-                        alt="menu icon"
+                        alt="Menu icon"
                         id="js-menu-icon"
                     />
                 </button>
@@ -121,7 +121,8 @@
             <div class="hero__pattern">
                 <img
                     src="src/assets/images/arrow-head-pattern.png"
-                    alt="orange colored arrow heads"
+                    alt=""
+                    aria-hidden="true"
                 />
             </div>
         </section>

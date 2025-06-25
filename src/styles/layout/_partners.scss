@@ -24,8 +24,7 @@
         padding: 0 px-to-rem(110);
 
         @include flex-property($wrap: wrap, $justify-content: center);
-        column-gap: px-to-rem(30);
-        row-gap: px-to-rem(31);
+        gap: px-to-rem(31) px-to-rem(30); // row col
     }
     @include media-query('lg') {
         margin-top: px-to-rem(145);

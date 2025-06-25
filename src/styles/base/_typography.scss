@@ -5,14 +5,13 @@
     @include font-face(
         map.get($font, 'name'),
         map.get($font, 'source'),
-        map.get($font, 'weight'),
-        map.get($font, 'color')
+        map.get($font, 'weight')
     );
 }
 
 body {
     font-family: $circular-std;
-    font-size: $text-base;
+    font-size: px-to-rem(16);
 }
 
 .hero {
@@ -45,7 +44,7 @@ body {
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
-            $size: $text-base,
+            $size: px-to-rem(16),
             $line-height: 1.6,
             $color: $midnight-express-50
         );
@@ -54,7 +53,7 @@ body {
             @include font-property(
                 $family: $inter,
                 $weight: $font-weight-normal,
-                $size: $text-md,
+                $size: px-to-rem(18),
                 $line-height: 1.6,
                 $color: $midnight-express-50
             );
@@ -63,7 +62,7 @@ body {
 }
 
 .chip {
-    @include font-property($size: $text-sm);
+    @include font-property($size: px-to-rem(14));
 }
 
 .heading {
@@ -71,7 +70,7 @@ body {
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
-            $size: $text-base,
+            $size: px-to-rem(16),
             $letter-spacing: 0.2em,
             $color: $french-rose,
             $line-height: 1.2
@@ -82,7 +81,7 @@ body {
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
-            $size: 32px,
+            $size: px-to-rem(32),
             $weight: $font-weight-bold,
             $line-height: 1.2
         );
@@ -93,7 +92,7 @@ body {
     @include font-property(
         $family: $inter,
         $weight: $font-weight-normal,
-        $size: $text-md,
+        $size: px-to-rem(18),
         $line-height: 1.6,
         $color: $midnight-express-50
     );
@@ -103,7 +102,7 @@ body {
     @include font-property(
         $family: $circular-std,
         $weight: $font-weight-bold,
-        $size: $text-sm,
+        $size: px-to-rem(14),
         $line-height: 1.2
     );
 }

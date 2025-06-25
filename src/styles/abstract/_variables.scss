@@ -24,13 +24,8 @@ $service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
 // chip shadow (h v blure spread color)
 
 $chip-shadow: 0 34px 75px 0 rgba(0, 0, 0, 0.2);
-// breakpoints for different device sizes
-$text-base: 16px;
-$text-sm: 14px;
-$text-md: 18px;
-$text-lg: 23px;
 
-$base-icon-size: 22px;
+// breakpoints for different device sizes
 
 $breakpoints: (
     'md': 768px,
@@ -53,101 +48,19 @@ $fonts-map: (
         'name': $inter,
         'source': '#{$font-path}/#{$inter}/#{$font-weight-normal}.ttf',
         'weight': $font-weight-normal,
-        'color': $midnight-express-50,
-    ),
-    (
-        'name': $inter,
-        'source': '#{$font-path}/#{$inter}/#{$font-weight-normal}.ttf',
-        'weight': $font-weight-normal,
-        'color': $midnight-express-75,
     ),
     (
         'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
+        'source': '#{$font-path}/#{$circular-std}/#{$font-weight-normal}.ttf',
         'weight': $font-weight-normal,
-        'color': $midnight-express-75,
     ),
     (
         'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
+        'source': '#{$font-path}/#{$circular-std}/#{$font-weight-bold}.ttf',
         'weight': $font-weight-bold,
-        'color': $midnight-express-75,
     ),
     (
         'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
+        'source': '#{$font-path}/#{$circular-std}/#{$font-weight-bold}.ttf',
         'weight': $font-weight-black,
-        'color': $midnight-express-75,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
-        'weight': $font-weight-normal,
-        'color': $midnight-express-50,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $midnight-express-50,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
-        'weight': $font-weight-black,
-        'color': $midnight-express-50,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
-        'weight': $font-weight-normal,
-        'color': $midnight-express,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $midnight-express,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
-        'weight': $font-weight-black,
-        'color': $midnight-express,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-normal}.ttf',
-        'weight': $font-weight-normal,
-        'color': $french-rose,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $french-rose,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-black}.ttf',
-        'weight': $font-weight-black,
-        'color': $french-rose,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $black-pearl,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $white-smoke,
-    ),
-    (
-        'name': $circular-std,
-        'source': '#{$font-path}/#{ciruclar-std}/#{$font-weight-bold}.ttf',
-        'weight': $font-weight-bold,
-        'color': $outrageous-orange,
     );
