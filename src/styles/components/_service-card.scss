@@ -1,7 +1,7 @@
 @use '../abstract/index' as *;
 @use '../base/index' as *;
 .service-card {
-    padding: px-to-rem(32);
+    padding: px-to-rem(30);
     width: 100%;
     border: 1px solid $midnight-express-10;
     border-radius: $card-radius;
@@ -24,7 +24,6 @@
         @include text-property($align: center, $wrap: wrap);
     }
     &__description {
-        padding: 0 px-to-rem(9);
         @include text-property($align: center, $wrap: wrap);
         @include media-query('md') {
             padding: 0;
@@ -36,6 +35,10 @@
             $align-items: center,
             $gap: px-to-rem(32)
         );
+
+        @include media-query('md') {
+            padding: 0 px-to-rem(5);
+        }
     }
 
     @include media-query('md') {
@@ -44,7 +47,11 @@
             $gap: px-to-rem(64),
             $align-items: center
         );
-        padding: px-to-rem(64);
+        padding: px-to-rem(54);
         height: px-to-rem(443);
+    }
+
+    @include media-query('lg') {
+        padding: px-to-rem(44);
     }
 }

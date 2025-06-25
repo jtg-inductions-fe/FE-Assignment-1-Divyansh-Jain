@@ -86,7 +86,7 @@ body {
             @include font-property(
                 $family: $circular-std,
                 $weight: $font-weight-bold,
-                $size: $text-lg,
+                $size: px-to-rem(23),
                 $letter-spacing: 0.2em,
                 $color: $french-rose,
                 $line-height: 1.2
@@ -107,7 +107,7 @@ body {
             @include font-property(
                 $family: $circular-std,
                 $color: $black-pearl,
-                $size: 40px,
+                $size: px-to-rem(40),
                 $weight: $font-weight-bold,
                 $line-height: 1.2
             );
@@ -117,7 +117,7 @@ body {
             @include font-property(
                 $family: $circular-std,
                 $color: $black-pearl,
-                $size: 44px,
+                $size: px-to-rem(44),
                 $weight: $font-weight-bold,
                 $line-height: 1.2
             );
@@ -151,14 +151,14 @@ body {
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
-            $size: 24px,
+            $size: px-to-rem(24),
             $line-height: 1.2
         );
         @include media-query('md') {
             @include font-property(
                 $family: $circular-std,
                 $weight: $font-weight-bold,
-                $size: 28px,
+                $size: px-to-rem(28),
                 $line-height: 1.2
             );
         }

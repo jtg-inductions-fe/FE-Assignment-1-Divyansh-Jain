@@ -11,7 +11,7 @@
     &__text-content {
         text-align: center;
         @include media-query('lg') {
-            margin-top: px-to-rem(38);
+            margin-top: px-to-rem(150);
             text-align: left;
         }
     }
@@ -27,16 +27,18 @@
     &__cards {
         @include flex-property(
             $direction: column,
-            $gap: px-to-rem(12),
+            $gap: px-to-rem(13),
             $align-items: center
         );
 
         @include media-query('md') {
+            margin-top: px-to-rem(6);
             @include flex-property($gap: px-to-rem(16));
         }
 
         @include media-query('lg') {
-            @include flex-property($gap: px-to-rem(21));
+            margin-top: px-to-rem(15);
+            @include flex-property($gap: px-to-rem(35));
         }
     }
 
@@ -51,8 +53,8 @@
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(123);
-        padding: 0 px-to-rem(3);
-        @include flex-property($direction: row, $align-items: center);
+        margin-top: px-to-rem(125);
+        padding: 0 px-to-rem(5);
+        @include flex-property($direction: row, $gap: px-to-rem(2));
     }
 }
