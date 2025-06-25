@@ -100,18 +100,25 @@
     &__btn {
         height: 64px;
         width: 64px;
-
+        position: absolute;
+        top: 120%;
         @include media-query('md') {
+            top: 45%;
             height: 100px;
             width: 100px;
         }
 
         &--next {
             background-color: $state-blue;
+            transform: translate(10px, 15px);
         }
 
         &--prev {
             background-color: $white;
+            transform: translate(-10px, 20px);
+
+            @include media-query('md') {
+            }
         }
     }
 }
