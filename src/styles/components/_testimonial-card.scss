@@ -6,7 +6,7 @@
         $align-items: center,
         $gap: px-to-rem(32)
     );
-    width: 100%;
+    // max-width: 100%;
     &__profile-wrapper {
         width: px-to-rem(128);
         height: px-to-rem(128);
@@ -21,9 +21,14 @@
     }
 
     &__rating {
+        @include flex-property($gap: 16px);
     }
     &__review {
         text-align: center;
         margin-top: px-to-rem(32);
+        @include media-query('md') {
+            padding: 0 px-to-rem(156);
+            margin-top: px-to-rem(25);
+        }
     }
 }

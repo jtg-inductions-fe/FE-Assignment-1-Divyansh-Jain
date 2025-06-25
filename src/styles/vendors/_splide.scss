@@ -7,6 +7,24 @@
         height: 400px;
     }
 
+    &__arrow {
+        height: 64px;
+        width: 64px;
+
+        @include media-query('md') {
+            height: 100px;
+            width: 100px;
+        }
+
+        &--next {
+            background-color: $state-blue;
+        }
+
+        &--prev {
+            background-color: $white;
+        }
+    }
+
     &__pagination {
         bottom: 10%;
         z-index: 10;
@@ -19,5 +37,9 @@
         background-color: $midnight-express-5;
         height: 24px;
         width: 24px;
+
+        &.is-active {
+            background-color: $french-rose;
+        }
     }
 }

@@ -1,9 +1,20 @@
 @use '../abstract/index' as *;
 
 .testimonial {
+    //    @include media-query('lg') {
+    //         max-width: 1440px;
+    //         margin : 0 auto;
+    //    }
+    //    @include media-query('md') {
+    //     transform: translate(0,-35%);
+    //      background-repeat: no-repeat;
+    //     background-size: cover;
+
+    //     background-image: url('src/assets/images/testimonial-bg.svg');
+    //     background-position:top;
+    // }
+
     position: relative;
-    max-width: 100%;
-    width: 100%;
     @include flex-property(
         $direction: column,
         $gap: px-to-rem(16),
@@ -12,5 +23,66 @@
 
     &__cards {
         margin-top: px-to-rem(48);
+        @include media-query('md') {
+            margin-top: px-to-rem(32);
+        }
+    }
+
+    &__forward-btn {
+        background-color: $state-blue;
+        position: absolute;
+        bottom: -20%;
+        transform: translateY(10%);
+        right: 0;
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+
+        @include media-query('md') {
+            height: 100px;
+            width: 100px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-100%);
+        }
+    }
+
+    &__backward-btn {
+        background-color: $white;
+        position: absolute;
+        bottom: -20%;
+        transform: translateY(10%);
+        left: 0;
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+
+        @include media-query('md') {
+            height: 100px;
+            width: 100px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-100%);
+        }
+    }
+
+    @include media-query('md') {
+        margin-top: px-to-rem(16);
+    }
+
+    &__bg-wrapper {
+        height: 1px;
+        width: 1px;
+    }
+
+    &__bullets {
+        // margin-top : 60px;
+        position: absolute;
+        left: 50%;
+        top: 97%;
+        transform: translate(-50%, 0%);
+        @include media-query('md') {
+            top: 98%;
+        }
     }
 }
