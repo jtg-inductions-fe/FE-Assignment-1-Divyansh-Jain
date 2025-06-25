@@ -170,7 +170,7 @@ body {
 .stats-card {
     &__stats {
         @include font-property(
-            $size: 35px,
+            $size: px-to-rem(35),
             $color: $outrageous-orange,
             $weight: $font-weight-bold,
             $line-height: 1.2
@@ -181,7 +181,7 @@ body {
         @include font-property(
             $family: $inter,
             $weight: $font-weight-normal,
-            $size: 18px,
+            $size: $text-md,
             $color: $midnight-express,
             $line-height: 1.6
         );

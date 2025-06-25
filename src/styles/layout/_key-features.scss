@@ -55,7 +55,7 @@
     }
 
     &__cards {
-        padding: 0 21px;
+        padding: 0 px-to-rem(21);
         margin-top: px-to-rem(8);
 
         @include media-query('md') {
@@ -78,8 +78,8 @@
     }
 
     @include media-query('lg') {
-        margin-top: 8.7rem;
-
+        margin-top: px-to-rem(82);
+        transform: translateX(58px);
         @include flex-property($direction: row-reverse, $gap: px-to-rem(70));
     }
 }

@@ -15,7 +15,7 @@
 
     &__title {
         @extend .inline-ellipsis;
-        max-width: 300px;
+        max-width: px-to-rem(300);
         text-wrap: nowrap;
     }
 }
