@@ -1,20 +1,18 @@
 @use '../abstract/index' as *;
 
 .testimonial {
-    //    @include media-query('lg') {
-    //         max-width: 1440px;
-    //         margin : 0 auto;
-    //    }
-    //    @include media-query('md') {
-    //     transform: translate(0,-35%);
-    //      background-repeat: no-repeat;
-    //     background-size: cover;
-
-    //     background-image: url('src/assets/images/testimonial-bg.svg');
-    //     background-position:top;
-    // }
+    &__bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('src/assets/images/testimonial-bg.svg');
+        height: px-to-rem(950);
+        width: px-to-rem(25000);
+        position: absolute;
+        z-index: -1;
+    }
 
     position: relative;
+
     @include flex-property(
         $direction: column,
         $gap: px-to-rem(16),
@@ -22,47 +20,16 @@
     );
 
     &__cards {
-        margin-top: px-to-rem(48);
         @include media-query('md') {
             margin-top: px-to-rem(32);
         }
     }
 
-    &__forward-btn {
-        background-color: $state-blue;
-        position: absolute;
-        bottom: -20%;
-        transform: translateY(10%);
-        right: 0;
-        border-radius: 50%;
-        height: 64px;
-        width: 64px;
+    &-card {
+        margin-top: px-to-rem(48);
 
         @include media-query('md') {
-            height: 100px;
-            width: 100px;
-            top: 50%;
-            right: 0;
-            transform: translateY(-100%);
-        }
-    }
-
-    &__backward-btn {
-        background-color: $white;
-        position: absolute;
-        bottom: -20%;
-        transform: translateY(10%);
-        left: 0;
-        border-radius: 50%;
-        height: 64px;
-        width: 64px;
-
-        @include media-query('md') {
-            height: 100px;
-            width: 100px;
-            top: 50%;
-            left: 0;
-            transform: translateY(-100%);
+            margin-top: px-to-rem(35);
         }
     }
 
@@ -75,32 +42,28 @@
         width: 1px;
     }
 
-    &__bullets {
-        // margin-top : 60px;
-        position: absolute;
-        left: 50%;
-        top: 97%;
-        transform: translate(-50%, 0%);
-        @include media-query('md') {
-            top: 98%;
-        }
-    }
-
     &__btn {
         height: 64px;
         width: 64px;
-
+        position: absolute;
+        top: 120%;
         @include media-query('md') {
+            top: 45%;
             height: 100px;
             width: 100px;
         }
 
         &--next {
             background-color: $state-blue;
+            transform: translate(10px, 15px);
         }
 
         &--prev {
             background-color: $white;
+            transform: translate(-10px, 20px);
+
+            @include media-query('md') {
+            }
         }
     }
 }

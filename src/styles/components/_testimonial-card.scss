@@ -30,5 +30,10 @@
             padding: 0 px-to-rem(156);
             margin-top: px-to-rem(25);
         }
+
+        @include media-query('lg') {
+            padding: 0 px-to-rem(176);
+            margin-top: px-to-rem(20);
+        }
     }
 }
