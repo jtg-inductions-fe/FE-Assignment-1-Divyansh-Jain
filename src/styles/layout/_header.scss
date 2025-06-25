@@ -99,7 +99,7 @@
         }
 
         #{$nav}__logo-wrapper {
-            margin-left: px-to-rem(172);
+            margin-left: px-to-rem(180);
             order: 2;
         }
         #{$nav}__menu-btn {
@@ -112,7 +112,8 @@
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(37);
+        margin-top: px-to-rem(40);
+        margin-left: px-to-rem(147);
         margin-bottom: px-to-rem(37);
 
         #{$nav}__list {

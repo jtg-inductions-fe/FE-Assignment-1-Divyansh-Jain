@@ -4,7 +4,7 @@
     border: none;
     border-radius: $btn-radius;
     padding: px-to-rem(16) px-to-rem(32);
-    max-width: px-to-rem(440);
+    max-width: 100%;
     cursor: pointer;
     @include pseudo-interactive-states {
         background-color: $black-pearl;
