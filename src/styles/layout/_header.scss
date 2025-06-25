@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    padding: px-to-rem(28) 0 px-to-rem(10) 0;
+    padding: px-to-rem(28) 0 px-to-rem(10);
     margin-top: px-to-rem(10);
     padding-right: px-to-rem(5);
     $nav: &;
@@ -20,21 +20,53 @@
     &__list {
         display: none;
         @include font-property($size: px-to-rem(14));
+
+        @include media-query('lg') {
+            all: unset;
+            @include flex-property($gap: px-to-rem(64));
+            @include font-property($size: px-to-rem(14));
+            order: 2;
+        }
     }
 
     &__auth-btns {
         display: none;
+        @include media-query('md') {
+            all: unset;
+            @include flex-property();
+            order: 3;
+        }
     }
 
     &__logo-wrapper {
         &:focus {
             outline: 2px solid $black;
         }
+        @include media-query('md') {
+            margin-left: px-to-rem(180);
+            order: 2;
+        }
+        @include media-query('lg') {
+            margin-left: 0;
+            order: 1;
+            padding: 0;
+        }
     }
 
     &__menu-btn {
         &:focus {
             outline: 2px solid $black;
+        }
+        @include media-query('md') {
+            order: 1;
+
+            @include pseudo-interactive-states {
+                outline: 2px solid $black;
+            }
+        }
+
+        @include media-query('lg') {
+            display: none;
         }
     }
 
@@ -44,6 +76,10 @@
         max-width: px-to-rem(440);
         text-align: center;
         list-style-type: none;
+
+        @include media-query('lg') {
+            max-width: px-to-rem(100);
+        }
     }
 
     &__link {
@@ -91,50 +127,11 @@
     @include media-query('md') {
         margin-top: px-to-rem(5);
         padding-left: px-to-rem(3);
-
-        #{$nav}__auth-btns {
-            all: unset;
-            @include flex-property();
-            order: 3;
-        }
-
-        #{$nav}__logo-wrapper {
-            margin-left: px-to-rem(180);
-            order: 2;
-        }
-        #{$nav}__menu-btn {
-            order: 1;
-
-            @include pseudo-interactive-states {
-                outline: 2px solid $black;
-            }
-        }
     }
 
     @include media-query('lg') {
         margin-top: px-to-rem(40);
         margin-left: px-to-rem(147);
         margin-bottom: px-to-rem(37);
-
-        #{$nav}__list {
-            all: unset;
-            @include flex-property($gap: px-to-rem(64));
-            @include font-property($size: px-to-rem(14));
-        }
-        #{$nav}__menu-btn {
-            display: none;
-        }
-
-        #{$nav}__logo-wrapper {
-            margin-left: 0;
-            order: 1;
-            padding: 0;
-        }
-        #{$nav}__list {
-            order: 2;
-        }
-        #{$nav}__item {
-            max-width: px-to-rem(100);
-        }
     }
 }
