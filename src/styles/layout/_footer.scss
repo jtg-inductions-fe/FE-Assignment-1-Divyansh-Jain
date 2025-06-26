@@ -1,1 +1,38 @@
-//TODO : Styles for footer section
+@use '../abstract/index' as *;
+.footer {
+    @include flex-property($direction: column, $gap: px-to-rem(94));
+
+    &__accordion-cards {
+        width: 100%;
+        @include flex-property($direction: column, $gap: px-to-rem(71));
+
+        @include media-query('md') {
+            @include flex-property($direction: row, $gap: px-to-rem(32));
+        }
+    }
+
+    &__logo-wrapper {
+        height: px-to-rem(40);
+        width: px-to-rem(40);
+    }
+
+    &__logo {
+        @include flex-property($gap: px-to-rem(16), $align-items: center);
+    }
+
+    &__company-info {
+        @include flex-property($direction: column, $gap: px-to-rem(32));
+    }
+
+    &__socials {
+        @include flex-property();
+    }
+
+    @include media-query('md') {
+        @include flex-property($direction: column, $gap: px-to-rem(64));
+    }
+
+    @include media-query('lg') {
+        @include flex-property($direction: row, $gap: px-to-rem(64));
+    }
+}
