@@ -1,15 +1,21 @@
 @use '../abstract/index' as *;
 
 .leading-icon-input {
-    @include flex-property($align-items: center, $gap: px-to-rem(16));
+    width: 100%;
     padding: px-to-rem(28) 0;
-    i[class^='icon-'] {
-    }
+    padding-left: px-to-rem(34);
+    border-radius: 16px;
+    background-color: $white;
+    @include flex-property($align-items: center, $gap: px-to-rem(16));
     &__inputbox {
+        flex-grow: 1;
         border: none;
         outline: none;
     }
 
+    @include media-query('md') {
+        border-radius: 32px;
+    }
     @include pseudo-interactive-states {
         outline: 1px solid $black;
     }

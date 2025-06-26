@@ -695,22 +695,35 @@
                 </div>
             </section>
         </div>
-
+        <!-- NEWSLETTER SECTION STARTED HERE -->
         <section class="newsletter container">
-            <h2 class="heading--primary">SUBSCRIBE TO OUR NEWSLETTER</h2>
-            <h3 class="heading--secondary">
-                Prepare yourself & let's explore the beauty of the world
-            </h3>
+            <div class="newsletter__pattern">
+                <img
+                    src="src/assets/images/star-pattern.png"
+                    alt=""
+                    aria-hidden="true"
+                />
+            </div>
+            <div class="newsletter__text-content">
+                <h2 class="heading--primary newsletter__heading">
+                    SUBSCRIBE TO OUR NEWSLETTER
+                </h2>
+                <h3 class="heading--secondary newsletter__subheading">
+                    Prepare yourself & let's explore the beauty of the world
+                </h3>
+            </div>
+
             <form class="newsletter__form">
                 <label class="leading-icon-input">
-                    <i class="icon-rating"></i>
+                    <i class="icon-suitcase"></i>
                     <input
                         class="leading-icon-input__inputbox newsletter__inputbox"
-                        type="text"
                         placeholder="Your Email"
+                        type="email"
+                        required
                     />
                 </label>
-                <button class="newsletter__btn btn btn--primary">
+                <button type="submit" class="newsletter__btn btn btn--primary">
                     Subscribe
                 </button>
             </form>
