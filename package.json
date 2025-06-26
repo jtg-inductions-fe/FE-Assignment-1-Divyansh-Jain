@@ -41,6 +41,6 @@
         "*.{html,scss,json}": "prettier --check"
     },
     "dependencies": {
-        "swiper": "^11.2.8"
+        "@splidejs/splide": "^4.1.4"
     }
 }

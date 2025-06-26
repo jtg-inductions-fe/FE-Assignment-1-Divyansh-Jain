@@ -21,7 +21,7 @@
     }
 
     &__rating {
-        @include flex-property($gap: 16px);
+        @include flex-property($gap: px-to-rem(16));
     }
     &__review {
         text-align: center;

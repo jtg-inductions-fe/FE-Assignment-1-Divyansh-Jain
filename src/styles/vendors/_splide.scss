@@ -1,25 +1,29 @@
 @use '../abstract/index' as *;
+@use '@splidejs/splide/dist/css/splide-core.min.css';
+
 .splide {
     &__slide {
         width: 100%;
     }
     &__track {
         position: static;
+        max-width: 100%;
     }
     &__pagination {
         position: absolute;
         bottom: 0;
-        transform: translateY(90px);
+        transform: translateY(px-to-rem(72));
         @include flex-property($justify-content: center, $gap: px-to-rem(24));
 
         @include media-query('md') {
-            transform: translateY(77px);
+            transform: translateY(px-to-rem(62));
         }
     }
     &__pagination__page {
+        border-radius: 50%;
         background-color: $midnight-express-5;
-        height: 24px;
-        width: 24px;
+        height: px-to-rem(24);
+        width: px-to-rem(24);
 
         &.is-active {
             background-color: $french-rose;

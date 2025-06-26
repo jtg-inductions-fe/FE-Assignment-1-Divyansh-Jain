@@ -1,5 +1,5 @@
 import '../styles/main.scss';
-
+import mountCarousel from './carousel';
 const menuBtn = document.getElementById('js-menu-btn');
 const navbar = document.getElementById('js-navbar');
 const menuIcon = document.getElementById('js-menu-icon');
@@ -30,3 +30,5 @@ menuBtn.addEventListener('click', handleMenuClick);
 Array.from(menuItems).forEach((menuItem) => {
     menuItem.addEventListener('click', handleMenuClick);
 });
+
+mountCarousel();

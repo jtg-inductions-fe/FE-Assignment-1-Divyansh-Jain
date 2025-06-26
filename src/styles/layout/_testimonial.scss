@@ -1,17 +1,26 @@
 @use '../abstract/index' as *;
 
 .testimonial {
-    &__bg {
+    position: relative;
+    margin-top: px-to-rem(75);
+
+    &__cover {
+        max-width: px-to-rem(1440);
+        margin: 0 auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url('src/assets/images/testimonial-bg.svg');
-        height: px-to-rem(950);
-        width: px-to-rem(25000);
-        position: absolute;
         z-index: -1;
-    }
+        visibility: hidden;
+        @include media-query('md') {
+            background-position: bottom 53% left 0;
+            visibility: visible;
+        }
 
-    position: relative;
+        @include media-query('lg') {
+            background-position: bottom 63% left 0;
+        }
+    }
 
     @include flex-property(
         $direction: column,
@@ -33,37 +42,54 @@
         }
     }
 
-    @include media-query('md') {
-        margin-top: px-to-rem(16);
-    }
-
-    &__bg-wrapper {
-        height: 1px;
-        width: 1px;
-    }
-
     &__btn {
         height: 64px;
         width: 64px;
         position: absolute;
         top: 120%;
+        border: 1px solid $midnight-express-10;
+        border-radius: 50%;
+        background-color: $white;
+        i[class^='icon-'] {
+            color: $black;
+        }
         @include media-query('md') {
             top: 45%;
             height: 100px;
             width: 100px;
         }
-
         &--next {
-            background-color: $state-blue;
-            transform: translate(10px, 15px);
-        }
-
-        &--prev {
-            background-color: $white;
-            transform: translate(-10px, 20px);
-
+            right: 0;
+            transform: translate(13px, 0);
             @include media-query('md') {
+                transform: translate(0px, 10px);
             }
         }
+        &--prev {
+            .rotate-180 {
+                display: inline-block;
+                transform: rotate(180deg);
+            }
+            left: 0;
+            transform: translate(-13px, 0px);
+
+            @include media-query('md') {
+                transform: translate(0px, 10px);
+            }
+        }
+
+        @include pseudo-interactive-states {
+            background-color: $state-blue;
+            i[class^='icon-'] {
+                color: $white;
+            }
+        }
+    }
+    @include media-query('md') {
+        margin-top: px-to-rem(128);
+    }
+    @include media-query('lg') {
+        margin-top: px-to-rem(117);
+        margin-left: px-to-rem(130);
     }
 }

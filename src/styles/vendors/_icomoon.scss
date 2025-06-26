@@ -48,22 +48,9 @@ i[class^='icon-'] {
 .icon-arrow {
     &:before {
         content: $icon-arrow;
-        color: $white;
     }
 }
 
-.icon-arrow-prev {
-    &:before {
-        content: $icon-arrow;
-        color: $black;
-    }
-}
-.icon-arrow-next {
-    &:before {
-        content: $icon-arrow;
-        color: $white;
-    }
-}
 .icon-arrow-head {
     &:before {
         content: $icon-arrow-head;
