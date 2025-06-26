@@ -267,7 +267,7 @@ body {
             $weight: $font-weight-normal,
             $family: $circular-std,
             $line-height: 1.6,
-            $size: $text-md,
+            $size: px-to-rem(18),
             $color: $midnight-express-75
         );
 
@@ -276,7 +276,7 @@ body {
                 $weight: $font-weight-normal,
                 $family: $circular-std,
                 $line-height: 1.6,
-                $size: $text-lg,
+                $size: px-to-rem(23),
                 $color: $midnight-express-75
             );
         }
