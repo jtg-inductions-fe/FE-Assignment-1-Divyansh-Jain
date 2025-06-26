@@ -336,3 +336,15 @@ body {
         }
     }
 }
+
+.leading-icon-input {
+    &__inputbox {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(14),
+            $color: $midnight-express-75,
+            $line-height: 1.2
+        );
+    }
+}

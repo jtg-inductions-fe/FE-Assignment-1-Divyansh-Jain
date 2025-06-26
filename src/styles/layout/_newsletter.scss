@@ -1,1 +1,16 @@
-//TODO : Styles for newsletter section
+@use '../abstract/mixins' as *;
+.newsletter {
+    margin: 150px 48px 0;
+    text-align: center;
+
+    &__form {
+        margin-top: 64px;
+        @include flex-property($direction: column, $gap: px-to-rem(32));
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 25px 1px;
+        border-radius: 16px;
+    }
+}

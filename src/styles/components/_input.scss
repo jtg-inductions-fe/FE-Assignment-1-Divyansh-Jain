@@ -1,0 +1,16 @@
+@use '../abstract/index' as *;
+
+.leading-icon-input {
+    @include flex-property($align-items: center, $gap: px-to-rem(16));
+    padding: px-to-rem(28) 0;
+    i[class^='icon-'] {
+    }
+    &__inputbox {
+        border: none;
+        outline: none;
+    }
+
+    @include pseudo-interactive-states {
+        outline: 1px solid $black;
+    }
+}
