@@ -14,6 +14,12 @@ body {
     font-size: px-to-rem(16);
 }
 
+.navbar {
+    &__list {
+        @include font-property($size: px-to-rem(14));
+    }
+}
+
 .hero {
     &__heading {
         @include font-property(

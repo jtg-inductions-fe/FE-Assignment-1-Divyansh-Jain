@@ -40,5 +40,10 @@
         i[class^='icon-'] {
             font-size: px-to-rem(22);
         }
+        @include pseudo-interactive-states {
+            background-color: inherit;
+            border: 1px solid $french-rose;
+            color: black;
+        }
     }
 }

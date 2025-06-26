@@ -19,12 +19,8 @@
 
     &__list {
         display: none;
-        @include font-property($size: px-to-rem(14));
-
         @include media-query('lg') {
-            all: unset;
             @include flex-property($gap: px-to-rem(64));
-            @include font-property($size: px-to-rem(14));
             order: 2;
         }
     }
@@ -32,7 +28,6 @@
     &__auth-btns {
         display: none;
         @include media-query('md') {
-            all: unset;
             @include flex-property();
             order: 3;
         }
@@ -107,10 +102,19 @@
                 $x: -50%,
                 $y: px-to-rem(60)
             );
+
+            @include media-query('lg') {
+                padding: 0;
+                height: auto;
+                width: auto;
+                //sets the position to static
+                @include position-property();
+                @include flex-property($gap: px-to-rem(64));
+                order: 2;
+            }
         }
         #{$nav}__auth-btns {
             border-top: 2px solid $white-smoke;
-
             padding: px-to-rem(10);
             z-index: $menu-z-index;
             @include flex-property($direction: column, $align-items: center);
@@ -122,6 +126,15 @@
                 $y: px-to-rem(330)
             );
             width: 100%;
+
+            @include media-query('md') {
+                border: none;
+                padding: 0;
+                @include position-property($position: static);
+                width: auto;
+                @include flex-property();
+                order: 3;
+            }
         }
     }
     @include media-query('md') {

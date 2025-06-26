@@ -142,6 +142,11 @@
         }
     }
 
+    &__btn:hover {
+        transform: translateY(-10px);
+        transition: transform 200ms;
+    }
+
     // arrow head pattern
     &__pattern {
         display: none;
