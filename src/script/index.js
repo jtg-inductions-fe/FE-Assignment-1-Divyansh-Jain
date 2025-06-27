@@ -26,9 +26,7 @@ const handleMenuClick = (e) => {
 
 menuBtn.addEventListener('click', handleMenuClick);
 
-+(
-    // apply event listener on each menuItem
-    (+Array.from(menuItems).forEach((menuItem) => {
-        menuItem.addEventListener('click', handleMenuClick);
-    }))
-);
+// apply event listener on each menuItem
+Array.from(menuItems).forEach((menuItem) => {
+    menuItem.addEventListener('click', handleMenuClick);
+});
