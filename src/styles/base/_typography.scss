@@ -138,7 +138,7 @@ body {
     }
 
     &--secondary {
-        @include line-clamp(2);
+        @include line-clamp(3);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
