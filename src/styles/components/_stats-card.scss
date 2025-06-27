@@ -7,6 +7,7 @@
     height: px-to-rem(151);
     overflow: hidden;
     max-width: 100%;
+    cursor: pointer;
     @include flex-property(
         $direction: column,
         $gap: px-to-rem(16),

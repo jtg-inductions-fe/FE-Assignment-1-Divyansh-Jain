@@ -5,6 +5,7 @@
     @include flex-property($direction: column, $gap: px-to-rem(32));
     padding: px-to-rem(32);
     border-radius: $card-radius;
+    cursor: pointer;
     @include pseudo-interactive-states {
         border: 1px solid $midnight-express-10;
     }
