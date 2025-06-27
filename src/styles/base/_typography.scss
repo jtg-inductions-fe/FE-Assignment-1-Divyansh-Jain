@@ -14,12 +14,6 @@ body {
     font-size: px-to-rem(16);
 }
 
-.navbar {
-    &__list {
-        @include font-property($size: px-to-rem(14));
-    }
-}
-
 .hero {
     &__heading {
         @include font-property(
@@ -67,49 +61,6 @@ body {
     }
 }
 
-.key-features {
-    &__description {
-        @include font-property(
-            $family: $inter,
-            $size: px-to-rem(16),
-            $weight: $font-weight-normal,
-            $line-height: 1.6,
-            $color: $midnight-express-50
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $family: $inter,
-                $size: px-to-rem(18),
-                $weight: $font-weight-normal,
-                $line-height: 1.6,
-                $color: $midnight-express-50
-            );
-        }
-    }
-}
-
-.travel-point {
-    &__description {
-        @include font-property(
-            $family: $inter,
-            $size: px-to-rem(16),
-            $weight: $font-weight-normal,
-            $line-height: 1.6
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $family: $inter,
-                $size: px-to-rem(18),
-                $weight: $font-weight-normal,
-                $line-height: 1.6,
-                $color: $midnight-express-50
-            );
-        }
-    }
-}
-
 .chip {
     @include font-property($size: px-to-rem(14));
 }
@@ -138,7 +89,6 @@ body {
     }
 
     &--secondary {
-        @include line-clamp(2);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
@@ -210,7 +160,7 @@ body {
 }
 
 .stats-card {
-    &__data {
+    &__stats {
         @include font-property(
             $size: px-to-rem(35),
             $color: $outrageous-orange,
@@ -238,6 +188,49 @@ body {
             $line-height: 1.2,
             $color: $midnight-express
         );
+    }
+}
+
+.key-features {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
+.travel-point {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
     }
 }
 
@@ -278,54 +271,6 @@ body {
         );
 
         &--outrageous-orange {
-            @include font-property(
-                $weight: $font-weight-bold,
-                $family: $circular-std,
-                $line-height: 1.2,
-                $size: px-to-rem(28),
-                $color: $outrageous-orange
-            );
-        }
-    }
-}
-
-.testimonial-card {
-    &__review {
-        @include font-property(
-            $weight: $font-weight-normal,
-            $family: $circular-std,
-            $line-height: 1.6,
-            $size: $text-md,
-            $color: $midnight-express-75
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $weight: $font-weight-normal,
-                $family: $circular-std,
-                $line-height: 1.6,
-                $size: $text-lg,
-                $color: $midnight-express-75
-            );
-        }
-    }
-
-    &__rating {
-        i[class^='icon-'] {
-            font-size: px-to-rem(32);
-        }
-    }
-
-    &__user-info {
-        @include font-property(
-            $weight: $font-weight-bold,
-            $family: $circular-std,
-            $line-height: 1.2,
-            $size: px-to-rem(23),
-            $color: $midnight-express-75
-        );
-
-        .user-info__name {
             @include font-property(
                 $weight: $font-weight-bold,
                 $family: $circular-std,
