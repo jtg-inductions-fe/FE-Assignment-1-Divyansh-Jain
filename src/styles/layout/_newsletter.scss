@@ -3,13 +3,13 @@
     position: relative;
     margin: 0 px-to-rem(48);
     margin-top: px-to-rem(253);
+    text-align: center;
+
     @include flex-property(
         $direction: column,
         $gap: px-to-rem(57),
         $align-items: center
     );
-
-    text-align: center;
 
     &__form {
         width: 100%;
@@ -69,7 +69,6 @@
         width: 100%;
         padding: px-to-rem(25) 0;
         border-radius: px-to-rem(16);
-
         @include media-query('md') {
             border-radius: px-to-rem(32);
             padding: px-to-rem(35) 0;
