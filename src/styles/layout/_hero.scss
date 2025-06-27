@@ -1,1 +1,177 @@
-//TODO : Styles For Hero Section
+@use '../components/index' as *;
+@use '../abstract/index' as *;
+@use '../base/index' as *;
+
+.hero {
+    margin-top: px-to-rem(55);
+    position: relative;
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(35)
+    );
+
+    @include media-query('md') {
+        margin-top: px-to-rem(87);
+
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(61)
+        );
+    }
+
+    @include media-query('lg') {
+        padding: 0 px-to-rem(6);
+        margin-top: px-to-rem(83);
+        width: 100%;
+        @include flex-property($direction: row-reverse);
+    }
+
+    // hero image wrapper
+
+    &__image-wrapper {
+        width: 100%;
+
+        @include media-query('md') {
+            margin-left: px-to-rem(17);
+            width: px-to-rem(788);
+        }
+
+        @include media-query('lg') {
+            margin-left: 0;
+            width: px-to-rem(772);
+        }
+    }
+
+    // explore the world chip
+    &__chip {
+        @include media-query('lg') {
+            margin-right: px-to-rem(64);
+        }
+    }
+
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(16)
+        );
+
+        @include media-query('md') {
+            padding: 0 px-to-rem(10);
+
+            @include flex-property(
+                $direction: column,
+                $align-items: center,
+                $gap: px-to-rem(42)
+            );
+        }
+
+        @include media-query('lg') {
+            padding: 0;
+            margin-top: px-to-rem(68);
+            max-width: px-to-rem(421);
+            @include flex-property($direction: column, $gap: 4.3rem);
+        }
+    }
+
+    &__heading {
+        @include line-clamp(3);
+
+        @include text-property($wrap: wrap, $align: center);
+        @include media-query('md') {
+            @include text-property($wrap: balance, $align: center);
+        }
+        @include media-query('lg') {
+            @include text-property($wrap: balance, $align: left);
+        }
+    }
+    &__description {
+        margin-top: px-to-rem(5);
+        @include text-property($wrap: wrap, $align: center);
+        @include line-clamp(3);
+        @include media-query('md') {
+            margin: 0;
+            padding: 0 px-to-rem(215);
+
+            @include text-property($wrap: wrap, $align: center);
+        }
+
+        @include media-query('lg') {
+            padding: 0;
+            @include text-property($wrap: wrap, $align: left);
+        }
+    }
+
+    &__btns {
+        margin-top: px-to-rem(17);
+        width: 100%;
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(24)
+        );
+
+        @include media-query('md') {
+            width: auto;
+            margin: 0;
+            @include flex-property($gap: px-to-rem(16));
+        }
+
+        @include media-query('lg') {
+            margin-top: px-to-rem(29);
+        }
+    }
+
+    &__get-started-btn {
+        width: 100%;
+        height: px-to-rem(65);
+        @include media-query('md') {
+            width: px-to-rem(141);
+            height: px-to-rem(49);
+        }
+    }
+
+    &__watch-demo-btn {
+        width: 100%;
+        height: px-to-rem(72);
+        @include media-query('md') {
+            width: px-to-rem(181);
+            height: px-to-rem(56);
+        }
+    }
+
+    &__btn:hover {
+        transform: translateY(-10px);
+        transition: transform 200ms;
+    }
+
+    // arrow head pattern
+    &__pattern {
+        display: none;
+        @include media-query('md') {
+            display: block;
+            width: px-to-rem(65);
+            height: px-to-rem(169);
+
+            @include position-property(
+                $position: absolute,
+                $left: 0,
+                $top: px-to-rem(1087),
+                $x: px-to-rem(-25),
+                $y: px-to-rem(3)
+            );
+        }
+
+        @include media-query('lg') {
+            @include position-property(
+                $position: absolute,
+                $top: px-to-rem(659),
+                $left: 0,
+                $x: px-to-rem(-83),
+                $y: px-to-rem(2)
+            );
+        }
+    }
+}

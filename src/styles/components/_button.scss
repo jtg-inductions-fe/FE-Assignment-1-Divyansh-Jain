@@ -1,24 +1,19 @@
-// TODO button component
 @use '../abstract/index' as *;
 @use '../base/typography' as *;
 .btn {
     border: none;
     border-radius: $btn-radius;
     padding: px-to-rem(16) px-to-rem(32);
-    max-width: 440px;
-    @include font-property(
-        $family: $circular-std,
-        $weight: $font-weight-bold,
-        $size: px-to-rem($text-sm)
-    );
+    max-width: 100%;
+    cursor: pointer;
+    @include pseudo-interactive-states {
+        background-color: $black-pearl;
+        color: $white-smoke;
+    }
     &--primary {
         @extend .btn;
         background-color: $state-blue;
         color: $white-smoke;
-        @include pseudo-interactive-states {
-            background-color: $black-pearl;
-            color: $white-smoke;
-        }
     }
 
     &--ghost {
@@ -26,7 +21,29 @@
         background-color: inherit;
         color: $black-pearl;
         @include pseudo-interactive-states {
+            background-color: inherit;
             color: $outrageous-orange;
+        }
+    }
+
+    &--secondary-outline {
+        @extend .btn;
+
+        background-color: inherit;
+        color: $black-pearl;
+        border: 1px solid $white-smoke;
+        @include flex-property(
+            $align-items: center,
+            $gap: px-to-rem(8),
+            $justify-content: center
+        );
+        i[class^='icon-'] {
+            font-size: px-to-rem(22);
+        }
+        @include pseudo-interactive-states {
+            background-color: inherit;
+            border: 1px solid $french-rose;
+            color: $black;
         }
     }
 }

@@ -1,0 +1,13 @@
+@use '../abstract/index' as *;
+.chip {
+    max-width: px-to-rem(400);
+    @include flex-property($gap: px-to-rem(19), $align-items: center);
+    box-shadow: $chip-shadow;
+    padding: px-to-rem(16) px-to-rem(32);
+    border-radius: $btn-radius;
+    width: max-content;
+
+    i[class^='icon-'] {
+        @include font-property($size: px-to-rem(22));
+    }
+}

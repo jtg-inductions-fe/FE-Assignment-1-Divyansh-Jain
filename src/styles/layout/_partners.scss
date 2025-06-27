@@ -1,0 +1,36 @@
+@use '../abstract/index' as *;
+
+.partners {
+    margin-top: px-to-rem(70);
+
+    @include flex-property($wrap: wrap, $justify-content: center);
+    row-gap: px-to-rem(27);
+    column-gap: px-to-rem(32);
+
+    &__partner {
+        max-width: 100%;
+        height: px-to-rem(20);
+        width: auto;
+
+        @include media-query('md') {
+            max-width: 100%;
+            height: px-to-rem(32);
+            width: auto;
+        }
+    }
+
+    @include media-query('md') {
+        margin-top: px-to-rem(160);
+        padding: 0 px-to-rem(110);
+
+        @include flex-property($wrap: wrap, $justify-content: center);
+        gap: px-to-rem(31) px-to-rem(30); // row col
+    }
+    @include media-query('lg') {
+        margin-top: px-to-rem(140);
+        padding: 0;
+        padding-left: px-to-rem(12);
+
+        @include flex-property($gap: px-to-rem(104));
+    }
+}

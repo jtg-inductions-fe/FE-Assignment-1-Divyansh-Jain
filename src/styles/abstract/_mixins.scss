@@ -12,13 +12,11 @@
 }
 
 // font face mixin
-@mixin font-face($name, $source, $weight, $style: 'normal', $color: $black) {
+@mixin font-face($name, $source, $weight) {
     @font-face {
         font-family: $name;
         src: url($source) format('truetype');
         font-weight: $weight;
-        // font-style: $style;
-        color: $color;
     }
 }
 
@@ -28,12 +26,14 @@
     $size: 18px,
     $weight: $font-weight-normal,
     $color: $black,
-    $line-height: 1
+    $line-height: 1,
+    $letter-spacing: normal
 ) {
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
     color: $color;
+    letter-spacing: $letter-spacing;
     line-height: $line-height;
 }
 
@@ -60,6 +60,7 @@
     text-overflow: $overflow;
 }
 // mixin for positioning elements
+
 @mixin position-property(
     $position: static,
     $top: null,
@@ -94,4 +95,11 @@
     &:visited {
         @content;
     }
+}
+// mixin for restricting the text content under certain number of lines
+@mixin line-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
