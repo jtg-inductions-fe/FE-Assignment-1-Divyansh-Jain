@@ -14,6 +14,12 @@ body {
     font-size: px-to-rem(16);
 }
 
+.navbar {
+    &__list {
+        @include font-property($size: px-to-rem(14));
+    }
+}
+
 .hero {
     &__heading {
         @include font-property(
@@ -61,6 +67,49 @@ body {
     }
 }
 
+.key-features {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
+.travel-point {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
 .chip {
     @include font-property($size: px-to-rem(14));
 }
@@ -89,6 +138,7 @@ body {
     }
 
     &--secondary {
+        @include line-clamp(2);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
