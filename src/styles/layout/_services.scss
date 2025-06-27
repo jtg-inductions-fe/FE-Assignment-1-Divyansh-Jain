@@ -14,6 +14,8 @@
             margin-top: px-to-rem(150);
             text-align: left;
         }
+        width: 100%;
+        max-width: px-to-rem(401);
     }
 
     &__heading {

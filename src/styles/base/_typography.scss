@@ -73,6 +73,7 @@ body {
 
 .heading {
     &--primary {
+        max-width: px-to-rem(400);
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
@@ -95,6 +96,7 @@ body {
     }
 
     &--secondary {
+        @include line-clamp(2);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
