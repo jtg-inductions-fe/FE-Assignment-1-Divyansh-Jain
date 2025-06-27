@@ -30,7 +30,7 @@
         text-align: center;
 
         @include media-query('md') {
-            margin-top: px-to-rem(20);
+            margin-top: px-to-rem(28);
             padding: 0 px-to-rem(32);
         }
 

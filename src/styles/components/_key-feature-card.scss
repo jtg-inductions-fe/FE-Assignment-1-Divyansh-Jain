@@ -10,7 +10,7 @@
     }
 
     &__title {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     &__description {
@@ -50,7 +50,7 @@
     }
 
     &__text-content {
-        max-width: 90%;
+        max-width: 100%;
         @include flex-property($direction: column, $gap: px-to-rem(8));
     }
 
@@ -64,8 +64,5 @@
     @include media-query('md') {
         margin-top: 0;
         @include flex-property($align-items: center, $gap: px-to-rem(33));
-    }
-
-    @include media-query('lg') {
     }
 }

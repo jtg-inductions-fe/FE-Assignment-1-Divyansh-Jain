@@ -67,13 +67,56 @@ body {
     }
 }
 
+.key-features {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6,
+            $color: $midnight-express-50
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
+.travel-point {
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $size: px-to-rem(16),
+            $weight: $font-weight-normal,
+            $line-height: 1.6
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $size: px-to-rem(18),
+                $weight: $font-weight-normal,
+                $line-height: 1.6,
+                $color: $midnight-express-50
+            );
+        }
+    }
+}
+
 .chip {
     @include font-property($size: px-to-rem(14));
 }
 
 .heading {
     &--primary {
-        max-width: px-to-rem(400);
+        // max-width: px-to-rem(430);
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
@@ -196,48 +239,5 @@ body {
             $line-height: 1.2,
             $color: $midnight-express
         );
-    }
-}
-
-.key-features {
-    &__description {
-        @include font-property(
-            $family: $inter,
-            $size: px-to-rem(16),
-            $weight: $font-weight-normal,
-            $line-height: 1.6,
-            $color: $midnight-express-50
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $family: $inter,
-                $size: px-to-rem(18),
-                $weight: $font-weight-normal,
-                $line-height: 1.6,
-                $color: $midnight-express-50
-            );
-        }
-    }
-}
-
-.travel-point {
-    &__description {
-        @include font-property(
-            $family: $inter,
-            $size: px-to-rem(16),
-            $weight: $font-weight-normal,
-            $line-height: 1.6
-        );
-
-        @include media-query('md') {
-            @include font-property(
-                $family: $inter,
-                $size: px-to-rem(18),
-                $weight: $font-weight-normal,
-                $line-height: 1.6,
-                $color: $midnight-express-50
-            );
-        }
     }
 }
