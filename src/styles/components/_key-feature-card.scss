@@ -5,14 +5,22 @@
     @include flex-property($direction: column, $gap: px-to-rem(32));
     padding: px-to-rem(32);
     border-radius: $card-radius;
-
     @include pseudo-interactive-states {
         border: 1px solid $midnight-express-10;
     }
+
+    &__title {
+        max-width: 90%;
+    }
+
+    &__description {
+        max-width: 100%;
+        @include line-clamp(3);
+    }
     &__icon-wrapper {
-        width: max-content;
         border-radius: px-to-rem(32);
         position: relative;
+        min-width: 100px;
         width: px-to-rem(100);
         height: px-to-rem(100);
 
@@ -42,6 +50,7 @@
     }
 
     &__text-content {
+        max-width: 90%;
         @include flex-property($direction: column, $gap: px-to-rem(8));
     }
 

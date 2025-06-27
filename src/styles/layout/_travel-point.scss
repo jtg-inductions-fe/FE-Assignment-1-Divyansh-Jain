@@ -4,7 +4,8 @@
     position: relative;
     margin-top: px-to-rem(64);
     @include flex-property($direction: column, $gap: px-to-rem(38));
-
+    overflow: hidden;
+    max-width: 100%;
     &__image-wrapper {
         width: 100%;
         height: auto;

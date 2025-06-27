@@ -2,6 +2,8 @@
 @use '../base/index' as *;
 .service-card {
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     @include flex-property(
         $direction: column,
         $align-items: center,
@@ -22,6 +24,7 @@
             // 24px;
             $line-height: 1.2
         );
+        max-width: 90%;
     }
 
     &__description {
@@ -35,6 +38,7 @@
             $line-height: 1.6
         );
         @include text-property($align: center, $wrap: wrap);
+        max-width: 100%;
     }
     &__text-content {
         @include flex-property(
@@ -42,6 +46,7 @@
             $align-items: center,
             $gap: 32px
         );
+        max-width: 90%;
     }
     @include pseudo-interactive-states() {
         box-shadow: $service-card-shadow;

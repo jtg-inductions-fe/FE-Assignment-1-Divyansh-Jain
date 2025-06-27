@@ -1,7 +1,7 @@
 @use '../abstract/index' as *;
 .key-features {
     margin: px-to-rem(95) px-to-rem(48) 0;
-
+    max-width: 100%;
     @include flex-property($direction: column, $align-items: center);
     &__text-content {
         margin-top: px-to-rem(106);
@@ -47,10 +47,12 @@
     &__description {
         margin-top: px-to-rem(16);
         padding: 0;
-
+        max-width: 100%;
         @include media-query('lg') {
             padding: 0;
         }
+
+        @include line-clamp(3);
     }
 
     &__cards {
