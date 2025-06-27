@@ -43,7 +43,7 @@
         @include pseudo-interactive-states {
             background-color: inherit;
             border: 1px solid $french-rose;
-            color: black;
+            color: $black;
         }
     }
 }

@@ -8,9 +8,12 @@ const imagePath = 'src/assets/images';
 const openIcon = 'hamburger-btn.png';
 const closeIcon = 'menu-close.png';
 
-const handleMenuClick = () => {
+const handleMenuClick = (e) => {
     // checks whether the navbar has class navbar--active if does meaning the menu is in open state
-    if (!navbar.classList.toggle('navbar--active')) {
+    if (
+        e.target.classList.contains('navbar__item') ||
+        !navbar.classList.toggle('navbar--active')
+    ) {
         menuIcon.src = `${imagePath}/${openIcon}`;
         // makes the body scrollable again
         document.body.style.overflow = 'initial';
