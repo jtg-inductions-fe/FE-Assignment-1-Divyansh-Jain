@@ -2,8 +2,6 @@
 @use '../base/index' as *;
 .service-card {
     padding: px-to-rem(30);
-    width: 100%;
-    max-width: 100%;
     border: 1px solid $midnight-express-10;
     border-radius: $card-radius;
     overflow: hidden; // for case where an image or content might overflow
@@ -51,11 +49,14 @@
             $gap: px-to-rem(64),
             $align-items: center
         );
-        padding: px-to-rem(54);
+        width: px-to-rem(288);
+        height: px-to-rem(443);
+        padding: px-to-rem(64) px-to-rem(54);
         height: px-to-rem(443);
     }
 
     @include media-query('lg') {
-        padding: px-to-rem(44);
+        width: px-to-rem(386);
+        padding: px-to-rem(64);
     }
 }
