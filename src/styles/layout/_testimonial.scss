@@ -43,8 +43,8 @@
     }
 
     &__btn {
-        height: 64px;
-        width: 64px;
+        height: px-to-rem(64);
+        width: px-to-rem(64);
         position: absolute;
         top: 120%;
         border: 1px solid $midnight-express-10;
@@ -55,14 +55,14 @@
         }
         @include media-query('md') {
             top: 45%;
-            height: 100px;
-            width: 100px;
+            height: px-to-rem(100);
+            width: px-to-rem(100);
         }
         &--next {
             right: 0;
-            transform: translate(13px, 0);
+
             @include media-query('md') {
-                transform: translate(0px, 10px);
+                transform: translate(0, px-to-rem(10));
             }
         }
         &--prev {
@@ -71,10 +71,9 @@
                 transform: rotate(180deg);
             }
             left: 0;
-            transform: translate(-13px, 0px);
 
             @include media-query('md') {
-                transform: translate(0px, 10px);
+                transform: translate(0, px-to-rem(10));
             }
         }
 
