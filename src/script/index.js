@@ -9,18 +9,18 @@ const openIcon = 'hamburger-btn.png';
 const closeIcon = 'menu-close.png';
 
 const handleMenuClick = (e) => {
-    // checks whether the navbar has class navbar--active if does meaning the menu is in open state
     if (
+        // checks whether the navbar has class navbar--active if does meaning the menu is in open state
+        // and also checks that the toggle is not triggered by auth btns
         e.target.classList.contains('navbar__item') ||
         !navbar.classList.toggle('navbar--active')
     ) {
         menuIcon.src = `${imagePath}/${openIcon}`;
-        // makes the body scrollable again
     } else {
         // menu is in closed state
         menuIcon.src = `${imagePath}/${closeIcon}`;
-        // makes the other part of body not scrollable
     }
+    // makes the other part of body  scrollable and not scrollable
     document.body.classList.toggle('no-scroll');
 };
 
