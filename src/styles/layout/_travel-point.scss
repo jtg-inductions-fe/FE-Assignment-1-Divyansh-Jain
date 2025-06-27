@@ -86,7 +86,7 @@
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(100);
+        margin-top: px-to-rem(120);
         @include flex-property($direction: row, $align-items: center);
     }
 }
