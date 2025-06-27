@@ -5,7 +5,7 @@
     border: 1px solid $midnight-express-10;
     border-radius: $card-radius;
     overflow: hidden; // for case where an image or content might overflow
-
+    cursor: pointer;
     // handles interaction like focus,hover
 
     @include pseudo-interactive-states() {
