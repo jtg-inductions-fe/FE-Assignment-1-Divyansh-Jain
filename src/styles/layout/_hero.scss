@@ -143,7 +143,7 @@
     }
 
     &__btn:hover {
-        transform: translateY(-10px);
+        transform: translateY(px-to-rem(-10));
         transition: transform 200ms;
     }
 

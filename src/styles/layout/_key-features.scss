@@ -11,7 +11,7 @@
     @include media-query('lg') {
         margin-top: px-to-rem(86);
         margin-left: px-to-rem(60);
-        transform: translateX(58px);
+        transform: translateX(px-to-rem(58));
         @include flex-property($direction: row-reverse, $gap: px-to-rem(70));
     }
 
