@@ -25,11 +25,10 @@ const handleMenuClick = (e) => {
 };
 
 menuBtn.addEventListener('click', handleMenuClick);
-// convert to menuItems to array
-const menuItemsList = Object.entries(menuItems).map((entry) => {
-    return entry[1];
-});
-// apply event listener on each menuItem
-menuItemsList.forEach((menuItem) => {
-    menuItem.addEventListener('click', handleMenuClick);
-});
+
++(
+    // apply event listener on each menuItem
+    (+Array.from(menuItems).forEach((menuItem) => {
+        menuItem.addEventListener('click', handleMenuClick);
+    }))
+);

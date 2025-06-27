@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    padding: px-to-rem(16) 0 px-to-rem(10);
+    padding: px-to-rem(40) 0 px-to-rem(10);
     padding-right: px-to-rem(5);
     $nav: &;
     background-color: $white;
@@ -96,21 +96,11 @@
             min-width: 0;
             @include position-property(
                 $position: absolute,
-                $top: 16%,
+                $top: 27%,
                 $left: 50%,
                 $x: -50%,
                 $y: px-to-rem(60)
             );
-
-            @include media-query('md') {
-                @include position-property(
-                    $position: absolute,
-                    $top: 26%,
-                    $left: 50%,
-                    $x: -50%,
-                    $y: px-to-rem(60)
-                );
-            }
 
             @include media-query('lg') {
                 padding: 0;
