@@ -1,5 +1,5 @@
 @use './colors' as *;
-
+@use './mixins' as *;
 // icomoon path and family name
 $icomoon-font-family: 'icomoon';
 $icomoon-font-path: '../assets/icomoon';
@@ -40,7 +40,7 @@ $circular-std: 'circular-std';
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
-$btn-radius: 10rem;
+$btn-radius: px-to-rem(100);
 
 $menu-z-index: 2;
 $header-z-index: 4;
