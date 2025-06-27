@@ -6,6 +6,16 @@
     @include flex-property($direction: column, $gap: px-to-rem(38));
     overflow: hidden;
     max-width: 100%;
+
+    @include media-query('md') {
+        margin-top: px-to-rem(125);
+    }
+
+    @include media-query('lg') {
+        margin-top: px-to-rem(120);
+        @include flex-property($direction: row, $align-items: center);
+    }
+
     &__image-wrapper {
         width: 100%;
         height: auto;
@@ -79,14 +89,5 @@
             grid-template-columns: 1fr 1fr;
             gap: px-to-rem(32);
         }
-    }
-
-    @include media-query('md') {
-        margin-top: px-to-rem(125);
-    }
-
-    @include media-query('lg') {
-        margin-top: px-to-rem(120);
-        @include flex-property($direction: row, $align-items: center);
     }
 }

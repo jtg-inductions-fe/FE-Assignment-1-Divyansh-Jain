@@ -116,7 +116,6 @@ body {
 
 .heading {
     &--primary {
-        // max-width: px-to-rem(430);
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,

@@ -20,7 +20,7 @@
     &__icon-wrapper {
         border-radius: px-to-rem(32);
         position: relative;
-        min-width: 100px;
+        min-width: px-to-rem(100);
         width: px-to-rem(100);
         height: px-to-rem(100);
 
