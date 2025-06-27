@@ -10,6 +10,7 @@
         max-width: px-to-rem(1193);
 
         &--max {
+            margin: 0 auto;
             max-width: px-to-rem(1440);
         }
     }
@@ -18,6 +19,16 @@
 .sticky {
     position: sticky;
     top: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100dvh;
+
+    @include media-query('lg') {
+        overflow: auto;
+        height: auto;
+    }
 }
 
 .inline-ellipsis {

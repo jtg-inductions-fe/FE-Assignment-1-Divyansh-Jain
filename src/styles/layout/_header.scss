@@ -7,8 +7,7 @@
 }
 
 .navbar {
-    padding: px-to-rem(28) 0 px-to-rem(10);
-    margin-top: px-to-rem(10);
+    padding: px-to-rem(16) 0 px-to-rem(10);
     padding-right: px-to-rem(5);
     $nav: &;
     background-color: $white;
@@ -97,11 +96,21 @@
             min-width: 0;
             @include position-property(
                 $position: absolute,
-                $top: 29%,
+                $top: 16%,
                 $left: 50%,
                 $x: -50%,
                 $y: px-to-rem(60)
             );
+
+            @include media-query('md') {
+                @include position-property(
+                    $position: absolute,
+                    $top: 26%,
+                    $left: 50%,
+                    $x: -50%,
+                    $y: px-to-rem(60)
+                );
+            }
 
             @include media-query('lg') {
                 padding: 0;
@@ -138,12 +147,12 @@
         }
     }
     @include media-query('md') {
-        margin-top: px-to-rem(5);
+        padding-top: px-to-rem(32);
         padding-left: px-to-rem(3);
     }
 
     @include media-query('lg') {
-        margin-top: px-to-rem(40);
+        padding-top: px-to-rem(67);
         margin-left: px-to-rem(147);
         margin-bottom: px-to-rem(37);
     }

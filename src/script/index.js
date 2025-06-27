@@ -16,15 +16,12 @@ const handleMenuClick = (e) => {
     ) {
         menuIcon.src = `${imagePath}/${openIcon}`;
         // makes the body scrollable again
-        document.body.style.overflow = 'initial';
-        document.body.style.height = 'auto';
     } else {
         // menu is in closed state
         menuIcon.src = `${imagePath}/${closeIcon}`;
         // makes the other part of body not scrollable
-        document.body.style.overflow = 'hidden';
-        document.body.style.height = '100dvh';
     }
+    document.body.classList.toggle('no-scroll');
 };
 
 menuBtn.addEventListener('click', handleMenuClick);

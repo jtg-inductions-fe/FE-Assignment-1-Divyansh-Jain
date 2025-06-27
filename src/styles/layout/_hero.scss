@@ -22,7 +22,7 @@
     }
 
     @include media-query('lg') {
-        padding: 0 px-to-rem(10);
+        padding: 0 px-to-rem(6);
         margin-top: px-to-rem(83);
         width: 100%;
         @include flex-property($direction: row-reverse);
