@@ -73,6 +73,7 @@ body {
 
 .heading {
     &--primary {
+        max-width: px-to-rem(400);
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,
@@ -81,9 +82,21 @@ body {
             $color: $french-rose,
             $line-height: 1.2
         );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: px-to-rem(23),
+                $letter-spacing: 0.2em,
+                $color: $french-rose,
+                $line-height: 1.2
+            );
+        }
     }
 
     &--secondary {
+        @include line-clamp(2);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
@@ -91,6 +104,26 @@ body {
             $weight: $font-weight-bold,
             $line-height: 1.2
         );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $color: $black-pearl,
+                $size: px-to-rem(40),
+                $weight: $font-weight-bold,
+                $line-height: 1.2
+            );
+        }
+
+        @include media-query('lg') {
+            @include font-property(
+                $family: $circular-std,
+                $color: $black-pearl,
+                $size: px-to-rem(44),
+                $weight: $font-weight-bold,
+                $line-height: 1.2
+            );
+        }
     }
 }
 
@@ -104,6 +137,8 @@ body {
     );
 }
 
+// components typography
+
 .btn {
     @include font-property(
         $family: $circular-std,
@@ -111,4 +146,23 @@ body {
         $size: px-to-rem(14),
         $line-height: 1.2
     );
+}
+
+.service-card {
+    &__title {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(24),
+            $line-height: 1.2
+        );
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: px-to-rem(28),
+                $line-height: 1.2
+            );
+        }
+    }
 }

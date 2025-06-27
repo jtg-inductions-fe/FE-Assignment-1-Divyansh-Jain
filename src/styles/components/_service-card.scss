@@ -1,0 +1,61 @@
+@use '../abstract/index' as *;
+@use '../base/index' as *;
+.service-card {
+    padding: px-to-rem(30);
+    border: 1px solid $midnight-express-10;
+    border-radius: $card-radius;
+    overflow: hidden; // for case where an image or content might overflow
+    cursor: pointer;
+    // handles interaction like focus,hover
+
+    @include pseudo-interactive-states() {
+        box-shadow: $service-card-shadow;
+    }
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(32)
+    );
+    &__image-wrapper {
+        width: px-to-rem(64);
+    }
+
+    &__title {
+        @include line-clamp(2);
+        @include text-property($align: center, $wrap: wrap);
+    }
+    &__description {
+        @include line-clamp(4);
+        @include text-property($align: center, $wrap: wrap);
+        @include media-query('md') {
+            padding: 0;
+        }
+    }
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(32)
+        );
+
+        @include media-query('md') {
+            padding: 0 px-to-rem(5);
+        }
+    }
+
+    @include media-query('md') {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(64),
+            $align-items: center
+        );
+        width: px-to-rem(288);
+        height: px-to-rem(443);
+        padding: px-to-rem(64) px-to-rem(54);
+    }
+
+    @include media-query('lg') {
+        width: px-to-rem(386);
+        padding: px-to-rem(64);
+    }
+}

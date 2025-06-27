@@ -1,5 +1,5 @@
 @use './colors' as *;
-
+@use './mixins' as *;
 // icomoon path and family name
 $icomoon-font-family: 'icomoon';
 $icomoon-font-path: '../assets/icomoon';
@@ -24,6 +24,9 @@ $service-card-shadow: 0 41px 89px 0 rgba(0, 0, 0, 0.1);
 // chip shadow (h v blur spread color)
 $chip-shadow: 0 34px 75px 0 rgba(0, 0, 0, 0.2);
 
+//card border radius
+$card-radius: px-to-rem(32);
+
 // breakpoints for different device sizes
 
 $breakpoints: (
@@ -37,7 +40,7 @@ $circular-std: 'circular-std';
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
-$btn-radius: 10rem;
+$btn-radius: px-to-rem(100);
 
 $menu-z-index: 2;
 $header-z-index: 4;

@@ -1,1 +1,67 @@
-//TODO : Styles for services section
+@use '../abstract/index' as *;
+
+.service {
+    margin-top: px-to-rem(66);
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(27),
+        $align-items: center
+    );
+
+    &__text-content {
+        text-align: center;
+        width: 100%;
+
+        @include media-query('md') {
+            width: 100%;
+        }
+        @include media-query('lg') {
+            margin-top: px-to-rem(170);
+            width: px-to-rem(401);
+            text-align: left;
+        }
+    }
+
+    &__heading {
+        margin: 0 auto;
+        margin-bottom: px-to-rem(16);
+    }
+
+    &__subheading {
+        margin-top: px-to-rem(16);
+    }
+
+    &__cards {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(13),
+            $align-items: center
+        );
+
+        @include media-query('md') {
+            @include flex-property($gap: px-to-rem(16));
+        }
+
+        @include media-query('lg') {
+            width: px-to-rem(793);
+            margin-top: px-to-rem(18);
+            @include flex-property($gap: px-to-rem(21));
+        }
+    }
+
+    &-card:nth-child(n + 3) {
+        @include media-query('lg') {
+            display: none;
+        }
+    }
+    @include media-query('md') {
+        margin-top: px-to-rem(130);
+        gap: px-to-rem(64);
+    }
+
+    @include media-query('lg') {
+        margin: 0 auto;
+        margin-top: px-to-rem(97);
+        @include flex-property();
+    }
+}
