@@ -383,7 +383,7 @@ body {
 }
 
 .accordion-card {
-    &__header {
+    &__heading {
         @include font-property(
             $family: $circular-std,
             $weight: $font-weight-bold,

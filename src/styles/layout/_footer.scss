@@ -30,6 +30,9 @@
 
     &__socials {
         @include flex-property($gap: px-to-rem(32));
+        @include media-query('lg') {
+            margin-top: px-to-rem(30);
+        }
     }
 
     &__description {
