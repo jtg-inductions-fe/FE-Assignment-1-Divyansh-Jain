@@ -42,6 +42,16 @@
         }
     }
 
+    &__heading {
+        max-width: 60%;
+        text-align: center;
+    }
+
+    &__subheading {
+        text-align: center;
+        max-width: 80%;
+    }
+
     &__btn {
         height: px-to-rem(64);
         width: px-to-rem(64);
@@ -66,10 +76,6 @@
             }
         }
         &--prev {
-            .rotate-180 {
-                display: inline-block;
-                transform: rotate(180deg);
-            }
             left: 0;
 
             @include media-query('md') {

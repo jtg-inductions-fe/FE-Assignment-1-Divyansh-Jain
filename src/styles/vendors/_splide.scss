@@ -1,5 +1,5 @@
 @use '../abstract/index' as *;
-@use '@splidejs/splide/dist/css/splide-core.min.css';
+@import 'node_modules/@splidejs/splide/dist/css/splide-core.min.css';
 
 .splide {
     &__slide {

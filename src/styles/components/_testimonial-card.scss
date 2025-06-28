@@ -11,12 +11,10 @@
         height: px-to-rem(128);
     }
 
-    &__user-info {
+    &__name {
+        max-width: 60%;
         text-align: center;
         margin-top: px-to-rem(32);
-        .user-info__name {
-            color: $outrageous-orange;
-        }
     }
 
     &__rating {

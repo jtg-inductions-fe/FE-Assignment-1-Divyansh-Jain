@@ -48,13 +48,15 @@
             $gap: px-to-rem(64),
             $align-items: center
         );
-        width: px-to-rem(288);
+        max-width: px-to-rem(288);
+        width: 100%;
         height: px-to-rem(443);
         padding: px-to-rem(64) px-to-rem(54);
     }
 
     @include media-query('lg') {
-        width: px-to-rem(386);
+        max-width: px-to-rem(386);
+        width: 100%;
         padding: px-to-rem(64);
     }
 }

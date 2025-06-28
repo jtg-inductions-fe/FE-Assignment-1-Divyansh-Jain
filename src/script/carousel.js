@@ -1,5 +1,5 @@
 import Splide from '@splidejs/splide';
-var splide = new Splide('.splide', {
+const splide = new Splide('.splide', {
     classes: {
         arrows: 'splide__arrows testimonial__btns',
         prev: 'splide__arrow--prev testimonial__btn--next',
