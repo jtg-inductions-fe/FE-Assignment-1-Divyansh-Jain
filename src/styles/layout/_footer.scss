@@ -1,6 +1,6 @@
 @use '../abstract/index' as *;
 .footer {
-    margin-top: px-to-rem(92);
+    margin-top: px-to-rem(95);
     @include flex-property($direction: column, $gap: px-to-rem(94));
 
     &__accordion-cards {
@@ -58,7 +58,7 @@
     }
 
     @include media-query('md') {
-        margin-top: px-to-rem(60);
+        margin-top: px-to-rem(64);
         @include flex-property($direction: column, $gap: px-to-rem(64));
     }
 
