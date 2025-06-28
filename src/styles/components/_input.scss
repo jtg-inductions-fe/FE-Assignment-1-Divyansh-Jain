@@ -14,7 +14,7 @@
     }
 
     @include media-query('md') {
-        border-radius: 32px;
+        border-radius: px-to-rem(32);
     }
     @include pseudo-interactive-states {
         outline: 1px solid $black;
