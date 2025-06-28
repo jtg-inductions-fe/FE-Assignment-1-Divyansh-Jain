@@ -1,1 +1,93 @@
-//TODO : Styles for travel point section
+@use '../abstract/index' as *;
+
+.travel-point {
+    position: relative;
+    margin-top: px-to-rem(64);
+    @include flex-property($direction: column, $gap: px-to-rem(38));
+    overflow: hidden;
+    max-width: 100%;
+
+    @include media-query('md') {
+        margin-top: px-to-rem(125);
+    }
+
+    @include media-query('lg') {
+        margin-top: px-to-rem(120);
+        @include flex-property($direction: row, $align-items: center);
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        height: auto;
+
+        @include media-query('md') {
+            margin-left: px-to-rem(32);
+            max-width: px-to-rem(871);
+        }
+
+        @include media-query('lg') {
+            width: px-to-rem(871);
+            margin: 0;
+        }
+    }
+
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $align-items: center,
+            $gap: px-to-rem(16)
+        );
+        text-align: center;
+
+        @include media-query('md') {
+            margin-top: px-to-rem(28);
+            padding: 0 px-to-rem(32);
+        }
+
+        @include media-query('lg') {
+            max-width: px-to-rem(451);
+            width: 100%;
+            margin-top: px-to-rem(33);
+            padding: 0;
+            @include flex-property($direction: column, $gap: px-to-rem(16));
+            text-align: left;
+        }
+    }
+
+    &__ticket {
+        display: none;
+
+        @include media-query('lg') {
+            display: block;
+            @include position-property(
+                $position: absolute,
+                $right: 8%,
+                $top: 39%,
+                $x: px-to-rem(65)
+            );
+        }
+    }
+
+    &__description {
+        @include line-clamp(3);
+        margin-top: px-to-rem(16);
+        @include media-query('lg') {
+            text-wrap: wrap;
+        }
+    }
+
+    &__stats-cards {
+        margin-top: px-to-rem(16);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: px-to-rem(16);
+
+        @include media-query('md') {
+            margin-top: px-to-rem(48);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: px-to-rem(32);
+        }
+    }
+}

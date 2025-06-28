@@ -1,1 +1,85 @@
-//TODO : Styles for key features section
+@use '../abstract/index' as *;
+.key-features {
+    margin: px-to-rem(95) px-to-rem(48) 0;
+    max-width: 100%;
+    @include flex-property($direction: column, $align-items: center);
+
+    @include media-query('md') {
+        margin: px-to-rem(130) px-to-rem(96) 0;
+    }
+
+    @include media-query('lg') {
+        margin-top: px-to-rem(86);
+        margin-left: px-to-rem(60);
+        transform: translateX(px-to-rem(58));
+        @include flex-property($direction: row-reverse, $gap: px-to-rem(70));
+    }
+
+    &__text-content {
+        margin-top: px-to-rem(106);
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(16),
+            $align-items: center
+        );
+        text-align: center;
+
+        @include media-query('md') {
+            padding: 0;
+            margin-top: px-to-rem(68);
+        }
+
+        @include media-query('lg') {
+            margin-top: px-to-rem(43);
+            margin-left: px-to-rem(24);
+            max-width: px-to-rem(559);
+            width: 100%;
+            text-align: left;
+
+            @include flex-property(
+                $direction: column,
+                $align-items: flex-start,
+                $gap: px-to-rem(16)
+            );
+        }
+    }
+    &__image-wrapper {
+        height: px-to-rem(439);
+        @include media-query('md') {
+            height: auto;
+            max-width: px-to-rem(693);
+            max-height: px-to-rem(869);
+        }
+
+        @include media-query('lg') {
+            margin-top: px-to-rem(45);
+        }
+    }
+
+    &__description {
+        margin-top: px-to-rem(16);
+        padding: 0;
+        max-width: 100%;
+        @include media-query('lg') {
+            padding: 0;
+        }
+
+        @include line-clamp(4);
+    }
+
+    &__cards {
+        margin-top: px-to-rem(8);
+
+        @include media-query('md') {
+            width: 100%;
+            padding: 0;
+            margin-left: 0;
+            margin-top: px-to-rem(50);
+        }
+
+        @include media-query('lg') {
+            padding: 0;
+            margin-top: px-to-rem(45);
+        }
+    }
+}

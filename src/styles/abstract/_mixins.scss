@@ -23,7 +23,7 @@
 // mixin for applying font-property
 @mixin font-property(
     $family: $circular-std,
-    $size: 18px,
+    $size: px-to-rem(18),
     $weight: $font-weight-normal,
     $color: $black,
     $line-height: 1,

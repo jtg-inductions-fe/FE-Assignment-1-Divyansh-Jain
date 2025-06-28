@@ -1,0 +1,28 @@
+@use '../abstract/index' as *;
+@use '../base/index' as *;
+.stats-card {
+    padding: px-to-rem(32);
+    border-radius: $card-radius;
+    border: 1px solid $midnight-express-10;
+    height: px-to-rem(151);
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(16),
+        $align-items: center
+    );
+
+    &__data {
+        max-width: 100%;
+    }
+    &__title {
+        max-width: px-to-rem(200);
+        text-wrap: nowrap;
+    }
+
+    @include pseudo-interactive-states {
+        box-shadow: $stats-card-shadow;
+    }
+}

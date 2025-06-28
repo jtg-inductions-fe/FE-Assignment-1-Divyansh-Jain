@@ -1,0 +1,69 @@
+@use '../abstract/index' as *;
+
+.key-feature-card {
+    margin-top: px-to-rem(8);
+    @include flex-property($direction: column, $gap: px-to-rem(32));
+    padding: px-to-rem(32);
+    border-radius: $card-radius;
+    cursor: pointer;
+    @include pseudo-interactive-states {
+        border: 1px solid $midnight-express-10;
+    }
+
+    &__title {
+        max-width: 100%;
+    }
+
+    &__description {
+        max-width: 100%;
+        @include line-clamp(3);
+    }
+    &__icon-wrapper {
+        border-radius: px-to-rem(32);
+        position: relative;
+        min-width: px-to-rem(100);
+        width: px-to-rem(100);
+        height: px-to-rem(100);
+
+        &--kournikova {
+            background-color: $kournikova;
+        }
+
+        &--outrageous-orange {
+            background-color: $outrageous-orange;
+        }
+
+        &--french-rose {
+            background-color: $french-rose;
+        }
+
+        & i[class^='icon-'] {
+            @include position-property(
+                $position: absolute,
+                $left: 50%,
+                $top: 50%,
+                $x: -50%,
+                $y: -50%
+            );
+
+            font-size: px-to-rem(48);
+        }
+    }
+
+    &__text-content {
+        max-width: 100%;
+        @include flex-property($direction: column, $gap: px-to-rem(8));
+    }
+
+    &__description {
+        text-align: left;
+        @include media-query('lg') {
+            padding: 0;
+        }
+    }
+
+    @include media-query('md') {
+        margin-top: 0;
+        @include flex-property($align-items: center, $gap: px-to-rem(33));
+    }
+}
