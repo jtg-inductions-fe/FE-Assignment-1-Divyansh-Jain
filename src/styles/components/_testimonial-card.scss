@@ -1,0 +1,37 @@
+@use '../abstract/index' as *;
+
+.testimonial-card {
+    @include flex-property(
+        $direction: column,
+        $align-items: center,
+        $gap: px-to-rem(32)
+    );
+    &__profile-wrapper {
+        width: px-to-rem(128);
+        height: px-to-rem(128);
+    }
+
+    &__name {
+        max-width: 60%;
+        text-align: center;
+        margin-top: px-to-rem(32);
+    }
+
+    &__rating {
+        @include flex-property($gap: px-to-rem(16));
+    }
+    &__review {
+        text-align: center;
+        margin-top: px-to-rem(32);
+        @include line-clamp(3);
+        @include media-query('md') {
+            padding: 0 px-to-rem(156);
+            margin-top: px-to-rem(25);
+        }
+
+        @include media-query('lg') {
+            padding: 0 px-to-rem(176);
+            margin-top: px-to-rem(20);
+        }
+    }
+}

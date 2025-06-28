@@ -39,5 +39,8 @@
             "eslint --max-warnings=0"
         ],
         "*.{html,scss,json}": "prettier --check"
+    },
+    "dependencies": {
+        "@splidejs/splide": "^4.1.4"
     }
 }

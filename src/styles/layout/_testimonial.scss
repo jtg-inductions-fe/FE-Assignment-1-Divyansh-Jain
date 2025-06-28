@@ -1,1 +1,99 @@
-//TODO : Styles for testimonial section
+@use '../abstract/index' as *;
+
+.testimonial {
+    position: relative;
+    margin-top: px-to-rem(75);
+
+    &__cover {
+        max-width: px-to-rem(1440);
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('src/assets/images/testimonial-bg.svg');
+        visibility: hidden;
+        @include media-query('md') {
+            background-position: bottom 53% left 0;
+            visibility: visible;
+        }
+
+        @include media-query('lg') {
+            background-position: bottom 63% left 0;
+        }
+    }
+
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(16),
+        $align-items: center
+    );
+
+    &__cards {
+        @include media-query('md') {
+            margin-top: px-to-rem(32);
+        }
+    }
+
+    &-card {
+        margin-top: px-to-rem(48);
+
+        @include media-query('md') {
+            margin-top: px-to-rem(35);
+        }
+    }
+
+    &__heading {
+        max-width: 60%;
+        text-align: center;
+    }
+
+    &__subheading {
+        text-align: center;
+        max-width: 80%;
+    }
+
+    &__btn {
+        height: px-to-rem(64);
+        width: px-to-rem(64);
+        position: absolute;
+        top: 120%;
+        border: 1px solid $midnight-express-10;
+        border-radius: 50%;
+        background-color: $white;
+        i[class^='icon-'] {
+            color: $black;
+        }
+        @include media-query('md') {
+            top: 45%;
+            height: px-to-rem(100);
+            width: px-to-rem(100);
+        }
+        &--next {
+            right: 0;
+
+            @include media-query('md') {
+                transform: translate(0, px-to-rem(10));
+            }
+        }
+        &--prev {
+            left: 0;
+
+            @include media-query('md') {
+                transform: translate(0, px-to-rem(10));
+            }
+        }
+
+        @include pseudo-interactive-states {
+            background-color: $state-blue;
+            i[class^='icon-'] {
+                color: $white;
+            }
+        }
+    }
+    @include media-query('md') {
+        margin-top: px-to-rem(128);
+    }
+    @include media-query('lg') {
+        margin-top: px-to-rem(117);
+        margin-left: px-to-rem(130);
+    }
+}

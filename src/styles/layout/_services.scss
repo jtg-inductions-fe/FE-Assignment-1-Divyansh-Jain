@@ -43,7 +43,8 @@
         }
 
         @include media-query('lg') {
-            width: px-to-rem(793);
+            max-width: px-to-rem(793);
+            width: 100%;
             margin-top: px-to-rem(18);
             @include flex-property($gap: px-to-rem(21));
         }
