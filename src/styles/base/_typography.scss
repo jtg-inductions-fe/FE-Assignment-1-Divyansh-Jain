@@ -242,7 +242,7 @@ body {
 }
 
 .stats-card {
-    &__stats {
+    &__data {
         @include font-property(
             $size: px-to-rem(35),
             $color: $outrageous-orange,
