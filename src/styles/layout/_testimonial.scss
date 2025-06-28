@@ -10,7 +10,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url('src/assets/images/testimonial-bg.svg');
-        z-index: -1;
         visibility: hidden;
         @include media-query('md') {
             background-position: bottom 53% left 0;
