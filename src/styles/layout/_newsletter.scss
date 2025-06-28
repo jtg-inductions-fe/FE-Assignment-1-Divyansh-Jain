@@ -2,14 +2,23 @@
 .newsletter {
     position: relative;
     margin: 0 px-to-rem(48);
-    margin-top: px-to-rem(253);
+    margin-top: px-to-rem(250);
     text-align: center;
-
+    border-radius: px-to-rem(32);
     @include flex-property(
         $direction: column,
-        $gap: px-to-rem(57),
+        $gap: px-to-rem(55),
         $align-items: center
     );
+
+    &__heading {
+        @include line-clamp(2);
+        text-align: center;
+    }
+
+    &__subheading {
+        text-align: center;
+    }
 
     &__form {
         width: 100%;
@@ -32,7 +41,7 @@
         }
     }
 
-    &__pattern {
+    &__star-pattern {
         display: none;
 
         @include media-query('md') {
@@ -53,7 +62,25 @@
                 $left: -3%,
                 $y: px-to-rem(5)
             );
-            opacity: 0.1;
+            opacity: 0.4;
+        }
+    }
+
+    &__curve-pattern {
+        display: none;
+        @include media-query('md') {
+            display: block;
+            @include position-property(
+                $position: absolute,
+                $right: -6%,
+                $top: -60%,
+                $y: px-to-rem(10),
+                $x: px-to-rem(4)
+            );
+        }
+
+        @include media-query('lg') {
+            display: none;
         }
     }
 
@@ -79,7 +106,7 @@
     @include media-query('md') {
         @include flex-property(
             $direction: column,
-            $gap: px-to-rem(64),
+            $gap: px-to-rem(58),
             $align-items: center
         );
         background-color: rgba($color: $kournikova, $alpha: 0.08);
