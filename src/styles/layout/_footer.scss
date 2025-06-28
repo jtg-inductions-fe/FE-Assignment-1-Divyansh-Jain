@@ -12,6 +12,9 @@
         }
     }
 
+    &__brand-name {
+        max-width: px-to-rem(440);
+    }
     &__logo-wrapper {
         height: px-to-rem(40);
         width: px-to-rem(40);
@@ -28,6 +31,11 @@
     &__socials {
         @include flex-property($gap: px-to-rem(32));
     }
+
+    &__description {
+        @include line-clamp(3);
+    }
+
     .socials__link {
         background-color: $state-blue;
         border-radius: 50%;

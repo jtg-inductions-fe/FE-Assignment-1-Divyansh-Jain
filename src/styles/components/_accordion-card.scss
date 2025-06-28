@@ -3,8 +3,9 @@
 .accordion-card {
     width: 100%;
     &__header {
+        @include line-clamp(1);
         @include flex-property($justify-content: space-between);
-
+        max-width: px-to-rem(400);
         @include media-query('md') {
             i[class^='icon-'] {
                 display: none;
@@ -21,8 +22,13 @@
         }
     }
 
+    &__item {
+        @include line-clamp(3);
+    }
+
     &__content {
         margin-top: px-to-rem(32);
+        @include line-clamp(2);
         max-height: 0;
         overflow: hidden;
         transition: max-height 200ms ease-in-out;
