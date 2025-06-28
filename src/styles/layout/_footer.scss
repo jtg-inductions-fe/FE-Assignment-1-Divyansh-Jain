@@ -1,10 +1,11 @@
 @use '../abstract/index' as *;
 .footer {
+    margin-top: px-to-rem(92);
     @include flex-property($direction: column, $gap: px-to-rem(94));
 
     &__accordion-cards {
         width: 100%;
-        @include flex-property($direction: column, $gap: px-to-rem(71));
+        @include flex-property($direction: column, $gap: px-to-rem(38));
 
         @include media-query('md') {
             @include flex-property($direction: row, $gap: px-to-rem(32));
@@ -25,14 +26,20 @@
     }
 
     &__socials {
-        @include flex-property();
+        @include flex-property($gap: px-to-rem(32));
     }
-
+    .socials__link {
+        background-color: $state-blue;
+        border-radius: 50%;
+    }
     @include media-query('md') {
+        margin-top: px-to-rem(60);
         @include flex-property($direction: column, $gap: px-to-rem(64));
     }
 
     @include media-query('lg') {
+        margin-top: px-to-rem(192);
+        padding-left: 7px;
         @include flex-property($direction: row, $gap: px-to-rem(64));
     }
 }

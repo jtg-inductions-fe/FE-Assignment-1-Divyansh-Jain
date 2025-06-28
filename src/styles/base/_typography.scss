@@ -110,6 +110,41 @@ body {
     }
 }
 
+.footer {
+    &__brand-name {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-black,
+            $size: px-to-rem(24),
+            $color: $midnight-express,
+            $line-height: px-to-rem(40)
+        );
+    }
+
+    &__description {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: px-to-rem(16),
+            $color: $midnight-express-50,
+            $line-height: 1.6
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $inter,
+                $weight: $font-weight-normal,
+                $size: px-to-rem(23),
+                $color: $midnight-express-50,
+                $line-height: 1.6
+            );
+        }
+    }
+    i[class^='icon-'] {
+        font-size: px-to-rem(32);
+    }
+}
+
 .chip {
     @include font-property($size: px-to-rem(14));
 }
@@ -347,5 +382,27 @@ body {
                 $line-height: 1.2
             );
         }
+    }
+}
+
+.accordion-card {
+    &__header {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(23),
+            $color: $midnight-express,
+            $line-height: 1.2
+        );
+    }
+
+    &__content {
+        @include font-property(
+            $family: $inter,
+            $weight: $font-weight-normal,
+            $size: px-to-rem(18),
+            $color: $midnight-express-75,
+            $line-height: 1.6
+        );
     }
 }
