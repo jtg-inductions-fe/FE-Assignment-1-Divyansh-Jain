@@ -13,6 +13,11 @@
 
         i[class^='icon-'] {
             font-size: px-to-rem(24);
+            transition: transform 20ms ease-in-out;
+        }
+
+        .toggle-icon {
+            transform: rotate(180deg);
         }
     }
 
@@ -20,7 +25,7 @@
         margin-top: px-to-rem(32);
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.8s ease-in-out;
+        transition: max-height 200ms ease-in-out;
         &.active {
             max-height: 800px;
         }

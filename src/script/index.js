@@ -48,5 +48,5 @@ for (let i of accordionBtn) {
 
 function accordionToggleFunction() {
     this.nextElementSibling.classList.toggle('active');
-    this.children[0].classList.toggle('toggleIcon');
+    this.children[0].classList.toggle('toggle-icon');
 }

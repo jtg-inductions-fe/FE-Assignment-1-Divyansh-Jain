@@ -31,7 +31,21 @@
     .socials__link {
         background-color: $state-blue;
         border-radius: 50%;
+        height: px-to-rem(32);
+        width: px-to-rem(32);
+        position: relative;
+        i[class^='icon-'] {
+            // to center icon in wrapper
+            @include position-property(
+                $position: absolute,
+                $top: 50%,
+                $left: 50%,
+                $x: -50%,
+                $y: -50%
+            );
+        }
     }
+
     @include media-query('md') {
         margin-top: px-to-rem(60);
         @include flex-property($direction: column, $gap: px-to-rem(64));

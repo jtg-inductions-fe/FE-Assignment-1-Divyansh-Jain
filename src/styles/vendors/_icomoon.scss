@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?xtubfi');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?o6ys5j');
     src:
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?xtubfi#iefix')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?o6ys5j#iefix')
             format('embedded-opentype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?xtubfi')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?o6ys5j')
             format('truetype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?xtubfi')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?o6ys5j')
             format('woff'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?xtubfi##{$icomoon-font-family}')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?o6ys5j##{$icomoon-font-family}')
             format('svg');
     font-weight: normal;
     font-style: normal;
@@ -31,12 +31,6 @@ i[class^="icon-"] {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook {
-    &:before {
-        content: $icon-social-facebook;
-        color: $white;
-    }
-}
 .icon-arrow-circle-down {
     &:before {
         content: $icon-arrow-circle-down;
@@ -53,6 +47,13 @@ i[class^="icon-"] {
         content: $icon-email;
     }
 }
+.icon-social-facebook {
+    &:before {
+        content: $icon-social-facebook;
+        color: $white;
+    }
+}
+
 .icon-instagram {
     &:before {
         content: $icon-instagram;
@@ -68,7 +69,6 @@ i[class^="icon-"] {
 .icon-arrow {
     &:before {
         content: $icon-arrow;
-        color: $white;
     }
 }
 .icon-arrow-head {
