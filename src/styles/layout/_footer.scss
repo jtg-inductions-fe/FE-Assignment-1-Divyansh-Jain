@@ -40,6 +40,7 @@
     }
 
     .socials__link {
+        display: block;
         background-color: $state-blue;
         border-radius: 50%;
         height: px-to-rem(32);
@@ -55,6 +56,10 @@
                 $y: -50%
             );
         }
+        @include pseudo-interactive-states {
+            transform: translateY(-10px);
+        }
+        transition: transform 100ms ease-in;
     }
 
     @include media-query('md') {
