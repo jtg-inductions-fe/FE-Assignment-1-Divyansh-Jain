@@ -20,6 +20,12 @@
         max-width: px-to-rem(300);
     }
 
+    &__link {
+        @include pseudo-interactive-states {
+            color: $black-pearl;
+        }
+    }
+
     &__item {
         @include line-clamp(3);
     }
