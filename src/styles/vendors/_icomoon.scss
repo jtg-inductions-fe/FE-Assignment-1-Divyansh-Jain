@@ -33,50 +33,50 @@ i[class^='icon-'] {
 
 .icon-arrow-circle-down {
     &:before {
-        content: $icon-arrow-circle-down9-1;
+        content: $icon-arrow-circle-down;
     }
 }
-.icon-twitter .path1 {
+.icon-twitter-bg {
     &:before {
-        content: $icon-Group-path1;
+        content: $icon-twitter-bg;
         color: $state-blue;
     }
 }
-.icon-twitter .path2 {
+.icon-twitter {
     &:before {
-        content: $icon-Group-path2;
+        content: $icon-twitter;
         margin-left: -1em;
         color: $zircon;
     }
 }
-.icon-instagram .path1 {
+.icon-instagram-bg {
     &:before {
-        content: $icon-Group-8-path1;
+        content: $icon-instagram-bg;
         color: $state-blue;
     }
 }
-.icon-instagram .path2 {
+.icon-instagram {
     &:before {
-        content: $icon-Group-8-path2;
+        content: $icon-instagram;
         margin-left: -1em;
         color: $white;
     }
 }
 .icon-facebook {
     &:before {
-        content: $icon-Group-1;
+        content: $icon-facebook;
         color: $state-blue;
     }
 }
 .icon-menu-icon {
     &:before {
-        content: $icon-menu11-1;
+        content: $icon-menu-icon;
         color: $state-blue;
     }
 }
 .icon-email {
     &:before {
-        content: $icon-message-1;
+        content: $icon-email;
     }
 }
 .icon-arrow {
@@ -101,12 +101,6 @@ i[class^='icon-'] {
     &:before {
         content: $icon-coupon;
         color: $white;
-    }
-}
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
-        color: $state-blue;
     }
 }
 .icon-location-pointer {

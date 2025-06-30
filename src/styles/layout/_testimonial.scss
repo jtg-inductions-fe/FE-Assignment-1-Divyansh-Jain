@@ -97,48 +97,6 @@
         margin-left: px-to-rem(130);
     }
 
-    &__btn {
-        height: px-to-rem(64);
-        width: px-to-rem(64);
-        position: absolute;
-        top: 120%;
-        border: 1px solid $midnight-express-10;
-        border-radius: 50%;
-        background-color: $white;
-        i[class^='icon-'] {
-            color: $black;
-        }
-        @include media-query('md') {
-            top: 45%;
-            height: px-to-rem(100);
-            width: px-to-rem(100);
-        }
-        &--next {
-            right: 0;
-
-            @include media-query('md') {
-                transform: translate(0, px-to-rem(10));
-            }
-        }
-        &--prev {
-            .rotate-180 {
-                display: inline-block;
-                transform: rotate(180deg);
-            }
-            left: 0;
-
-            @include media-query('md') {
-                transform: translate(0, px-to-rem(10));
-            }
-        }
-
-        @include pseudo-interactive-states {
-            background-color: $state-blue;
-            i[class^='icon-'] {
-                color: $white;
-            }
-        }
-    }
     @include media-query('md') {
         margin-top: px-to-rem(128);
     }
