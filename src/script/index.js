@@ -40,3 +40,13 @@ newsletterForm.addEventListener('submit', (e) => {
     const email = newsletterForm.email.value;
     alert(`You have successfully subscribed with the email : ${email}`);
 });
+const accordionBtn = document.getElementsByClassName('accordion-card__header');
+
+for (let i of accordionBtn) {
+    i.addEventListener('click', accordionToggleFunction);
+}
+
+function accordionToggleFunction() {
+    this.nextElementSibling.classList.toggle('active');
+    this.children[1].classList.toggle('rotate-icon-180');
+}

@@ -1,1 +1,75 @@
-//TODO : Styles for footer section
+@use '../abstract/index' as *;
+.footer {
+    margin-top: px-to-rem(95);
+    @include flex-property($direction: column, $gap: px-to-rem(94));
+
+    &__accordion-cards {
+        width: 100%;
+        @include flex-property($direction: column, $gap: px-to-rem(38));
+
+        @include media-query('md') {
+            @include flex-property($direction: row, $gap: px-to-rem(32));
+        }
+    }
+
+    &__brand-name {
+        max-width: px-to-rem(300);
+    }
+    &__logo-wrapper {
+        height: px-to-rem(40);
+        width: px-to-rem(40);
+    }
+
+    &__logo {
+        @include flex-property($gap: px-to-rem(16), $align-items: center);
+    }
+
+    &__company-info {
+        @include flex-property($direction: column, $gap: px-to-rem(32));
+    }
+
+    &__socials {
+        @include flex-property($gap: px-to-rem(32));
+        @include media-query('lg') {
+            margin-top: px-to-rem(30);
+        }
+    }
+
+    &__description {
+        @include line-clamp(3);
+    }
+
+    .socials__link {
+        display: block;
+        background-color: $state-blue;
+        border-radius: 50%;
+        height: px-to-rem(32);
+        width: px-to-rem(32);
+        position: relative;
+        i[class^='icon-'] {
+            // to center icon in wrapper
+            @include position-property(
+                $position: absolute,
+                $top: 50%,
+                $left: 50%,
+                $x: -50%,
+                $y: -50%
+            );
+        }
+        @include pseudo-interactive-states {
+            transform: translateY(-10px);
+        }
+        transition: transform 100ms ease-in;
+    }
+
+    @include media-query('md') {
+        margin-top: px-to-rem(64);
+        @include flex-property($direction: column, $gap: px-to-rem(64));
+    }
+
+    @include media-query('lg') {
+        margin-top: px-to-rem(192);
+        padding-left: 7px;
+        @include flex-property($direction: row, $gap: px-to-rem(64));
+    }
+}

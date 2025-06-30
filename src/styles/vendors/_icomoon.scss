@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vky5r8');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?o6ys5j');
     src:
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vky5r8#iefix')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?o6ys5j#iefix')
             format('embedded-opentype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vky5r8')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?o6ys5j')
             format('truetype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vky5r8')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?o6ys5j')
             format('woff'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vky5r8##{$icomoon-font-family}')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?o6ys5j##{$icomoon-font-family}')
             format('svg');
     font-weight: normal;
     font-style: normal;
@@ -36,38 +36,6 @@ i[class^='icon-'] {
         content: $icon-arrow-circle-down;
     }
 }
-.icon-twitter-bg {
-    &:before {
-        content: $icon-twitter-bg;
-        color: $state-blue;
-    }
-}
-.icon-twitter {
-    &:before {
-        content: $icon-twitter;
-        margin-left: -1em;
-        color: $zircon;
-    }
-}
-.icon-instagram-bg {
-    &:before {
-        content: $icon-instagram-bg;
-        color: $state-blue;
-    }
-}
-.icon-instagram {
-    &:before {
-        content: $icon-instagram;
-        margin-left: -1em;
-        color: $white;
-    }
-}
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
-        color: $state-blue;
-    }
-}
 .icon-menu-icon {
     &:before {
         content: $icon-menu-icon;
@@ -79,12 +47,30 @@ i[class^='icon-'] {
         content: $icon-email;
     }
 }
+.icon-social-facebook {
+    &:before {
+        content: $icon-social-facebook;
+        color: $white;
+    }
+}
+
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
+        color: $white;
+    }
+}
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+        color: $white;
+    }
+}
 .icon-arrow {
     &:before {
         content: $icon-arrow;
     }
 }
-
 .icon-arrow-head {
     &:before {
         content: $icon-arrow-head;

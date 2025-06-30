@@ -4,7 +4,7 @@
     width: 100%;
     padding: px-to-rem(28) 0;
     padding-left: px-to-rem(34);
-    border-radius: 16px;
+    border-radius: px-to-rem(16);
     background-color: $white;
     @include flex-property($align-items: center, $gap: px-to-rem(16));
     &__inputbox {

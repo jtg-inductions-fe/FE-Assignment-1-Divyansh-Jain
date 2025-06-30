@@ -1,0 +1,49 @@
+@use '../abstract/index' as *;
+
+.accordion-card {
+    width: 100%;
+    &__header {
+        @include flex-property($justify-content: space-between);
+        @include media-query('md') {
+            i[class^='icon-'] {
+                display: none;
+            }
+        }
+
+        i[class^='icon-'] {
+            font-size: px-to-rem(24);
+            transition: transform 20ms ease-in-out;
+        }
+    }
+
+    &__heading {
+        max-width: px-to-rem(300);
+    }
+
+    &__link {
+        @include pseudo-interactive-states {
+            color: $black-pearl;
+        }
+    }
+
+    &__item {
+        @include line-clamp(3);
+    }
+
+    &__content {
+        margin-top: px-to-rem(32);
+        @include line-clamp(2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 200ms ease-in-out;
+        &.active {
+            max-height: px-to-rem(800);
+        }
+        @include flex-property($direction: column, $gap: px-to-rem(16));
+
+        @include media-query('md') {
+            max-height: px-to-rem(800);
+            @include flex-property($direction: column, $gap: px-to-rem(32));
+        }
+    }
+}
