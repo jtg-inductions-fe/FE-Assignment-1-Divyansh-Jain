@@ -2,26 +2,24 @@
 
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vky5r8');
     src:
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chion0#iefix')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vky5r8#iefix')
             format('embedded-opentype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?chion0')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vky5r8')
             format('truetype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?chion0')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vky5r8')
             format('woff'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?chion0##{$icomoon-font-family}')
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vky5r8##{$icomoon-font-family}')
             format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-// selects i tags with class icon-*
 i[class^='icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: '#{$icomoon-font-family}' !important;
-
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -33,16 +31,52 @@ i[class^='icon-'] {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram {
+.icon-arrow-circle-down {
     &:before {
-        content: $icon-instagram;
-        color: $white;
+        content: $icon-arrow-circle-down;
+    }
+}
+.icon-twitter-bg {
+    &:before {
+        content: $icon-twitter-bg;
+        color: $state-blue;
     }
 }
 .icon-twitter {
     &:before {
         content: $icon-twitter;
+        margin-left: -1em;
         color: $zircon;
+    }
+}
+.icon-instagram-bg {
+    &:before {
+        content: $icon-instagram-bg;
+        color: $state-blue;
+    }
+}
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
+        margin-left: -1em;
+        color: $white;
+    }
+}
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+        color: $state-blue;
+    }
+}
+.icon-menu-icon {
+    &:before {
+        content: $icon-menu-icon;
+        color: $state-blue;
+    }
+}
+.icon-email {
+    &:before {
+        content: $icon-email;
     }
 }
 .icon-arrow {
@@ -67,12 +101,6 @@ i[class^='icon-'] {
     &:before {
         content: $icon-coupon;
         color: $white;
-    }
-}
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
-        color: $state-blue;
     }
 }
 .icon-location-pointer {

@@ -8,7 +8,6 @@
             name="keywords"
             content="Travel,Booking,Explore,Hotel,Stay,Popular Places to Visit,tourist destinations "
         />
-
         <meta name="description" content="Travel Booking website" />
     </head>
 
@@ -573,6 +572,56 @@
                     </div>
                 </section>
             </div>
+            <!-- NEWSLETTER SECTION STARTED HERE -->
+            <section class="newsletter container">
+                <div class="newsletter__star-pattern">
+                    <img
+                        src="src/assets/images/star-pattern.png"
+                        alt="Star pattern"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="newsletter__curve-pattern">
+                    <img
+                        src="src/assets/images/curves-pattern.png"
+                        alt="Curves pattern"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="newsletter__text-content">
+                    <h2
+                        class="heading--primary newsletter__heading"
+                        tabindex="0"
+                    >
+                        SUBSCRIBE TO OUR NEWSLETTER
+                    </h2>
+                    <h3
+                        class="heading--secondary newsletter__subheading"
+                        tabindex="0"
+                    >
+                        Prepare yourself & let's explore the beauty of the world
+                    </h3>
+                </div>
+
+                <form class="newsletter__form" name="newsletter-form">
+                    <label class="newsletter__input-group leading-icon-input">
+                        <i class="icon-email"></i>
+                        <input
+                            class="leading-icon-input__inputbox newsletter__inputbox"
+                            placeholder="Your Email"
+                            type="email"
+                            name="email"
+                            required
+                        />
+                    </label>
+                    <button
+                        type="submit"
+                        class="newsletter__btn btn btn--primary inline-ellipsis"
+                    >
+                        Subscribe
+                    </button>
+                </form>
+            </section>
         </main>
 
         <script type="module" src="./src/script/index.js"></script>

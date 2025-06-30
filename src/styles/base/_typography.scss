@@ -138,7 +138,7 @@ body {
     }
 
     &--secondary {
-        @include line-clamp(2);
+        @include line-clamp(3);
         @include font-property(
             $family: $circular-std,
             $color: $black-pearl,
@@ -284,6 +284,65 @@ body {
                 $line-height: 1.2,
                 $size: px-to-rem(28),
                 $color: $outrageous-orange
+            );
+        }
+    }
+}
+
+.leading-icon-input {
+    &__inputbox {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(14),
+            $color: $midnight-express-75,
+            $line-height: 1.2
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $line-height: 1.2,
+                $size: px-to-rem(23)
+            );
+        }
+    }
+
+    i[class^='icon-'] {
+        font-size: px-to-rem(24);
+        @include media-query('md') {
+            font-size: px-to-rem(32);
+        }
+    }
+}
+
+.newsletter {
+    &__btn {
+        @include font-property(
+            $family: $circular-std,
+            $weight: $font-weight-bold,
+            $size: px-to-rem(16),
+            $line-height: 1.2
+        );
+
+        @include media-query('md') {
+            @include font-property(
+                $family: $circular-std,
+                $weight: $font-weight-bold,
+                $size: px-to-rem(23),
+                $line-height: 1.2
+            );
+        }
+    }
+
+    &__subheading {
+        @include media-query('lg') {
+            @include font-property(
+                $family: $circular-std,
+                $size: px-to-rem(55),
+                $weight: $font-weight-bold,
+                $line-height: 1.2
             );
         }
     }

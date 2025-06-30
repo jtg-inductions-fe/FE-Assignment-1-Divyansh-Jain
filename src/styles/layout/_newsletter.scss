@@ -1,1 +1,124 @@
-//TODO : Styles for newsletter section
+@use '../abstract/index' as *;
+.newsletter {
+    position: relative;
+    margin: 0 px-to-rem(48);
+    margin-top: px-to-rem(250);
+    text-align: center;
+    border-radius: px-to-rem(32);
+    @include flex-property(
+        $direction: column,
+        $gap: px-to-rem(55),
+        $align-items: center
+    );
+
+    &__heading {
+        @include line-clamp(2);
+        text-align: center;
+    }
+
+    &__subheading {
+        text-align: center;
+    }
+
+    &__form {
+        width: 100%;
+        @include flex-property($direction: column, $gap: px-to-rem(28));
+
+        @include media-query('md') {
+            @include flex-property(
+                $direction: row,
+                $gap: px-to-rem(32),
+                $align-items: center
+            );
+        }
+
+        @include media-query('lg') {
+            @include flex-property(
+                $direction: row,
+                $gap: px-to-rem(64),
+                $align-items: center
+            );
+        }
+    }
+
+    &__star-pattern {
+        display: none;
+
+        @include media-query('md') {
+            display: block;
+            @include position-property(
+                $position: absolute,
+                $top: -10%,
+                $left: -4%,
+                $y: px-to-rem(5)
+            );
+            opacity: 1;
+        }
+
+        @include media-query('lg') {
+            @include position-property(
+                $position: absolute,
+                $top: -9%,
+                $left: -3%,
+                $y: px-to-rem(5)
+            );
+            opacity: 0.4;
+        }
+    }
+
+    &__curve-pattern {
+        display: none;
+        @include media-query('md') {
+            display: block;
+            @include position-property(
+                $position: absolute,
+                $right: -6%,
+                $top: -60%,
+                $y: px-to-rem(10),
+                $x: px-to-rem(4)
+            );
+        }
+
+        @include media-query('lg') {
+            display: none;
+        }
+    }
+
+    &__text-content {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(32),
+            $align-items: center
+        );
+    }
+
+    &__btn {
+        width: 100%;
+        padding: px-to-rem(25) 0;
+        border-radius: px-to-rem(16);
+        @include media-query('md') {
+            border-radius: px-to-rem(32);
+            padding: px-to-rem(35) 0;
+            max-width: px-to-rem(235);
+        }
+    }
+
+    @include media-query('md') {
+        @include flex-property(
+            $direction: column,
+            $gap: px-to-rem(58),
+            $align-items: center
+        );
+        background-color: rgba($color: $kournikova, $alpha: 0.08);
+        margin: 0 px-to-rem(64);
+        margin-top: px-to-rem(177);
+        padding: px-to-rem(128) px-to-rem(64);
+    }
+
+    @include media-query('lg') {
+        margin: 0 auto;
+        margin-top: px-to-rem(240);
+        padding: px-to-rem(128) px-to-rem(58);
+        padding-left: px-to-rem(71);
+    }
+}

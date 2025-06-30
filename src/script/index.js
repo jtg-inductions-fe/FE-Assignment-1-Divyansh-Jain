@@ -7,6 +7,7 @@ const menuItems = document.getElementsByClassName('navbar__item');
 const imagePath = 'src/assets/images';
 const openIcon = 'hamburger-btn.png';
 const closeIcon = 'menu-close.png';
+const newsletterForm = document.forms['newsletter-form'];
 
 const handleMenuClick = (e) => {
     if (
@@ -31,4 +32,11 @@ Array.from(menuItems).forEach((menuItem) => {
     menuItem.addEventListener('click', handleMenuClick);
 });
 
+// mounts  testimonial carousel
 mountCarousel();
+
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = newsletterForm.email.value;
+    alert(`You have successfully subscribed with the email : ${email}`);
+});
